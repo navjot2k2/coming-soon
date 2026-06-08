@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Navjot Punni — SunRE Global</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f1f2e;
+    --slate: #4a5a6a;
+    --mist: #f4f5f3;
+    --rule: #e2e4e1;
+    --accent: #1a6b4a;
+    --accent-light: #eaf3ee;
+    --white: #ffffff;
+    --body: 'DM Sans', sans-serif;
+    --serif: 'DM Serif Display', serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body);
+    font-weight: 300;
+    color: var(--navy);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    z-index: 100;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-logo svg { height: 40px; width: auto; }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--slate);
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+
+  .nav-cta {
+    background: var(--navy);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--accent) !important; }
+
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* HERO STRIP */
+  .profile-hero {
+    background: var(--navy);
+    padding: 80px 6vw 0;
+  }
+
+  .profile-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: flex-end;
+  }
+
+  /* PHOTO */
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.12);
+    border-bottom: none;
+    background: #1a2d3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    align-self: flex-end;
+  }
+
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+
+  .photo-placeholder {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .photo-placeholder .initials {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .photo-placeholder span {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* HERO TEXT */
+  .profile-hero-text {
+    padding-bottom: 2.5rem;
+  }
+
+  .profile-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #5dcaa5;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .profile-name {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-title {
+    font-size: 1rem;
+    color: #8fa8b8;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #c8d8e4;
+    font-size: 0.78rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 640px) {
+    .profile-hero-inner { grid-template-columns: 1fr; }
+    .profile-photo { width: 120px; height: 120px; border-radius: 8px; border-bottom: 3px solid rgba(255,255,255,0.12); }
+  }
+
+  /* MAIN CONTENT */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 6vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  @media (max-width: 800px) { .main { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  /* SECTIONS */
+  .section { margin-bottom: 3rem; }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .section-heading {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section p {
+    color: var(--slate);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+
+  /* TIMELINE */
+  .timeline { list-style: none; }
+
+  .timeline-item {
+    position: relative;
+    padding: 0 0 2rem 1.5rem;
+    border-left: 1px solid var(--rule);
+  }
+
+  .timeline-item:last-child { padding-bottom: 0; border-left-color: transparent; }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .timeline-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-company {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--navy);
+  }
+
+  .timeline-date {
+    font-size: 0.78rem;
+    color: var(--slate);
+    white-space: nowrap;
+  }
+
+  .timeline-role {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    font-style: italic;
+  }
+
+  .timeline-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .timeline-item ul li {
+    font-size: 0.88rem;
+    color: var(--slate);
+    padding: 0.3rem 0;
+    border-top: 1px solid var(--rule);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .timeline-item ul li::before {
+    content: '→';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
+    top: 0.35rem;
+  }
+
+  /* SIDEBAR */
+  .sidebar-card {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-card h3 {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  /* SKILLS */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 400;
+  }
+
+  /* EDUCATION */
+  .edu-item { margin-bottom: 1.2rem; }
+  .edu-item:last-child { margin-bottom: 0; }
+
+  .edu-degree {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.1rem;
+  }
+
+  .edu-school {
+    font-size: 0.8rem;
+    color: var(--slate);
+  }
+
+  .edu-year {
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-top: 0.1rem;
+  }
+
+  /* AWARDS */
+  .award-item {
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--slate);
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .award-item::before { content: '🏆'; font-size: 0.85rem; flex-shrink: 0; }
+
+  /* ACHIEVEMENTS */
+  .achievement-item {
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.88rem;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  .achievement-item strong {
+    display: block;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* CTA */
+  .cta-strip {
+    background: var(--mist);
+    border-top: 1px solid var(--rule);
+    padding: 60px 6vw;
+    text-align: center;
+  }
+
+  .cta-strip h2 {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-strip p {
+    color: var(--slate);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--accent); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer p { font-size: 0.8rem; color: var(--slate); }
+
+  .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+  .footer-links a { font-size: 0.8rem; color: var(--slate); text-decoration: none; }
+  .footer-links a:hover { color: var(--navy); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SunRE">
+      <style>
+        .nwm  { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #0f1f2e; }
+        .nwmg { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #1a6b4a; }
+      </style>
+      <path d="M 10 46 A 22 22 0 0 1 54 46" fill="#1a6b4a"/>
+      <line x1="4" y1="46" x2="60" y2="46" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="32" y1="18" x2="32" y2="11" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="46" y1="24" x2="51" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="18" y1="24" x2="13" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="55" y1="36" x2="62" y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9"  y1="36" x2="2"  y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <text x="72" y="46" class="nwm">Sun</text>
+      <text x="130" y="46" class="nwmg">RE</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="profile-hero">
+  <div class="profile-hero-inner">
+    <div class="profile-photo">
+      <!--
+        TO ADD YOUR PHOTO:
+        1. Save your photo as "navjot.jpg" in the same folder as this file
+        2. Replace the div below with:
+           <img src="navjot.jpg" alt="Navjot Punni" />
+      -->
+      <div class="photo-placeholder">
+        <span class="initials">NP</span>
+        <span>Add your photo here</span>
+      </div>
+    </div>
+    <div class="profile-hero-text">
+      <span class="profile-label">Founder & Principal Consultant</span>
+      <h1 class="profile-name">Navjot Punni</h1>
+      <p class="profile-title">SunRE Global · Langley, BC, Canada</p>
+      <div class="profile-tags">
+        <span class="tag">Business Strategy</span>
+        <span class="tag">Global Expansion</span>
+        <span class="tag">Channel Development</span>
+        <span class="tag">IT Consulting</span>
+        <span class="tag">15+ Years Experience</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- LEFT COLUMN -->
+  <div>
+
+    <!-- BIO -->
+    <div class="section">
+      <span class="section-label">About</span>
+      <h2 class="section-heading">A global perspective, built from the ground up.</h2>
+      <p>Navjot Punni is the founder of SunRE Global, a business strategy and IT consulting practice built on 15+ years of hands-on experience across channel sales, international distribution, and global business development.</p>
+      <p>Having worked across South Asia, Africa, the APAC region, and North America — with organizations including TVS Motor Company, Oracle, and Softchoice — Navjot brings a rare combination of strategic thinking and commercial execution to every engagement. He understands what it takes to enter new markets, build high-performing teams, and drive sustainable growth across diverse geographies and industries.</p>
+      <p>At SunRE Global, Navjot partners with business leaders to cut through complexity and deliver clear, actionable strategies — whether that's entering a new market, transforming operations, or navigating technology decisions with confidence.</p>
+    </div>
+
+    <!-- CONSULTING EXPERIENCE -->
+    <div class="section">
+      <span class="section-label">Consulting</span>
+      <h2 class="section-heading">Current focus.</h2>
+      <ul class="timeline">
+
+        <li class="timeline-item">
+          <div class="timeline-company">SunRE Global</div>
+          <div class="timeline-role">Founder &amp; Principal Consultant</div>
+          <p style="font-size:0.88rem;color:var(--slate);margin-top:0.4rem;line-height:1.6;">Business strategy and IT consulting practice helping organisations navigate complexity, enter new markets, and drive sustainable growth.</p>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- CORPORATE CAREER -->
+    <div class="section">
+      <span class="section-label">Corporate Career</span>
+      <h2 class="section-heading">Where the experience was built.</h2>
+      <ul class="timeline">
+
+        <li class="timeline-item">
+          <div class="timeline-company">Softchoice Corporation</div>
+          <div class="timeline-role">Sales &amp; Consulting</div>
+          <p style="font-size:0.88rem;color:var(--slate);margin-top:0.4rem;line-height:1.6;">IT solutions advisory for SMB clients across British Columbia, partnering with vendors to deliver tailored technology strategies.</p>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-company">TVS Motor Company</div>
+          <div class="timeline-role">Multiple Senior Roles — Exports &amp; Sales</div>
+          <p style="font-size:0.88rem;color:var(--slate);margin-top:0.4rem;line-height:1.6;">Progressed through senior export and sales leadership roles across India, Sri Lanka, and Africa — managing large dealer networks, $60M+ in revenue, and multi-country go-to-market strategies.</p>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div>
+
+    <div class="sidebar-card">
+      <h3>Core Skills</h3>
+      <div class="skills-list">
+        <span class="skill-tag">Strategic Management</span>
+        <span class="skill-tag">Business Development</span>
+        <span class="skill-tag">Channel Management</span>
+        <span class="skill-tag">Account Management</span>
+        <span class="skill-tag">International Trade</span>
+        <span class="skill-tag">Market Research</span>
+        <span class="skill-tag">Team Leadership</span>
+        <span class="skill-tag">Vendor Relations</span>
+        <span class="skill-tag">Supply Chain</span>
+        <span class="skill-tag">Sales Promotions</span>
+        <span class="skill-tag">CRM</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Education</h3>
+      <div class="edu-item">
+        <div class="edu-degree">MBA — International Business</div>
+        <div class="edu-school">Trinity Western University, Langley, BC</div>
+        <div class="edu-year">2022 – 2023</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">PG Diploma — Marketing</div>
+        <div class="edu-school">Alliance Business School, Bangalore, India</div>
+        <div class="edu-year">2007 – 2009</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">B.Tech — Mechanical Engineering</div>
+        <div class="edu-school">Punjab Technical University, India</div>
+        <div class="edu-year">2002 – 2006</div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Certificates</h3>
+      <div class="edu-item">
+        <div class="edu-degree">International Business Excellence</div>
+        <div class="edu-school">Indian Institute of Foreign Trade, New Delhi</div>
+        <div class="edu-year">2019 – 2020</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Applied Business Strategy</div>
+        <div class="edu-school">University of Central Florida, Orlando</div>
+        <div class="edu-year">2008</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <h2>Let's work together.</h2>
+  <p>Ready to bring clarity and momentum to your business? Reach out and let's start a conversation.</p>
+  <a href="index.html#contact" class="btn-primary">Get in touch →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" style="text-decoration:none;">
+    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SunRE" style="height:30px;width:auto;">
+      <style>
+        .fwm  { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #0f1f2e; }
+        .fwmg { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #1a6b4a; }
+      </style>
+      <path d="M 10 46 A 22 22 0 0 1 54 46" fill="#1a6b4a"/>
+      <line x1="4" y1="46" x2="60" y2="46" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="32" y1="18" x2="32" y2="11" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="46" y1="24" x2="51" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="18" y1="24" x2="13" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="55" y1="36" x2="62" y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9"  y1="36" x2="2"  y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <text x="72" y="46" class="fwm">Sun</text>
+      <text x="130" y="46" class="fwmg">RE</text>
+    </svg>
+  </a>
+  <p>© 2026 SunRE Global. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
