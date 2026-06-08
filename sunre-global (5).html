@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sunre Global</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f1f2e;
+    --slate: #4a5a6a;
+    --mist: #f4f5f3;
+    --rule: #e2e4e1;
+    --accent: #1a6b4a;
+    --accent-light: #eaf3ee;
+    --white: #ffffff;
+    --body: 'DM Sans', sans-serif;
+    --serif: 'DM Serif Display', serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body);
+    font-weight: 300;
+    color: var(--navy);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    z-index: 100;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo svg {
+    height: 40px;
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--slate);
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+
+  .nav-cta {
+    background: var(--navy);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--accent) !important; color: var(--white) !important; }
+
+  /* HERO */
+  .hero {
+    padding: 120px 6vw 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hero-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--navy);
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--slate);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--accent); }
+
+  .btn-secondary {
+    color: var(--navy);
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border: 1px solid var(--rule);
+    transition: border-color 0.2s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover { border-color: var(--slate); }
+
+  /* STATS STRIP */
+  .stats {
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 48px 6vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .stat-item { text-align: center; }
+
+  .stat-number {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    color: var(--navy);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  /* SECTION WRAPPER */
+  section {
+    padding: 100px 6vw;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .section-heading {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-sub {
+    color: var(--slate);
+    max-width: 480px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 2rem;
+    transition: background 0.2s;
+  }
+
+  .service-card:hover { background: var(--mist); }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.01em;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    color: var(--slate);
+    line-height: 1.7;
+  }
+
+  /* ABOUT */
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  @media (max-width: 720px) {
+    .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+  }
+
+  .about-visual {
+    background: var(--mist);
+    border-radius: 8px;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-visual-inner {
+    text-align: center;
+  }
+
+  .about-visual-inner .big-letter {
+    font-family: var(--serif);
+    font-size: 8rem;
+    color: var(--rule);
+    line-height: 1;
+    display: block;
+  }
+
+  .about-visual-inner span {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  .about-text p {
+    color: var(--slate);
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .about-text ul {
+    list-style: none;
+    margin-top: 1.5rem;
+  }
+
+  .about-text ul li {
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9rem;
+    color: var(--slate);
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .about-text ul li::before {
+    content: '→';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* PROCESS */
+  .process-full { background: var(--mist); padding: 100px 6vw; }
+  .process-inner { max-width: 1100px; margin: 0 auto; }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .process-step {
+    padding: 2rem 1.5rem;
+    border-left: 1px solid var(--rule);
+  }
+
+  .process-step:first-child { border-left: none; }
+
+  .step-num {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    color: var(--rule);
+    display: block;
+    margin-bottom: 0.8rem;
+    line-height: 1;
+  }
+
+  .process-step h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .process-step p {
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.7;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .testimonial-card {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+
+  .quote-mark {
+    font-family: var(--serif);
+    font-size: 3rem;
+    color: var(--accent-light);
+    line-height: 0.5;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95rem;
+    color: var(--slate);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .author-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--navy);
+    display: block;
+  }
+
+  .author-title {
+    font-size: 0.78rem;
+    color: var(--slate);
+  }
+
+  /* CONTACT */
+  .contact-full { background: var(--navy); padding: 100px 6vw; }
+  .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+
+  @media (max-width: 720px) { .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  .contact-full .section-label { color: #5dcaa5; }
+  .contact-full .section-heading { color: var(--white); }
+  .contact-full .section-sub { color: #8fa8b8; max-width: 400px; }
+
+  .contact-detail {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .contact-detail-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-detail-text .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5dcaa5;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .contact-detail-text .value {
+    font-size: 0.9rem;
+    color: #c8d8e4;
+  }
+
+  /* FORM */
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+  .form-group label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8fa8b8;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-family: var(--body);
+    font-size: 0.9rem;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: #4a6070; }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus { border-color: #5dcaa5; }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .form-group select option { background: var(--navy); }
+
+  .btn-submit {
+    background: #1a6b4a;
+    color: var(--white);
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-submit:hover { background: #0f6e56; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer .footer-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--navy);
+    text-decoration: none;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    color: var(--slate);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    color: var(--slate);
+    text-decoration: none;
+  }
+
+  .footer-links a:hover { color: var(--navy); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SunRE">
+      <style>
+        .nwm  { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #0f1f2e; }
+        .nwmg { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #1a6b4a; }
+      </style>
+      <!-- Semicircle -->
+      <path d="M 10 46 A 22 22 0 0 1 54 46" fill="#1a6b4a"/>
+      <!-- Horizon line -->
+      <line x1="4" y1="46" x2="60" y2="46" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <!-- Rays -->
+      <line x1="32" y1="18" x2="32" y2="11" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="46" y1="24" x2="51" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="18" y1="24" x2="13" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="55" y1="36" x2="62" y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9"  y1="36" x2="2"  y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <!-- Wordmark -->
+      <text x="72" y="46" class="nwm">Sun</text>
+      <text x="130" y="46" class="nwmg">RE</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="about-me.html">Meet the Founder</a></li>
+    <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-label">Business &amp; Technology Consulting</p>
+  <h1>Moving your business forward.</h1>
+  <p>Sunre Global helps organisations navigate complexity — from strategic direction to technology transformation — with precision and purpose.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Start a conversation</a>
+    <a href="#services" class="btn-secondary">Explore our services</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item">
+    <span class="stat-number">15+</span>
+    <span class="stat-label">Years of experience</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">80+</span>
+    <span class="stat-label">Clients served</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">15</span>
+    <span class="stat-label">Countries reached</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">94%</span>
+    <span class="stat-label">Client retention rate</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <p class="section-label">What we do</p>
+  <h2 class="section-heading">Two disciplines, one partner.</h2>
+  <p class="section-sub">We bring together business strategy and technology consulting so you never have to choose between vision and execution.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Business strategy</h3>
+      <p>Market entry, growth planning, competitive positioning, and organisational design tailored to your goals.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔗</div>
+      <h3>Digital transformation</h3>
+      <p>From process automation to full technology stack reviews — we help you modernise without disruption.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📐</div>
+      <h3>Operating model design</h3>
+      <p>Structure your teams, workflows, and systems to scale efficiently and sustainably.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌐</div>
+      <h3>Global expansion</h3>
+      <p>Navigate regulatory, cultural, and commercial complexity as you grow across borders.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h3>IT advisory</h3>
+      <p>Independent technology selection, vendor management, and architecture guidance without the bias.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎯</div>
+      <h3>Performance improvement</h3>
+      <p>Diagnose inefficiencies, redesign processes, and unlock measurable gains across your operations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-layout">
+    <div class="about-visual">
+      <div class="about-visual-inner">
+        <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SunRE" style="width:220px;height:auto;">
+          <style>
+            .awm  { font-family: Georgia, serif; font-size: 48px; font-weight: 400; fill: #0f1f2e; }
+            .awmg { font-family: Georgia, serif; font-size: 48px; font-weight: 400; fill: #1a6b4a; }
+          </style>
+          <!-- Semicircle -->
+          <path d="M 60 108 A 50 50 0 0 1 160 108" fill="#1a6b4a"/>
+          <!-- Horizon line -->
+          <line x1="46" y1="108" x2="174" y2="108" stroke="#0f1f2e" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Rays -->
+          <line x1="110" y1="48"  x2="110" y2="34"  stroke="#0f1f2e" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="143" y1="59"  x2="153" y2="46"  stroke="#0f1f2e" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="77"  y1="59"  x2="67"  y2="46"  stroke="#0f1f2e" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="162" y1="84"  x2="175" y2="77"  stroke="#0f1f2e" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="58"  y1="84"  x2="45"  y2="77"  stroke="#0f1f2e" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Wordmark -->
+          <text x="52" y="148" class="awm">Sun</text>
+          <text x="136" y="148" class="awmg">RE</text>
+        </svg>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">About us</p>
+      <h2 class="section-heading">Independent thinking. Real results.</h2>
+      <p>Sunre Global was founded on a simple belief — that great consulting should be honest, focused, and built around the client, not the consultant's agenda.</p>
+      <p>We work across industries including financial services, technology, healthcare, and professional services. Our team brings deep functional expertise alongside genuine commercial experience.</p>
+      <ul>
+        <li>Experienced-led engagements that value every voice on the team</li>
+        <li>Practical recommendations you can actually implement</li>
+        <li>No retainer lock-ins — we earn your continued trust</li>
+        <li>Global reach with local understanding</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<div class="process-full" id="process">
+  <div class="process-inner">
+    <p class="section-label">How we work</p>
+    <h2 class="section-heading">A clear path from problem to progress.</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3>Discovery</h3>
+        <p>We listen first. A deep diagnostic to understand your business, challenges, and ambitions.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3>Analysis</h3>
+        <p>Data-informed review of your current state — commercial, operational, and technological.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3>Strategy</h3>
+        <p>A clear, prioritised plan with concrete recommendations and measurable outcomes.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <h3>Delivery</h3>
+        <p>Hands-on support through implementation — as involved as you need us to be.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <p class="section-label">Client voices</p>
+  <h2 class="section-heading">What our clients say.</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <span class="quote-mark">"</span>
+      <p>Sunre Global helped us cut through months of internal debate and arrive at a strategy we could actually execute. Refreshingly direct.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JD</div>
+        <div>
+          <span class="author-name">John Doe</span>
+          <span class="author-title">CEO, Example Corp</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">"</span>
+      <p>Their technology advisory work saved us from a very expensive mistake. We got honest guidance with no hidden agenda — rare in this industry.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JS</div>
+        <div>
+          <span class="author-name">Jane Smith</span>
+          <span class="author-title">CTO, Sample Financial</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">"</span>
+      <p>What impressed me most was how quickly they understood our world. Within two weeks they were thinking like insiders — and challenging us in the right ways.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AJ</div>
+        <div>
+          <span class="author-name">Alex Johnson</span>
+          <span class="author-title">COO, Example Health</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-full" id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="section-label">Get in touch</p>
+      <h2 class="section-heading">Let's talk about your business.</h2>
+      <p class="section-sub">Whether you have a specific challenge in mind or just want to explore how we might help, we'd love to hear from you.</p>
+      <div style="margin-top: 2.5rem;">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div class="contact-detail-text">
+            <span class="label">Email</span>
+            <span class="value">hello@sunre.ca</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <span class="label">Phone</span>
+            <span class="value">+1 999 999 9999</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-text">
+            <span class="label">Location</span>
+            <span class="value">Vancouver, BC — serving clients globally</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label>Your name</label>
+        <input type="text" placeholder="Jane Smith" />
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" placeholder="jane@yourcompany.com" />
+      </div>
+      <div class="form-group">
+        <label>Area of interest</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Business strategy</option>
+          <option>Digital transformation</option>
+          <option>Operating model design</option>
+          <option>Global expansion</option>
+          <option>IT advisory</option>
+          <option>Performance improvement</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell us a little about what you're working on..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send message →</button>
+      <p id="form-msg" style="font-size:0.85rem; color:#5dcaa5; display:none; margin-top:0.5rem;">Thanks! We'll be in touch shortly.</p>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="#">
+    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SunRE" style="height:34px;width:auto;">
+      <style>
+        .fwm  { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #0f1f2e; }
+        .fwmg { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #1a6b4a; }
+      </style>
+      <path d="M 10 46 A 22 22 0 0 1 54 46" fill="#1a6b4a"/>
+      <line x1="4" y1="46" x2="60" y2="46" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="32" y1="18" x2="32" y2="11" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="46" y1="24" x2="51" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="18" y1="24" x2="13" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="55" y1="36" x2="62" y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9"  y1="36" x2="2"  y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <text x="72" y="46" class="fwm">Sun</text>
+      <text x="130" y="46" class="fwmg">RE</text>
+    </svg>
+  </a>
+  <p>© 2026 Sunre Global. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-msg').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
