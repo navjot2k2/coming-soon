@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SunRE Global — Legacy Modernization Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #020617; color: #e2e8f0; font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; }
+  a { color: inherit; }
+
+  /* Site Nav */
+  #site-nav {
+    position: sticky; top: 0; z-index: 200;
+    background: #ffffff; border-bottom: 1px solid #e2e4e1;
+    padding: 0 6vw; display: flex; align-items: center; justify-content: space-between; height: 64px;
+  }
+  #site-nav a.nav-logo { text-decoration: none; display: flex; align-items: center; }
+  #site-nav a.nav-logo svg { height: 40px; width: auto; }
+  #site-nav ul { display: flex; gap: 2.5rem; list-style: none; margin: 0; padding: 0; }
+  #site-nav ul a { text-decoration: none; font-size: 0.875rem; font-weight: 400; color: #4a5a6a; letter-spacing: 0.04em; transition: color 0.2s; font-family: 'DM Sans', sans-serif; }
+  #site-nav ul a:hover { color: #0f1f2e; }
+  #site-nav ul a.active { color: #1a6b4a; font-weight: 500; }
+  #site-nav ul a.nav-cta { background: #0f1f2e; color: #ffffff !important; padding: 8px 20px; border-radius: 4px; transition: background 0.2s !important; }
+  #site-nav ul a.nav-cta:hover { background: #1a6b4a !important; }
+
+  /* Layout */
+  #app { display: flex; flex-direction: column; min-height: 100vh; }
+  #header { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; border-bottom: 1px solid #1e293b; }
+  #header-left { display: flex; align-items: center; gap: 10px; }
+  .logo-icon { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, #1d4ed8, #16a34a); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .header-title { font-size: 16px; font-weight: 700; color: #f1f5f9; }
+  .header-sep { color: #334155; font-size: 14px; }
+  .header-sub { font-size: 13px; color: #64748b; }
+  .ai-badge { font-size: 11px; color: #475569; background: #0f172a; border: 1px solid #1e293b; border-radius: 6px; padding: 4px 12px; }
+
+  #main { display: flex; flex: 1; overflow: hidden; }
+
+  /* Sidebar */
+  #sidebar { width: 240px; flex-shrink: 0; border-right: 1px solid #1e293b; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px; overflow-y: auto; }
+  .filter-label { font-size: 10px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .radio-group, .check-group { display: flex; flex-direction: column; gap: 5px; }
+  .radio-group label, .check-group label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 12px; color: #64748b; transition: color 0.15s; }
+  .radio-group label:hover, .check-group label:hover { color: #e2e8f0; }
+  .radio-group input, .check-group input { accent-color: #16a34a; flex-shrink: 0; }
+  .radio-group label.active, .check-group label.active { color: #e2e8f0; }
+
+  #run-btn { margin-top: auto; background: linear-gradient(135deg, #1d4ed8, #16a34a); color: #fff; border: none; border-radius: 10px; padding: 14px; font-size: 14px; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+  #run-btn:disabled { background: #1e293b; color: #475569; cursor: not-allowed; }
+  #run-btn:not(:disabled):hover { opacity: 0.9; }
+
+  /* Results */
+  #results-panel { flex: 1; overflow-y: auto; padding: 22px; min-width: 0; }
+  .panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .panel-header-title { font-size: 14px; font-weight: 600; color: #94a3b8; }
+  .panel-header-hint { font-size: 11px; color: #475569; }
+
+  .empty-state { text-align: center; padding: 80px 40px; }
+  .empty-icon { font-size: 48px; margin-bottom: 16px; }
+  .empty-title { font-size: 18px; font-weight: 600; color: #475569; margin-bottom: 8px; }
+  .empty-sub { font-size: 13px; color: #334155; }
+
+  .loading-state { text-align: center; padding: 80px 40px; }
+  .loading-icon { font-size: 32px; margin-bottom: 20px; animation: spin 2s linear infinite; display: inline-block; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .loading-title { font-size: 16px; color: #64748b; margin-bottom: 8px; }
+  .loading-sub { font-size: 12px; color: #334155; }
+
+  .error-box { background: #450a0a; border: 1px solid #7f1d1d; border-radius: 10px; padding: 14px; color: #fca5a5; font-size: 13px; }
+
+  /* Company Card */
+  .company-card { background: #080f1a; border: 1px solid #1e293b; border-radius: 12px; padding: 16px; margin-bottom: 10px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+  .company-card:hover { border-color: #334155; background: #0c1626; }
+  .company-card.active { border-color: #1d4ed8; background: #0f172a; }
+  .card-inner { display: flex; align-items: flex-start; gap: 12px; }
+  .rank-box { width: 34px; height: 34px; border-radius: 8px; background: #0f172a; border: 1px solid #1e293b; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #475569; flex-shrink: 0; }
+  .card-body { flex: 1; min-width: 0; }
+  .card-name-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 3px; }
+  .card-name { font-size: 15px; font-weight: 700; color: #f1f5f9; }
+  .card-meta { font-size: 12px; color: #475569; margin-bottom: 10px; }
+  .card-scores { display: flex; gap: 14px; margin-bottom: 10px; align-items: flex-start; flex-wrap: wrap; }
+  .score-block { text-align: center; }
+  .score-num { font-size: 22px; font-weight: 800; }
+  .score-lbl { font-size: 10px; color: #475569; }
+  .likelihood-block { text-align: center; }
+  .likelihood-val { font-size: 12px; font-weight: 700; color: #a78bfa; padding-top: 4px; }
+  .service-block { flex: 1; }
+  .service-val { font-size: 11px; color: #16a34a; font-weight: 600; padding-top: 4px; }
+  .evidence-list { display: flex; flex-direction: column; gap: 4px; }
+  .evidence-item { font-size: 12px; color: #64748b; padding-left: 10px; border-left: 2px solid #1e293b; }
+
+  /* Badge */
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+
+  /* Deep Dive Panel */
+  #deepdive-panel { width: 400px; flex-shrink: 0; border-left: 1px solid #1e293b; overflow-y: auto; padding: 20px; display: none; }
+  #deepdive-panel.open { display: block; }
+  .dd-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .dd-company { font-size: 15px; font-weight: 700; color: #f1f5f9; }
+  .dd-subtitle { font-size: 11px; color: #475569; }
+  .dd-close { background: #1e293b; border: none; border-radius: 6px; color: #64748b; padding: 6px 10px; cursor: pointer; font-size: 12px; }
+  .dd-close:hover { color: #e2e8f0; }
+
+  .dd-loading { text-align: center; padding: 60px 20px; }
+  .dd-loading-icon { font-size: 24px; margin-bottom: 12px; }
+  .dd-loading-title { font-size: 13px; color: #64748b; }
+  .dd-loading-sub { font-size: 11px; color: #334155; margin-top: 6px; }
+
+  .phase-header { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #1e293b; }
+  .phase-header.blue { color: #1d4ed8; }
+  .phase-header.green { color: #16a34a; }
+
+  .section-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .initiative-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; padding: 10px; margin-bottom: 7px; }
+  .initiative-text { font-size: 12px; color: #e2e8f0; margin-bottom: 5px; line-height: 1.5; }
+  .initiative-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .initiative-source { font-size: 11px; color: #64748b; }
+  .initiative-date { font-size: 11px; color: #475569; }
+
+  /* Score bars */
+  .score-bar-wrap { margin-bottom: 9px; }
+  .score-bar-header { display: flex; justify-content: space-between; margin-bottom: 3px; }
+  .score-bar-label { font-size: 12px; color: #94a3b8; }
+  .score-bar-val { font-size: 12px; font-weight: 700; }
+  .score-bar-track { height: 6px; background: #1e293b; border-radius: 3px; }
+  .score-bar-fill { height: 6px; border-radius: 3px; transition: width 0.6s ease; }
+  .score-totals { border-top: 1px solid #1e293b; padding-top: 10px; margin-top: 4px; display: flex; justify-content: space-between; align-items: center; }
+  .score-totals-label { font-size: 13px; font-weight: 700; color: #e2e8f0; }
+  .score-totals-val { font-size: 24px; font-weight: 800; }
+
+  .rationale-item { margin-bottom: 7px; }
+  .rationale-lbl { font-size: 11px; font-weight: 700; color: #475569; }
+  .rationale-text { font-size: 12px; color: #94a3b8; }
+
+  .why-now-box { background: #0d1f0d; border: 1px solid #166534; border-radius: 10px; padding: 12px; margin-top: 14px; }
+  .why-now-title { font-size: 11px; font-weight: 700; color: #16a34a; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .why-now-text { font-size: 12px; color: #86efac; line-height: 1.6; }
+
+  .service-box { background: #0f172a; border: 1px solid #1e3a5f; border-radius: 10px; padding: 12px; margin-top: 10px; }
+  .service-box-title { font-size: 11px; font-weight: 700; color: #60a5fa; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .service-box-text { font-size: 12px; color: #93c5fd; line-height: 1.6; }
+
+  .opening-box { background: #1a0f2e; border: 1px solid #4c1d95; border-radius: 10px; padding: 12px; margin-top: 10px; margin-bottom: 20px; }
+  .opening-title { font-size: 11px; font-weight: 700; color: #a78bfa; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .opening-text { font-size: 12px; color: #c4b5fd; line-height: 1.6; font-style: italic; }
+
+  .scores-box { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+
+<!-- SITE NAV -->
+<nav id="site-nav">
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SunRE">
+      <style>.snwm{font-family:Georgia,serif;font-size:28px;font-weight:400;fill:#0f1f2e}.snwmg{font-family:Georgia,serif;font-size:28px;font-weight:400;fill:#1a6b4a}</style>
+      <path d="M 10 46 A 22 22 0 0 1 54 46" fill="#1a6b4a"/>
+      <line x1="4" y1="46" x2="60" y2="46" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="32" y1="18" x2="32" y2="11" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="46" y1="24" x2="51" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="18" y1="24" x2="13" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="55" y1="36" x2="62" y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9"  y1="36" x2="2"  y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <text x="72" y="46" class="snwm">Sun</text>
+      <text x="130" y="46" class="snwmg">RE</text>
+    </svg>
+  </a>
+  <ul>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="about-me.html">Meet the Team</a></li>
+    <li><a href="sunre-intelligence.html" class="active">SunRE Intelligence</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+  </ul>
+</nav>
+
+<div id="app">
+  <!-- Header -->
+  <div id="header">
+    <div id="header-left">
+      <div class="logo-icon">☀</div>
+      <span class="header-title">SunRE Global</span>
+      <span class="header-sep">·</span>
+      <span class="header-sub">Legacy Modernization Intelligence</span>
+    </div>
+    <div class="ai-badge">AI-Powered · Web Search Enabled</div>
+  </div>
+
+  <div id="main">
+    <!-- Sidebar Filters -->
+    <div id="sidebar">
+      <div>
+        <div class="filter-label">Geography</div>
+        <div class="radio-group" id="geo-group"></div>
+      </div>
+      <div>
+        <div class="filter-label">Industry</div>
+        <div class="check-group" id="industry-group"></div>
+      </div>
+      <div>
+        <div class="filter-label">Company Size (employees)</div>
+        <div class="radio-group" id="size-group"></div>
+      </div>
+      <div>
+        <div class="filter-label">Ownership Type</div>
+        <div class="radio-group" id="ownership-group"></div>
+      </div>
+      <button id="run-btn" onclick="runDiscovery()">⚡ Find Opportunities</button>
+    </div>
+
+    <!-- Results Panel -->
+    <div id="results-panel">
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">🔍</div>
+        <div class="empty-title">Set your filters and run discovery</div>
+        <div class="empty-sub">The AI agent will search for real organizations with active modernization pressure</div>
+      </div>
+      <div class="loading-state" id="loading-state" style="display:none">
+        <div class="loading-icon">⚙</div>
+        <div class="loading-title">Running intelligence scan...</div>
+        <div class="loading-sub">Searching for legacy tech signals, modernization drivers, and business pressures</div>
+      </div>
+      <div class="error-box" id="error-box" style="display:none"></div>
+      <div id="results-list" style="display:none">
+        <div class="panel-header">
+          <span class="panel-header-title" id="results-count"></span>
+          <span class="panel-header-hint">Click any row to deep dive</span>
+        </div>
+        <div id="cards-container"></div>
+      </div>
+    </div>
+
+    <!-- Deep Dive Panel -->
+    <div id="deepdive-panel">
+      <div class="dd-header">
+        <div>
+          <div class="dd-company" id="dd-company-name"></div>
+          <div class="dd-subtitle">Deep Dive Intelligence</div>
+        </div>
+        <button class="dd-close" onclick="closeDeepDive()">✕</button>
+      </div>
+      <div id="dd-loading" style="display:none">
+        <div class="dd-loading">
+          <div class="dd-loading-icon">🔬</div>
+          <div class="dd-loading-title">Running deep-dive research...</div>
+          <div class="dd-loading-sub">Searching for modernization drivers and scoring signals</div>
+        </div>
+      </div>
+      <div id="dd-error" class="error-box" style="display:none"></div>
+      <div id="dd-content"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const INDUSTRIES = ["Banking","Financial Services","Insurance","Healthcare","Government","Transportation","Logistics","Manufacturing","Utilities","Telecommunications","Retail"];
+const GEOGRAPHIES = ["United States","Canada","Both"];
+const SIZES = ["500–1,000","1,000–5,000","5,000–10,000","10,000–20,000","All"];
+const OWNERSHIP = ["Public","Private","PE-backed","Government","All"];
+
+// State
+let filters = { geography: "Both", industries: [], size: "All", ownership: "All" };
+let results = [];
+let activeCompany = null;
+
+// Build filter UI
+function buildFilters() {
+  // Geography
+  const geoGroup = document.getElementById("geo-group");
+  GEOGRAPHIES.forEach(g => {
+    const lbl = document.createElement("label");
+    lbl.className = filters.geography === g ? "active" : "";
+    lbl.innerHTML = `<input type="radio" name="geo" value="${g}" ${filters.geography === g ? "checked" : ""}> ${g}`;
+    lbl.querySelector("input").addEventListener("change", () => {
+      filters.geography = g;
+      document.querySelectorAll("#geo-group label").forEach(l => l.classList.remove("active"));
+      lbl.classList.add("active");
+    });
+    geoGroup.appendChild(lbl);
+  });
+
+  // Industries
+  const indGroup = document.getElementById("industry-group");
+  INDUSTRIES.forEach(ind => {
+    const lbl = document.createElement("label");
+    lbl.innerHTML = `<input type="checkbox" value="${ind}"> ${ind}`;
+    lbl.querySelector("input").addEventListener("change", (e) => {
+      if (e.target.checked) { filters.industries.push(ind); lbl.classList.add("active"); }
+      else { filters.industries = filters.industries.filter(x => x !== ind); lbl.classList.remove("active"); }
+    });
+    indGroup.appendChild(lbl);
+  });
+
+  // Size
+  const sizeGroup = document.getElementById("size-group");
+  SIZES.forEach(s => {
+    const lbl = document.createElement("label");
+    lbl.className = filters.size === s ? "active" : "";
+    lbl.innerHTML = `<input type="radio" name="size" value="${s}" ${filters.size === s ? "checked" : ""}> ${s}`;
+    lbl.querySelector("input").addEventListener("change", () => {
+      filters.size = s;
+      document.querySelectorAll("#size-group label").forEach(l => l.classList.remove("active"));
+      lbl.classList.add("active");
+    });
+    sizeGroup.appendChild(lbl);
+  });
+
+  // Ownership
+  const ownGroup = document.getElementById("ownership-group");
+  OWNERSHIP.forEach(o => {
+    const lbl = document.createElement("label");
+    lbl.className = filters.ownership === o ? "active" : "";
+    lbl.innerHTML = `<input type="radio" name="own" value="${o}" ${filters.ownership === o ? "checked" : ""}> ${o}`;
+    lbl.querySelector("input").addEventListener("change", () => {
+      filters.ownership = o;
+      document.querySelectorAll("#ownership-group label").forEach(l => l.classList.remove("active"));
+      lbl.classList.add("active");
+    });
+    ownGroup.appendChild(lbl);
+  });
+}
+
+// Prompts
+const SYSTEM_PROMPT = `You are an elite Legacy Modernization Opportunity Intelligence Agent working for SunRE Global, a business strategy and IT consulting firm.
+
+Your job is to identify organizations that are LIKELY TO INITIATE, FUND, OR EXPAND a modernization initiative within the next 24 months.
+
+Services you are identifying opportunities for:
+- Mainframe Modernization
+- COBOL Modernization
+- Natural/Adabas Modernization
+- Legacy Application Modernization
+- Database Migration / Data Modernization
+- Application Replatforming / Cloud Migration
+- AI Readiness and Legacy Data Enablement
+
+CRITICAL RULES:
+- Do NOT reward companies merely for having legacy tech. A company running COBOL for 30 years without change is NOT an opportunity.
+- PRIORITIZE organizations where executive, operational, cloud, AI, workforce, regulatory, competitive, or business pressures are FORCING modernization decisions within 24 months.
+- Clearly distinguish: Verified Evidence | Strong Inference | Speculation
+- NEVER fabricate companies. Only include real organizations.
+- Always respond in valid JSON only — no markdown, no preamble, no explanation outside JSON.`;
+
+function discoveryPrompt() {
+  return `Using web search, identify the TOP 10 real organizations that are HIGH-PROBABILITY legacy modernization opportunities.
+
+FILTERS APPLIED:
+- Geography: ${filters.geography}
+- Industries: ${filters.industries.length > 0 ? filters.industries.join(", ") : "All industries"}
+- Company Size (employees): ${filters.size}
+- Ownership Type: ${filters.ownership}
+
+For each company, use web search to find real evidence of:
+1. Legacy technology in use (mainframe, COBOL, AS/400, CICS, Adabas, etc.)
+2. Active modernization drivers (cloud initiatives, AI programs, digital transformation, ERP replacement, core platform changes)
+3. Business pressures (M&A activity, leadership changes, regulatory deadlines, competitive pressure, talent shortage)
+
+Rank them by likelihood of FUNDED modernization activity within 24 months.
+
+Respond ONLY with a valid JSON array of exactly 10 objects. No markdown. No explanation. Pure JSON only.
+
+Each object must have EXACTLY these fields (all required):
+{
+  "rank": number,
+  "company": "string",
+  "industry": "string",
+  "headquarters": "string",
+  "employees": "string",
+  "ownership": "string",
+  "overallScore": number,
+  "whyNowScore": number,
+  "modernizationLikelihood": "Very High or High or Medium-High",
+  "recommendedService": "string",
+  "topEvidencePoints": ["string","string","string"],
+  "topStakeholders": ["string","string"],
+  "recommendedFirstConversation": "string",
+  "evidenceConfidence": "Verified or Strong Inference or Mixed"
+}`;
+}
+
+function deepDivePrompt(co) {
+  return `Conduct a deep-dive intelligence analysis on: ${co.company} (${co.industry}, ${co.headquarters}).
+
+Use web search to find CURRENT, SPECIFIC evidence for two phases:
+
+PHASE 3 - MODERNIZATION DRIVER DETECTION:
+Find real evidence of: cloud initiatives (AWS/Azure/GCP), data modernization programs, application modernization, AI/GenAI initiatives, digital transformation programs.
+For each finding: what the evidence is, the source, approximate date, confidence level (Verified/Strong Inference/Speculation).
+
+PHASE 10 - OPPORTUNITY SCORING:
+Score 0-100 with rationale for each:
+- legacyTechScore + legacyTechRationale
+- modernizationDriverScore + modernizationDriverRationale
+- executiveTriggerScore + executiveTriggerRationale
+- workforcePressureScore + workforcePressureRationale
+- aiReadinessPressureScore + aiReadinessPressureRationale
+- buyingSignalScore + buyingSignalRationale
+- overallOpportunityScore (0-100)
+- whyNowScore (0-100)
+- whyNowNarrative (3-4 sentences on why they act in 24 months)
+- bestServiceFit (which SunRE service and why)
+- recommendedOpening (specific first conversation line)
+
+Respond ONLY with a valid JSON object. No markdown. Pure JSON.
+
+{
+  "phase3": {
+    "cloudInitiatives": [{"evidence":"string","source":"string","date":"string","confidence":"string"}],
+    "dataInitiatives": [{"evidence":"string","source":"string","date":"string","confidence":"string"}],
+    "appInitiatives": [{"evidence":"string","source":"string","date":"string","confidence":"string"}],
+    "aiInitiatives": [{"evidence":"string","source":"string","date":"string","confidence":"string"}],
+    "digitalTransformation": [{"evidence":"string","source":"string","date":"string","confidence":"string"}]
+  },
+  "phase10": {
+    "legacyTechScore": 0,
+    "legacyTechRationale": "string",
+    "modernizationDriverScore": 0,
+    "modernizationDriverRationale": "string",
+    "executiveTriggerScore": 0,
+    "executiveTriggerRationale": "string",
+    "workforcePressureScore": 0,
+    "workforcePressureRationale": "string",
+    "aiReadinessPressureScore": 0,
+    "aiReadinessPressureRationale": "string",
+    "buyingSignalScore": 0,
+    "buyingSignalRationale": "string",
+    "overallOpportunityScore": 0,
+    "whyNowScore": 0,
+    "whyNowNarrative": "string",
+    "bestServiceFit": "string",
+    "recommendedOpening": "string"
+  }
+}`;
+}
+
+// Robust JSON parser
+function safeParseJSON(text, type) {
+  let cleaned = text.replace(/```json\s*/gi, "").replace(/```\s*/g, "").trim();
+  const open = type === "array" ? "[" : "{";
+  const close = type === "array" ? "]" : "}";
+  const start = cleaned.indexOf(open);
+  if (start === -1) throw new Error("No JSON structure found in response.");
+  let depth = 0, end = -1;
+  for (let i = start; i < cleaned.length; i++) {
+    if (cleaned[i] === open) depth++;
+    else if (cleaned[i] === close) { depth--; if (depth === 0) { end = i; break; } }
+  }
+  let jsonStr = end !== -1 ? cleaned.slice(start, end + 1) : cleaned.slice(start);
+  jsonStr = jsonStr.replace(/,\s*([}\]])/g, "$1");
+  if (type === "array" && end === -1) {
+    const lastComma = jsonStr.lastIndexOf(",");
+    if (lastComma !== -1) jsonStr = jsonStr.slice(0, lastComma);
+    jsonStr += "]";
+  }
+  try { return JSON.parse(jsonStr); }
+  catch(e) {
+    const fixed = jsonStr.replace(/:\s*"((?:[^"\\]|\\.)*)"/g, (m, p1) => {
+      return ': "' + p1.replace(/\n/g, " ").replace(/\r/g, "").replace(/\t/g, " ") + '"';
+    });
+    return JSON.parse(fixed);
+  }
+}
+
+// API call
+async function callClaude(userPrompt) {
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-20250514",
+      max_tokens: 6000,
+      system: SYSTEM_PROMPT,
+      tools: [{ type: "web_search_20250305", name: "web_search" }],
+      messages: [{ role: "user", content: userPrompt }]
+    })
+  });
+  const data = await response.json();
+  if (data.error) throw new Error(data.error.message);
+  return data.content.filter(b => b.type === "text").map(b => b.text).join("");
+}
+
+// Score color
+function scoreColor(s) {
+  if (s >= 80) return "#22c55e";
+  if (s >= 65) return "#f59e0b";
+  if (s >= 50) return "#fb923c";
+  return "#94a3b8";
+}
+
+function badge(text, color, bg) {
+  return `<span class="badge" style="color:${color};background:${bg};border:1px solid ${color}40">${text}</span>`;
+}
+
+function confidenceBadge(level) {
+  const map = {
+    "Verified": ["#22c55e","#14532d"],
+    "Strong Inference": ["#f59e0b","#451a03"],
+    "Mixed": ["#94a3b8","#1e293b"],
+    "Speculation": ["#f87171","#450a0a"]
+  };
+  const [c,b] = map[level] || map["Mixed"];
+  return badge(level, c, b);
+}
+
+function scoreBar(score, label) {
+  const color = scoreColor(score);
+  return `<div class="score-bar-wrap">
+    <div class="score-bar-header">
+      <span class="score-bar-label">${label}</span>
+      <span class="score-bar-val" style="color:${color}">${score}</span>
+    </div>
+    <div class="score-bar-track">
+      <div class="score-bar-fill" style="width:${score}%;background:${color}"></div>
+    </div>
+  </div>`;
+}
+
+function initiativeSection(items, label, icon) {
+  if (!items || items.length === 0) return "";
+  const cards = items.map(item => `
+    <div class="initiative-card">
+      <div class="initiative-text">${item.evidence || ""}</div>
+      <div class="initiative-meta">
+        <span class="initiative-source">${item.source || ""}</span>
+        ${item.date ? `<span class="initiative-date">· ${item.date}</span>` : ""}
+        ${confidenceBadge(item.confidence || "Mixed")}
+      </div>
+    </div>`).join("");
+  return `<div style="margin-bottom:14px">
+    <div class="section-label">${icon} ${label}</div>
+    ${cards}
+  </div>`;
+}
+
+// Render results
+function renderResults() {
+  document.getElementById("empty-state").style.display = "none";
+  document.getElementById("loading-state").style.display = "none";
+  document.getElementById("results-list").style.display = "block";
+  document.getElementById("results-count").textContent = `Top ${results.length} Opportunities`;
+  const container = document.getElementById("cards-container");
+  container.innerHTML = "";
+  results.forEach(co => {
+    const div = document.createElement("div");
+    div.className = "company-card";
+    div.id = `card-${co.rank}`;
+    div.innerHTML = `
+      <div class="card-inner">
+        <div class="rank-box">${co.rank}</div>
+        <div class="card-body">
+          <div class="card-name-row">
+            <span class="card-name">${co.company}</span>
+            ${badge(co.industry, "#94a3b8", "#1e293b")}
+            ${confidenceBadge(co.evidenceConfidence)}
+          </div>
+          <div class="card-meta">${co.headquarters} · ${co.employees} employees · ${co.ownership}</div>
+          <div class="card-scores">
+            <div class="score-block">
+              <div class="score-num" style="color:${scoreColor(co.overallScore)}">${co.overallScore}</div>
+              <div class="score-lbl">Opportunity</div>
+            </div>
+            <div class="score-block">
+              <div class="score-num" style="color:${scoreColor(co.whyNowScore)}">${co.whyNowScore}</div>
+              <div class="score-lbl">Why Now</div>
+            </div>
+            <div class="likelihood-block">
+              <div class="likelihood-val">${co.modernizationLikelihood}</div>
+              <div class="score-lbl">Likelihood</div>
+            </div>
+            <div class="service-block">
+              <div class="service-val">${co.recommendedService}</div>
+              <div class="score-lbl">Recommended Service</div>
+            </div>
+          </div>
+          <div class="evidence-list">
+            ${(co.topEvidencePoints || []).map(pt => `<div class="evidence-item">${pt}</div>`).join("")}
+          </div>
+        </div>
+      </div>`;
+    div.addEventListener("click", () => runDeepDive(co));
+    container.appendChild(div);
+  });
+}
+
+// Discovery
+async function runDiscovery() {
+  const btn = document.getElementById("run-btn");
+  btn.disabled = true;
+  btn.textContent = "⟳ Searching...";
+  document.getElementById("empty-state").style.display = "none";
+  document.getElementById("loading-state").style.display = "block";
+  document.getElementById("error-box").style.display = "none";
+  document.getElementById("results-list").style.display = "none";
+  closeDeepDive();
+  try {
+    const text = await callClaude(discoveryPrompt());
+    results = safeParseJSON(text, "array");
+    if (!Array.isArray(results) || results.length === 0) throw new Error("No results returned. Please try again.");
+    renderResults();
+  } catch(e) {
+    document.getElementById("loading-state").style.display = "none";
+    document.getElementById("error-box").style.display = "block";
+    document.getElementById("error-box").textContent = "Discovery failed: " + e.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "⚡ Find Opportunities";
+  }
+}
+
+// Deep dive
+async function runDeepDive(co) {
+  activeCompany = co;
+  // Highlight active card
+  document.querySelectorAll(".company-card").forEach(c => c.classList.remove("active"));
+  const card = document.getElementById(`card-${co.rank}`);
+  if (card) card.classList.add("active");
+
+  const panel = document.getElementById("deepdive-panel");
+  panel.classList.add("open");
+  document.getElementById("dd-company-name").textContent = co.company;
+  document.getElementById("dd-loading").style.display = "block";
+  document.getElementById("dd-error").style.display = "none";
+  document.getElementById("dd-content").innerHTML = "";
+
+  try {
+    const text = await callClaude(deepDivePrompt(co));
+    const data = safeParseJSON(text, "object");
+    renderDeepDive(data);
+  } catch(e) {
+    document.getElementById("dd-loading").style.display = "none";
+    document.getElementById("dd-error").style.display = "block";
+    document.getElementById("dd-error").textContent = "Deep-dive failed: " + e.message;
+  }
+}
+
+function renderDeepDive(data) {
+  document.getElementById("dd-loading").style.display = "none";
+  const p3 = data.phase3 || {};
+  const p10 = data.phase10 || {};
+  const overall = p10.overallOpportunityScore || 0;
+
+  const rationales = [
+    ["Legacy Tech", "legacyTechRationale"],
+    ["Modernization Drivers", "modernizationDriverRationale"],
+    ["Executive Triggers", "executiveTriggerRationale"],
+    ["Workforce", "workforcePressureRationale"],
+    ["AI Readiness", "aiReadinessPressureRationale"],
+    ["Buying Signals", "buyingSignalRationale"],
+  ].filter(([,k]) => p10[k]).map(([label, key]) =>
+    `<div class="rationale-item"><span class="rationale-lbl">${label}: </span><span class="rationale-text">${p10[key]}</span></div>`
+  ).join("");
+
+  document.getElementById("dd-content").innerHTML = `
+    <div style="margin-bottom:24px">
+      <div class="phase-header blue">Phase 3 — Modernization Drivers</div>
+      ${initiativeSection(p3.cloudInitiatives, "Cloud Initiatives", "☁")}
+      ${initiativeSection(p3.dataInitiatives, "Data Modernization", "🗄")}
+      ${initiativeSection(p3.appInitiatives, "Application Modernization", "⚙")}
+      ${initiativeSection(p3.aiInitiatives, "AI Initiatives", "🤖")}
+      ${initiativeSection(p3.digitalTransformation, "Digital Transformation", "📱")}
+    </div>
+    <div>
+      <div class="phase-header green">Phase 10 — Opportunity Scoring</div>
+      <div class="scores-box">
+        ${scoreBar(p10.legacyTechScore || 0, "Legacy Technology")}
+        ${scoreBar(p10.modernizationDriverScore || 0, "Modernization Drivers")}
+        ${scoreBar(p10.executiveTriggerScore || 0, "Executive Triggers")}
+        ${scoreBar(p10.workforcePressureScore || 0, "Workforce Pressure")}
+        ${scoreBar(p10.aiReadinessPressureScore || 0, "AI Readiness Pressure")}
+        ${scoreBar(p10.buyingSignalScore || 0, "Buying Signals")}
+        <div class="score-totals">
+          <span class="score-totals-label">Overall Score</span>
+          <span class="score-totals-val" style="color:${scoreColor(overall)}">${overall}</span>
+        </div>
+      </div>
+      ${rationales}
+      <div class="why-now-box">
+        <div class="why-now-title">Why Now — Score ${p10.whyNowScore || 0}</div>
+        <div class="why-now-text">${p10.whyNowNarrative || ""}</div>
+      </div>
+      <div class="service-box">
+        <div class="service-box-title">Best Service Fit</div>
+        <div class="service-box-text">${p10.bestServiceFit || ""}</div>
+      </div>
+      <div class="opening-box">
+        <div class="opening-title">Recommended Opening</div>
+        <div class="opening-text">"${p10.recommendedOpening || ""}"</div>
+      </div>
+    </div>`;
+}
+
+function closeDeepDive() {
+  activeCompany = null;
+  document.getElementById("deepdive-panel").classList.remove("open");
+  document.querySelectorAll(".company-card").forEach(c => c.classList.remove("active"));
+}
+
+buildFilters();
+</script>
+</body>
+</html>
