@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scoreboard — SunRE Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+<script>
+  // ============================================================
+  // CONFIG — paste the SAME Google Apps Script Web App URL used
+  // in the quiz pages. See google-sheets-setup.md, step 5.
+  // ============================================================
+  const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f1f2e;
+    --slate: #4a5a6a;
+    --mist: #f4f5f3;
+    --rule: #e2e4e1;
+    --accent: #1a6b4a;
+    --accent-light: #eaf3ee;
+    --red: #b5433a;
+    --red-light: #fbeceb;
+    --white: #ffffff;
+    --body: 'DM Sans', sans-serif;
+    --serif: 'DM Serif Display', serif;
+  }
+
+  body {
+    font-family: var(--body);
+    font-weight: 300;
+    color: var(--navy);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    z-index: 100;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo { text-decoration: none; display: flex; align-items: center; }
+  .nav-logo svg { height: 36px; width: auto; }
+
+  .nav-back { font-size: 0.85rem; color: var(--slate); text-decoration: none; }
+  .nav-back:hover { color: var(--navy); }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 60px 6vw 100px; }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  h1.page-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .page-sub { color: var(--slate); font-size: 0.95rem; max-width: 640px; margin-bottom: 2rem; }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-secondary {
+    color: var(--navy);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    border: 1px solid var(--rule);
+    transition: border-color 0.2s;
+    display: inline-block;
+    background: none;
+    cursor: pointer;
+    font-family: var(--body);
+  }
+
+  .btn-secondary:hover { border-color: var(--slate); }
+
+  .status-msg {
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .status-msg.pending { background: var(--mist); color: var(--slate); }
+  .status-msg.error { background: var(--red-light); color: var(--red); }
+  .status-msg.empty { background: var(--mist); color: var(--slate); }
+
+  /* TABLE */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    min-width: 600px;
+  }
+
+  thead th {
+    background: var(--navy);
+    color: var(--white);
+    text-align: left;
+    padding: 0.9rem 1.1rem;
+    font-weight: 500;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  thead th.numeric { text-align: center; }
+
+  tbody td {
+    padding: 0.85rem 1.1rem;
+    border-top: 1px solid var(--rule);
+    color: var(--slate);
+    white-space: nowrap;
+  }
+
+  tbody tr:nth-child(even) { background: var(--mist); }
+
+  tbody td.student-name { color: var(--navy); font-weight: 500; }
+  tbody td.numeric { text-align: center; }
+
+  .cell-score { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.82rem; }
+  .cell-score.na { color: var(--rule); }
+  .cell-score.high { background: var(--accent-light); color: var(--accent); }
+  .cell-score.mid { background: #fdf1de; color: #a86a1c; }
+  .cell-score.low { background: var(--red-light); color: var(--red); }
+
+  .total-col { color: var(--navy); font-weight: 500; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 6vw;
+    text-align: center;
+  }
+
+  footer p { font-size: 0.8rem; color: var(--slate); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SunRE">
+      <style>
+        .nwm  { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #0f1f2e; }
+        .nwmg { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #1a6b4a; }
+      </style>
+      <path d="M 10 46 A 22 22 0 0 1 54 46" fill="#1a6b4a"/>
+      <line x1="4" y1="46" x2="60" y2="46" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="32" y1="18" x2="32" y2="11" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="46" y1="24" x2="51" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="18" y1="24" x2="13" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="55" y1="36" x2="62" y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9"  y1="36" x2="2"  y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <text x="72" y="46" class="nwm">Sun</text>
+      <text x="130" y="46" class="nwmg">RE</text>
+    </svg>
+  </a>
+  <a class="nav-back" href="academy.html">← Back to Academy</a>
+</nav>
+
+<div class="wrap">
+  <span class="section-label">SunRE Academy</span>
+  <h1 class="page-title">Scoreboard.</h1>
+  <p class="page-sub">Every student's results across every assignment, pulled live from the master Google Sheet. Compare performance assignment-to-assignment at a glance.</p>
+
+  <div class="toolbar">
+    <span id="summaryText" style="font-size:0.85rem; color:var(--slate);"></span>
+    <button class="btn-secondary" id="refreshBtn">↻ Refresh</button>
+  </div>
+
+  <div id="statusArea"></div>
+  <div id="tableArea"></div>
+</div>
+
+<footer>
+  <p>© 2026 Sunre Global. SunRE Academy.</p>
+</footer>
+
+<script>
+  const statusArea = document.getElementById('statusArea');
+  const tableArea = document.getElementById('tableArea');
+  const summaryText = document.getElementById('summaryText');
+
+  document.getElementById('refreshBtn').addEventListener('click', loadScores);
+  loadScores();
+
+  function loadScores() {
+    statusArea.innerHTML = '<div class="status-msg pending">Loading scores…</div>';
+    tableArea.innerHTML = '';
+    summaryText.textContent = '';
+
+    if (!SCRIPT_URL || SCRIPT_URL.indexOf('PASTE_YOUR') === 0) {
+      statusArea.innerHTML = '<div class="status-msg error">Not connected to the master scoring sheet yet. See google-sheets-setup.md to set SCRIPT_URL in this file.</div>';
+      return;
+    }
+
+    fetch(SCRIPT_URL, { method: 'GET' })
+      .then(res => res.json())
+      .then(data => {
+        const records = data.records || [];
+        if (records.length === 0) {
+          statusArea.innerHTML = '<div class="status-msg empty">No submissions yet — scores will appear here as students complete assignments.</div>';
+          return;
+        }
+        statusArea.innerHTML = '';
+        renderTable(records);
+      })
+      .catch(err => {
+        statusArea.innerHTML = '<div class="status-msg error">Could not load the scoreboard. This can happen if the sheet isn\'t deployed yet, or if the browser blocked the cross-origin request. Try again, or check the sheet directly in Google Sheets.</div>';
+      });
+  }
+
+  function renderTable(records) {
+    // Normalize keys (Apps Script returns exact header names)
+    const norm = records.map(r => ({
+      name: r['Student Name'] || 'Unknown',
+      cls: r['Class'] || '',
+      assignment: r['Assignment'] || 'Unknown assignment',
+      score: Number(r['Score (pts)']) || 0,
+      total: Number(r['Total (pts)']) || 0,
+      pct: Number(r['Percentage']) || 0,
+      timestamp: r['Timestamp'] || ''
+    }));
+
+    // Distinct assignments, ordered by earliest first appearance
+    const assignmentOrder = [];
+    norm.forEach(r => { if (!assignmentOrder.includes(r.assignment)) assignmentOrder.push(r.assignment); });
+
+    // Group by student (name + class), keep latest attempt per assignment
+    const students = {};
+    norm.forEach(r => {
+      const key = r.name + '||' + r.cls;
+      if (!students[key]) students[key] = { name: r.name, cls: r.cls, attempts: {} };
+      const existing = students[key].attempts[r.assignment];
+      if (!existing || new Date(r.timestamp) > new Date(existing.timestamp)) {
+        students[key].attempts[r.assignment] = r;
+      }
+    });
+
+    const studentList = Object.values(students).sort((a, b) => a.name.localeCompare(b.name));
+
+    summaryText.textContent = `${studentList.length} student${studentList.length !== 1 ? 's' : ''} · ${assignmentOrder.length} assignment${assignmentOrder.length !== 1 ? 's' : ''} · ${records.length} submission${records.length !== 1 ? 's' : ''}`;
+
+    let html = '<div class="table-wrap"><table><thead><tr>';
+    html += '<th>Student</th><th>Class</th>';
+    assignmentOrder.forEach(a => { html += `<th class="numeric">${escapeHtml(a)}</th>`; });
+    html += '<th class="numeric">Total Pts</th><th class="numeric">Average %</th>';
+    html += '</tr></thead><tbody>';
+
+    studentList.forEach(s => {
+      html += '<tr>';
+      html += `<td class="student-name">${escapeHtml(s.name)}</td>`;
+      html += `<td>${escapeHtml(s.cls)}</td>`;
+
+      let totalScore = 0, totalMax = 0, pctSum = 0, attemptCount = 0;
+
+      assignmentOrder.forEach(a => {
+        const att = s.attempts[a];
+        if (att) {
+          totalScore += att.score;
+          totalMax += att.total;
+          pctSum += att.pct;
+          attemptCount++;
+          const cls = att.pct >= 80 ? 'high' : (att.pct >= 50 ? 'mid' : 'low');
+          html += `<td class="numeric"><span class="cell-score ${cls}">${att.score}/${att.total} (${att.pct}%)</span></td>`;
+        } else {
+          html += `<td class="numeric"><span class="cell-score na">—</span></td>`;
+        }
+      });
+
+      const avgPct = attemptCount > 0 ? Math.round(pctSum / attemptCount) : 0;
+      html += `<td class="numeric total-col">${totalScore}/${totalMax}</td>`;
+      html += `<td class="numeric total-col">${avgPct}%</td>`;
+      html += '</tr>';
+    });
+
+    html += '</tbody></table></div>';
+    tableArea.innerHTML = html;
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+</script>
+
+</body>
+</html>

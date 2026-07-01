@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grade 6 Math Quiz 3 — SunRE Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+<style>
+  /* ============================================================
+     CONFIG — paste your Google Apps Script Web App URL below.
+     See google-sheets-setup.md for step-by-step instructions.
+     Until this is set, scores still save locally in the browser
+     and can be downloaded as CSV from the results screen.
+     ============================================================ */
+</style>
+<script>
+  const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+  const ASSIGNMENT_NAME = "Grade 6 Math Quiz — Assignment 3";
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f1f2e;
+    --slate: #4a5a6a;
+    --mist: #f4f5f3;
+    --rule: #e2e4e1;
+    --accent: #1a6b4a;
+    --accent-light: #eaf3ee;
+    --red: #b5433a;
+    --red-light: #fbeceb;
+    --white: #ffffff;
+    --body: 'DM Sans', sans-serif;
+    --serif: 'DM Serif Display', serif;
+  }
+
+  body {
+    font-family: var(--body);
+    font-weight: 300;
+    color: var(--navy);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    z-index: 200;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo { text-decoration: none; display: flex; align-items: center; }
+  .nav-logo svg { height: 36px; width: auto; }
+
+  .nav-back {
+    font-size: 0.85rem;
+    color: var(--slate);
+    text-decoration: none;
+  }
+  .nav-back:hover { color: var(--navy); }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 60px 6vw 100px; }
+
+  /* TIMER BAR */
+  .timer-bar {
+    position: sticky;
+    top: 64px;
+    z-index: 150;
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+  }
+
+  .timer-bar.warning { background: var(--red); }
+
+  .timer-clock {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    min-width: 62px;
+    text-align: center;
+  }
+
+  /* START SCREEN */
+  .start-card {
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  h1.quiz-title {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .quiz-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .quiz-meta-item { font-size: 0.85rem; color: var(--slate); }
+  .quiz-meta-item strong { display: block; color: var(--navy); font-size: 1.1rem; font-family: var(--serif); font-weight: 400; }
+
+  .form-group { margin-bottom: 1.25rem; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 6px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    font-family: var(--body);
+    font-size: 0.95rem;
+    color: var(--navy);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus { border-color: var(--accent); }
+
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--accent); }
+  .btn-primary:disabled { background: var(--rule); color: var(--slate); cursor: not-allowed; }
+
+  .btn-secondary {
+    color: var(--navy);
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border: 1px solid var(--rule);
+    transition: border-color 0.2s;
+    display: inline-block;
+    background: none;
+    cursor: pointer;
+    font-family: var(--body);
+  }
+
+  .btn-secondary:hover { border-color: var(--slate); }
+
+  .form-error {
+    color: var(--red);
+    font-size: 0.82rem;
+    margin-top: 0.5rem;
+    display: none;
+  }
+
+  /* QUESTIONS */
+  .q-progress {
+    font-size: 0.8rem;
+    color: var(--slate);
+    margin-bottom: 1.5rem;
+    text-align: right;
+  }
+
+  .question-card {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .question-num {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .diff-badge {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 9px;
+    border-radius: 20px;
+  }
+
+  .diff-badge.easy { background: var(--accent-light); color: var(--accent); }
+  .diff-badge.medium { background: #fdf1de; color: #a86a1c; }
+  .diff-badge.hard { background: var(--red-light); color: var(--red); }
+
+  .points-badge {
+    font-size: 0.68rem;
+    color: var(--slate);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  .question-text {
+    font-size: 1.02rem;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+  }
+
+  .options { display: flex; flex-direction: column; gap: 0.6rem; }
+
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    font-size: 0.92rem;
+    color: var(--slate);
+  }
+
+  .option:hover { border-color: var(--accent); background: var(--accent-light); }
+
+  .option input[type="radio"] { accent-color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+
+  .option.selected { border-color: var(--accent); background: var(--accent-light); color: var(--navy); }
+
+  .submit-bar {
+    position: sticky;
+    bottom: 0;
+    background: var(--white);
+    border-top: 1px solid var(--rule);
+    padding: 1.25rem 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .submit-bar-status { font-size: 0.82rem; color: var(--slate); }
+
+  /* RESULTS */
+  .results-hero {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: var(--mist);
+    border-radius: 10px;
+    margin-top: 1.5rem;
+  }
+
+  .results-score {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .results-pct { font-size: 1rem; color: var(--accent); font-weight: 500; margin-bottom: 0.5rem; }
+  .results-name { font-size: 0.9rem; color: var(--slate); }
+
+  .save-status {
+    margin-top: 1.5rem;
+    padding: 0.85rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .save-status.ok { background: var(--accent-light); color: var(--accent); }
+  .save-status.pending { background: var(--mist); color: var(--slate); }
+  .save-status.error { background: var(--red-light); color: var(--red); }
+
+  .review-item {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .review-item.correct { border-left: 4px solid var(--accent); }
+  .review-item.incorrect { border-left: 4px solid var(--red); }
+
+  .review-q { font-size: 0.92rem; color: var(--navy); margin-bottom: 0.6rem; }
+  .review-answer { font-size: 0.85rem; color: var(--slate); margin-bottom: 0.2rem; }
+  .review-answer.your-wrong { color: var(--red); }
+  .review-answer.your-right { color: var(--accent); }
+
+  .results-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .hidden { display: none !important; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 6vw;
+    text-align: center;
+  }
+
+  footer p { font-size: 0.8rem; color: var(--slate); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SunRE">
+      <style>
+        .nwm  { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #0f1f2e; }
+        .nwmg { font-family: Georgia, serif; font-size: 28px; font-weight: 400; fill: #1a6b4a; }
+      </style>
+      <path d="M 10 46 A 22 22 0 0 1 54 46" fill="#1a6b4a"/>
+      <line x1="4" y1="46" x2="60" y2="46" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="32" y1="18" x2="32" y2="11" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="46" y1="24" x2="51" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="18" y1="24" x2="13" y2="18" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="55" y1="36" x2="62" y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9"  y1="36" x2="2"  y2="32" stroke="#0f1f2e" stroke-width="2" stroke-linecap="round"/>
+      <text x="72" y="46" class="nwm">Sun</text>
+      <text x="130" y="46" class="nwmg">RE</text>
+    </svg>
+  </a>
+  <a class="nav-back" href="academy.html">← Back to Academy</a>
+</nav>
+
+<!-- TIMER (shown only during quiz) -->
+<div class="timer-bar hidden" id="timerBar">
+  <span>Time remaining</span>
+  <span class="timer-clock" id="timerClock">45:00</span>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ START SCREEN ============ -->
+  <div id="startScreen">
+    <span class="section-label">SunRE Academy · Grade 6</span>
+    <h1 class="quiz-title">Grade 6 Math Quiz — Assignment 3</h1>
+    <div class="start-card">
+      <div class="quiz-meta">
+        <div class="quiz-meta-item"><strong>15</strong>Questions</div>
+        <div class="quiz-meta-item"><strong>30</strong>Points total</div>
+        <div class="quiz-meta-item"><strong>45 min</strong>Time limit</div>
+        <div class="quiz-meta-item"><strong>MCQ</strong>Format</div>
+      </div>
+      <p style="color:var(--slate); font-size:0.9rem; margin-bottom:0.75rem;">Covers factors and multiples, percentages, expressions, surface area, volume, and basic probability. Questions are tagged by difficulty and weighted accordingly:</p>
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+        <span class="diff-badge easy">Easy · 1 pt (5 questions)</span>
+        <span class="diff-badge medium">Medium · 2 pts (5 questions)</span>
+        <span class="diff-badge hard">Hard · 3 pts (5 questions)</span>
+      </div>
+      <p style="color:var(--slate); font-size:0.9rem; margin-bottom:1.5rem;">Once you start, the timer cannot be paused. Your answers are saved as you go — if the timer runs out, the quiz will submit automatically with whatever you've answered.</p>
+      <div class="form-group">
+        <label for="studentName">Your full name</label>
+        <input type="text" id="studentName" placeholder="e.g. Jordan Lee" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="studentClass">Class / Section (optional)</label>
+        <input type="text" id="studentClass" placeholder="e.g. 6B" autocomplete="off" />
+      </div>
+      <p class="form-error" id="nameError">Please enter your name to begin.</p>
+      <button class="btn-primary" id="startBtn">Start quiz →</button>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ SCREEN ============ -->
+  <div id="quizScreen" class="hidden">
+    <div class="q-progress" id="qProgress">0 of 15 answered</div>
+    <form id="quizForm"></form>
+    <div class="submit-bar">
+      <span class="submit-bar-status">Answers save automatically as you select them.</span>
+      <button class="btn-primary" id="submitBtn" type="button">Submit quiz</button>
+    </div>
+  </div>
+
+  <!-- ============ RESULTS SCREEN ============ -->
+  <div id="resultsScreen" class="hidden">
+    <div class="results-hero">
+      <span class="section-label" style="justify-content:center;">Results</span>
+      <div class="results-score" id="resultsScore">0 / 30 pts</div>
+      <div class="results-pct" id="resultsPct">0%</div>
+      <div class="results-name" id="resultsName"></div>
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; margin-top:1rem;" id="difficultyBreakdown"></div>
+      <div class="save-status pending" id="saveStatus">Saving your result…</div>
+    </div>
+
+    <div class="results-actions">
+      <button class="btn-primary" id="downloadBtn" type="button">Download my result (CSV) →</button>
+      <a class="btn-secondary" href="academy.html">Back to Academy</a>
+    </div>
+
+    <div id="reviewList" style="margin-top:2.5rem;"></div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Sunre Global. SunRE Academy.</p>
+</footer>
+
+<script>
+  // ------------------------------------------------------------------
+  // QUESTION BANK — Grade 6 Math, Assignment 3
+  // To reuse this page for a new assignment: change ASSIGNMENT_NAME
+  // above, edit the questions array below, and keep everything else.
+  // ------------------------------------------------------------------
+  const POINTS = { easy: 1, medium: 2, hard: 3 };
+
+  const QUESTIONS = [
+    // ---- EASY (1 pt each) ----
+    { q: "What is the greatest common factor (GCF) of 12 and 18?", options: ["2", "6", "3", "36"], answer: 1, difficulty: "easy" },
+    { q: "What is 3/5 × 2?", options: ["6/5", "3/10", "6/10", "5/3"], answer: 0, difficulty: "easy" },
+    { q: "Which of these is the smallest?", options: ["0.45", "0.5", "0.405", "0.54"], answer: 2, difficulty: "easy" },
+    { q: "What is 40% written as a fraction in simplest form?", options: ["2/5", "4/10", "40/100", "4/5"], answer: 0, difficulty: "easy" },
+    { q: "Solve using order of operations: 20 - 4 × 3 = ?", options: ["48", "8", "16", "12"], answer: 1, difficulty: "easy" },
+
+    // ---- MEDIUM (2 pts each) ----
+    { q: "What is the least common multiple (LCM) of 4 and 6?", options: ["10", "12", "24", "18"], answer: 1, difficulty: "medium" },
+    { q: "A shirt originally costs $40. It is on sale for 25% off. What is the sale price?", options: ["$10", "$30", "$35", "$32"], answer: 1, difficulty: "medium" },
+    { q: "Evaluate the expression 2x + 5 when x = 6.", options: ["11", "17", "13", "16"], answer: 1, difficulty: "medium" },
+    { q: "What is the surface area of a cube with side length 4 cm? (Surface area = 6 × side²)", options: ["16 cm²", "24 cm²", "96 cm²", "64 cm²"], answer: 2, difficulty: "medium" },
+    { q: "Which fraction is greater: 5/6 or 7/9?", options: ["5/6", "7/9", "Equal", "Cannot compare"], answer: 0, difficulty: "medium" },
+
+    // ---- HARD (3 pts each) — includes geometry volume ----
+    { q: "What is the volume of a rectangular prism with length 12 cm, width 5 cm, and height 3 cm?", options: ["180 cm³", "60 cm³", "20 cm³", "150 cm³"], answer: 0, difficulty: "hard" },
+    { q: "A gift box is a cube with side length 10 cm. What is its volume in liters? (1000 cm³ = 1 liter)", options: ["1 liter", "10 liters", "100 liters", "0.1 liter"], answer: 0, difficulty: "hard" },
+    { q: "A bag has 3 red, 5 blue, and 2 green marbles. What is the probability of picking a blue marble at random?", options: ["1/2", "1/5", "3/10", "1/10"], answer: 0, difficulty: "hard" },
+    { q: "Solve for x: 3x + 4 = 2x + 9.", options: ["x = 5", "x = 13", "x = 4", "x = -5"], answer: 0, difficulty: "hard" },
+    { q: "What is 15% of 220?", options: ["33", "22", "30", "35"], answer: 0, difficulty: "hard" }
+  ];
+
+  const TIME_LIMIT_SECONDS = 45 * 60;
+  let timeLeft = TIME_LIMIT_SECONDS;
+  let timerInterval = null;
+  let studentName = "";
+  let studentClass = "";
+  let startedAt = null;
+  const userAnswers = new Array(QUESTIONS.length).fill(null);
+
+  const startScreen = document.getElementById('startScreen');
+  const quizScreen = document.getElementById('quizScreen');
+  const resultsScreen = document.getElementById('resultsScreen');
+  const timerBar = document.getElementById('timerBar');
+  const timerClock = document.getElementById('timerClock');
+  const quizForm = document.getElementById('quizForm');
+  const qProgress = document.getElementById('qProgress');
+
+  document.getElementById('startBtn').addEventListener('click', () => {
+    const nameInput = document.getElementById('studentName');
+    const classInput = document.getElementById('studentClass');
+    studentName = nameInput.value.trim();
+    studentClass = classInput.value.trim();
+
+    if (!studentName) {
+      document.getElementById('nameError').style.display = 'block';
+      nameInput.focus();
+      return;
+    }
+
+    startedAt = Date.now();
+    startScreen.classList.add('hidden');
+    quizScreen.classList.remove('hidden');
+    timerBar.classList.remove('hidden');
+    renderQuestions();
+    startTimer();
+  });
+
+  function renderQuestions() {
+    quizForm.innerHTML = '';
+    QUESTIONS.forEach((item, qi) => {
+      const card = document.createElement('div');
+      card.className = 'question-card';
+
+      const label = document.createElement('span');
+      label.className = 'question-num';
+      const pts = POINTS[item.difficulty];
+      label.innerHTML = `Question ${qi + 1} of ${QUESTIONS.length} <span class="diff-badge ${item.difficulty}">${item.difficulty}</span> <span class="points-badge">${pts} pt${pts > 1 ? 's' : ''}</span>`;
+      card.appendChild(label);
+
+      const qText = document.createElement('div');
+      qText.className = 'question-text';
+      qText.textContent = item.q;
+      card.appendChild(qText);
+
+      const optsWrap = document.createElement('div');
+      optsWrap.className = 'options';
+
+      item.options.forEach((opt, oi) => {
+        const optLabel = document.createElement('label');
+        optLabel.className = 'option';
+        optLabel.id = `opt-${qi}-${oi}`;
+
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = `q${qi}`;
+        radio.value = oi;
+        radio.addEventListener('change', () => selectAnswer(qi, oi));
+
+        const span = document.createElement('span');
+        span.textContent = opt;
+
+        optLabel.appendChild(radio);
+        optLabel.appendChild(span);
+        optsWrap.appendChild(optLabel);
+      });
+
+      card.appendChild(optsWrap);
+      quizForm.appendChild(card);
+    });
+  }
+
+  function selectAnswer(qi, oi) {
+    userAnswers[qi] = oi;
+    QUESTIONS[qi].options.forEach((_, i) => {
+      document.getElementById(`opt-${qi}-${i}`).classList.toggle('selected', i === oi);
+    });
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const answered = userAnswers.filter(a => a !== null).length;
+    qProgress.textContent = `${answered} of ${QUESTIONS.length} answered`;
+  }
+
+  function startTimer() {
+    updateClock();
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      updateClock();
+      if (timeLeft <= 300) timerBar.classList.add('warning');
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        finishQuiz(true);
+      }
+    }, 1000);
+  }
+
+  function updateClock() {
+    const m = Math.floor(Math.max(timeLeft, 0) / 60).toString().padStart(2, '0');
+    const s = Math.max(timeLeft, 0) % 60;
+    timerClock.textContent = `${m}:${s.toString().padStart(2, '0')}`;
+  }
+
+  document.getElementById('submitBtn').addEventListener('click', () => {
+    const answered = userAnswers.filter(a => a !== null).length;
+    if (answered < QUESTIONS.length) {
+      const ok = confirm(`You've answered ${answered} of ${QUESTIONS.length} questions. Submit anyway?`);
+      if (!ok) return;
+    }
+    clearInterval(timerInterval);
+    finishQuiz(false);
+  });
+
+  function finishQuiz(autoSubmitted) {
+    quizScreen.classList.add('hidden');
+    timerBar.classList.add('hidden');
+    resultsScreen.classList.remove('hidden');
+
+    const maxPoints = QUESTIONS.reduce((sum, item) => sum + POINTS[item.difficulty], 0);
+    const breakdown = {
+      easy: { earned: 0, max: 0, correct: 0, count: 0 },
+      medium: { earned: 0, max: 0, correct: 0, count: 0 },
+      hard: { earned: 0, max: 0, correct: 0, count: 0 }
+    };
+
+    let earnedPoints = 0;
+    let correctCount = 0;
+    QUESTIONS.forEach((item, qi) => {
+      const pts = POINTS[item.difficulty];
+      const d = breakdown[item.difficulty];
+      d.max += pts;
+      d.count++;
+      if (userAnswers[qi] === item.answer) {
+        earnedPoints += pts;
+        correctCount++;
+        d.earned += pts;
+        d.correct++;
+      }
+    });
+
+    const pct = Math.round((earnedPoints / maxPoints) * 100);
+    const elapsedSec = Math.round((Date.now() - startedAt) / 1000);
+    const timeTaken = `${Math.floor(elapsedSec / 60)}:${(elapsedSec % 60).toString().padStart(2, '0')}`;
+
+    document.getElementById('resultsScore').textContent = `${earnedPoints} / ${maxPoints} pts`;
+    document.getElementById('resultsPct').textContent = `${pct}% · ${correctCount} of ${QUESTIONS.length} correct`;
+    document.getElementById('resultsName').textContent = studentName + (studentClass ? ` · ${studentClass}` : '') + (autoSubmitted ? ' · time expired' : '');
+
+    const diffWrap = document.getElementById('difficultyBreakdown');
+    diffWrap.innerHTML = '';
+    ['easy', 'medium', 'hard'].forEach(level => {
+      const d = breakdown[level];
+      const badge = document.createElement('span');
+      badge.className = `diff-badge ${level}`;
+      badge.textContent = `${level.charAt(0).toUpperCase() + level.slice(1)}: ${d.earned}/${d.max} pts (${d.correct}/${d.count} correct)`;
+      diffWrap.appendChild(badge);
+    });
+
+    renderReview();
+
+    const payload = {
+      name: studentName,
+      class: studentClass,
+      assignment: ASSIGNMENT_NAME,
+      score: earnedPoints,
+      total: maxPoints,
+      correctCount: correctCount,
+      questionCount: QUESTIONS.length,
+      percentage: pct,
+      easyScore: `${breakdown.easy.earned}/${breakdown.easy.max}`,
+      mediumScore: `${breakdown.medium.earned}/${breakdown.medium.max}`,
+      hardScore: `${breakdown.hard.earned}/${breakdown.hard.max}`,
+      timeTaken: timeTaken,
+      autoSubmitted: autoSubmitted,
+      timestamp: new Date().toISOString(),
+      answers: userAnswers
+    };
+
+    saveLocally(payload);
+    submitToSheet(payload);
+
+    document.getElementById('downloadBtn').addEventListener('click', () => downloadCsv(payload));
+  }
+
+  function renderReview() {
+    const wrap = document.getElementById('reviewList');
+    wrap.innerHTML = '<span class="section-label">Answer review</span>';
+    QUESTIONS.forEach((item, qi) => {
+      const correct = userAnswers[qi] === item.answer;
+      const div = document.createElement('div');
+      div.className = `review-item ${correct ? 'correct' : 'incorrect'}`;
+
+      const qEl = document.createElement('div');
+      qEl.className = 'review-q';
+      const pts = POINTS[item.difficulty];
+      qEl.innerHTML = `${qi + 1}. ${item.q} <span class="diff-badge ${item.difficulty}">${item.difficulty} · ${pts} pt${pts > 1 ? 's' : ''}</span>`;
+      div.appendChild(qEl);
+
+      const yourAns = document.createElement('div');
+      yourAns.className = `review-answer ${correct ? 'your-right' : 'your-wrong'}`;
+      yourAns.textContent = 'Your answer: ' + (userAnswers[qi] === null ? '(no answer)' : item.options[userAnswers[qi]]);
+      div.appendChild(yourAns);
+
+      if (!correct) {
+        const correctAns = document.createElement('div');
+        correctAns.className = 'review-answer your-right';
+        correctAns.textContent = 'Correct answer: ' + item.options[item.answer];
+        div.appendChild(correctAns);
+      }
+
+      wrap.appendChild(div);
+    });
+  }
+
+  function saveLocally(payload) {
+    const key = 'sunre_academy_scores';
+    const existing = JSON.parse(localStorage.getItem(key) || '[]');
+    existing.push(payload);
+    localStorage.setItem(key, JSON.stringify(existing));
+  }
+
+  function submitToSheet(payload) {
+    const statusEl = document.getElementById('saveStatus');
+
+    if (!SCRIPT_URL || SCRIPT_URL.indexOf('PASTE_YOUR') === 0) {
+      statusEl.className = 'save-status error';
+      statusEl.textContent = 'Not connected to the master scoring sheet yet — your result is saved in this browser and included in the CSV download.';
+      return;
+    }
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    }).then(() => {
+      statusEl.className = 'save-status ok';
+      statusEl.textContent = 'Saved to the SunRE Academy scoring sheet.';
+    }).catch(() => {
+      statusEl.className = 'save-status error';
+      statusEl.textContent = 'Could not reach the scoring sheet — your result is still saved in this browser and in the CSV download.';
+    });
+  }
+
+  function downloadCsv(payload) {
+    const rows = [
+      ['Name', 'Class', 'Assignment', 'Score (pts)', 'Total (pts)', 'Percentage', 'Correct Answers', 'Easy', 'Medium', 'Hard', 'Time Taken', 'Auto-submitted', 'Timestamp'],
+      [payload.name, payload.class, payload.assignment, payload.score, payload.total, payload.percentage + '%', `${payload.correctCount}/${payload.questionCount}`, payload.easyScore, payload.mediumScore, payload.hardScore, payload.timeTaken, payload.autoSubmitted, payload.timestamp]
+    ];
+    const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${payload.name.replace(/\s+/g, '_')}_grade6_math_assignment3_result.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+</script>
+
+</body>
+</html>
