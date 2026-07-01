@@ -13,7 +13,7 @@
    should not be relied on to protect sensitive data.
    ========================================================================== */
 (function () {
-  var ACADEMY_PASSWORD = "sunre2026";
+  var ACADEMY_PASSWORD = "Sunre2026";
   var STORAGE_KEY = "sunre_academy_unlocked";
 
   function encode(pw) {
