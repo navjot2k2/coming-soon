@@ -3,93 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sunre Global — business, technology and wealth solutions.">
-<title>Sunre Global | Business, Technology & Wealth</title>
+<meta name="description" content="Sunre Global — business strategy, technology advisory and transformation.">
+<title>Sunre Global | Business & Technology</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#10202d;--muted:#61717d;--green:#176b4b;--green-soft:#edf6f1;--line:#e4e9e6;--paper:#fff;--soft:#f7f9f8}
+:root{--ink:#10202d;--muted:#63737f;--green:#176b4b;--green2:#eaf4ef;--line:#e3e9e6;--paper:#fff;--soft:#f6f8f7}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.7}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);line-height:1.65;background:var(--paper)}
 a{color:inherit}
-.container{width:min(1120px,calc(100% - 48px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:inline-flex;text-decoration:none;align-items:center}
-.logo svg{width:142px;height:auto}
-.nav-links{display:flex;gap:28px;align-items:center;list-style:none}
-.nav-links a{font-size:14px;text-decoration:none;color:var(--muted)}
+.container{width:min(1160px,calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;text-decoration:none}
+.logo svg{width:148px;height:auto}
+.nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+.nav-links a{font-size:14px;color:var(--muted);text-decoration:none}
 .nav-links a:hover{color:var(--ink)}
-.nav-button{padding:9px 17px;border-radius:7px;background:var(--ink);color:#fff!important}
-.menu{display:none;border:0;background:none;font-size:24px}
-.hero{padding:112px 0 100px;background:linear-gradient(180deg,#fff 0%,#fbfcfb 100%)}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:center}
-.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--green);margin-bottom:20px}
-h1,h2{font-family:"DM Serif Display",serif;font-weight:400;line-height:1.08}
-h1{font-size:clamp(48px,6vw,76px);max-width:760px;letter-spacing:-.025em}
-.hero-copy{font-size:18px;color:var(--muted);max-width:620px;margin:24px 0 34px}
+.nav-cta{background:var(--ink);color:#fff!important;padding:10px 18px;border-radius:6px}
+.menu{display:none;border:0;background:none;font-size:25px;color:var(--ink)}
+.hero{padding:120px 0 105px;background:linear-gradient(135deg,#fff 0%,#f7faf8 100%)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:end}
+.kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.15em;font-size:12px;font-weight:600;color:var(--green);margin-bottom:22px}
+.kicker:before{content:"";width:28px;height:2px;background:var(--green)}
+h1,h2{font-family:"DM Serif Display",serif;font-weight:400;line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(52px,7vw,88px);max-width:850px}
+.hero-copy{font-size:19px;color:var(--muted);max-width:670px;margin:28px 0 34px}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:7px;text-decoration:none;font-size:14px;font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600}
 .btn-dark{background:var(--ink);color:#fff}
-.btn-light{border:1px solid var(--line);background:#fff}
-.btn:hover{transform:translateY(-1px)}
-.hero-panel{background:var(--ink);color:#fff;border-radius:18px;padding:34px;min-height:360px;display:flex;flex-direction:column;justify-content:space-between}
-.hero-panel .mark{font-family:"DM Serif Display",serif;font-size:92px;line-height:.8;color:#6cc49f}
-.hero-panel h2{font-size:32px;margin:25px 0 10px}
-.hero-panel p{color:#b8c8d1;font-size:14px}
-.section{padding:96px 0}
+.btn-outline{border:1px solid var(--line);background:#fff}
+.hero-note{border-left:1px solid var(--green);padding:4px 0 4px 24px;color:var(--muted);font-size:14px}
+.hero-note strong{display:block;color:var(--ink);font-size:16px;margin-bottom:6px}
+.section{padding:100px 0}
 .section-soft{background:var(--soft)}
-.section-head{max-width:650px;margin-bottom:42px}
-.section-head h2{font-size:clamp(36px,4vw,52px);margin-bottom:14px}
+.section-head{max-width:720px;margin-bottom:48px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:600;color:var(--green);margin-bottom:16px}
+.section-head h2{font-size:clamp(38px,5vw,58px);margin-bottom:16px}
 .section-head p{color:var(--muted);font-size:16px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{border:1px solid var(--line);border-radius:12px;padding:28px;background:#fff}
-.card:hover{border-color:#cbd8d2}
-.card-number{font-size:12px;font-weight:600;color:var(--green);letter-spacing:.1em}
-.card h3{font-size:19px;margin:28px 0 9px}
-.card p{font-size:14px;color:var(--muted)}
-.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
-.about-box{border-radius:18px;background:var(--green-soft);min-height:390px;display:flex;align-items:center;justify-content:center}
-.about-box svg{width:220px;max-width:65%}
-.about-copy p{color:var(--muted);margin-bottom:17px}
-.points{list-style:none;margin-top:25px}
-.points li{padding:12px 0;border-top:1px solid var(--line);font-size:14px}
-.points li::before{content:"—";color:var(--green);margin-right:12px}
-.resources{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.resource{padding:32px;border-radius:12px;background:#fff;border:1px solid var(--line);text-decoration:none}
-.resource h3{font-size:21px;margin-bottom:8px}
-.resource p{font-size:14px;color:var(--muted);margin-bottom:20px}
-.resource span{font-size:14px;font-weight:600;color:var(--green)}
-.contact{background:var(--ink);color:#fff;padding:88px 0}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.contact h2{font-size:clamp(40px,4vw,58px);margin-bottom:18px}
-.contact p{color:#b8c8d1;max-width:500px}
-.contact-details{margin-top:32px}
-.contact-details a{display:inline-block;color:#fff;text-decoration:none;font-size:16px;border-bottom:1px solid #4f6876;padding-bottom:4px}
-.contact-details small{display:block;color:#7f98a6;text-transform:uppercase;letter-spacing:.1em;font-size:11px;margin-bottom:7px}
-.contact-card{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:30px}
-.contact-card h3{font-size:18px;margin-bottom:8px}
-.contact-card p{font-size:14px;margin-bottom:22px}
-footer{padding:26px 0;border-top:1px solid var(--line)}
-.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.service{position:relative;border:1px solid var(--line);border-radius:10px;padding:34px;background:#fff;min-height:290px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:.2s}
+.service:hover{transform:translateY(-3px);border-color:#b9cec4}
+.service-num{font-size:12px;color:var(--green);font-weight:600;letter-spacing:.1em}
+.service h3{font-size:24px;margin:30px 0 10px}
+.service p{font-size:14px;color:var(--muted);max-width:470px}
+.service-link{font-size:14px;font-weight:600;color:var(--green);margin-top:25px}
+.split{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;align-items:start}
+.big-statement{font-family:"DM Serif Display",serif;font-size:clamp(34px,4vw,50px);line-height:1.12}
+.about-copy{color:var(--muted);font-size:16px;max-width:650px}
+.about-copy p+p{margin-top:18px}
+.principles{margin-top:38px;border-top:1px solid var(--line)}
+.principle{display:grid;grid-template-columns:50px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.principle span{font-size:12px;color:var(--green);font-weight:600}
+.principle strong{display:block;color:var(--ink);font-size:15px;margin-bottom:3px}
+.principle p{font-size:13px}
+.academy{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:center}
+.academy-card{background:var(--ink);color:#fff;border-radius:14px;padding:38px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
+.academy-card .mini{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7ed0a9}
+.academy-card h3{font-family:"DM Serif Display",serif;font-weight:400;font-size:34px;line-height:1.1}
+.academy-card a{color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+.contact{background:var(--ink);color:#fff;padding:90px 0}
+.contact-grid{display:grid;grid-template-columns:1fr .7fr;gap:80px}
+.contact h2{font-size:clamp(44px,5vw,64px);max-width:650px;margin-bottom:18px}
+.contact p{color:#b7c5cc;max-width:550px}
+.email{display:inline-block;margin-top:30px;color:#fff;text-decoration:none;border-bottom:1px solid #4d6470;padding-bottom:5px}
+footer{border-top:1px solid var(--line);padding:25px 0}
+.footer-row{display:flex;justify-content:space-between;gap:20px}
 footer p,footer a{font-size:12px;color:var(--muted);text-decoration:none}
-.footer-links{display:flex;gap:20px}
+.footer-links{display:flex;gap:22px}
 @media(max-width:800px){
- .container{width:min(100% - 32px,1120px)}
- .nav-links{display:none}.menu{display:block}
- .hero{padding:76px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:42px}
- .hero-panel{min-height:290px}.cards{grid-template-columns:1fr}.resources{grid-template-columns:1fr}
- .section{padding:72px 0}.contact{padding:72px 0}.footer-row{align-items:flex-start;flex-direction:column}
+.container{width:min(100% - 32px,1160px)}
+.nav-links{display:none}.menu{display:block}
+.hero{padding:82px 0 75px}.hero-grid,.split,.academy,.contact-grid{grid-template-columns:1fr;gap:42px}
+.hero-note{margin-top:15px}.services{grid-template-columns:1fr}.section{padding:72px 0}
+.footer-row{flex-direction:column}.footer-links{flex-wrap:wrap}
 }
 </style>
 </head>
 <body>
 <header>
-<div class="container">
-<nav>
-<a class="logo" href="#" aria-label="Sunre Global">
+<div class="container"><nav>
+<a class="logo" href="index.html" aria-label="Sunre Global">
 <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img">
 <path d="M10 46A22 22 0 0 1 54 46" fill="#176b4b"/>
 <line x1="4" y1="46" x2="60" y2="46" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
@@ -100,126 +96,40 @@ footer p,footer a{font-size:12px;color:var(--muted);text-decoration:none}
 <line x1="9" y1="36" x2="2" y2="32" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
 <text x="72" y="46" font-family="Georgia,serif" font-size="28" fill="#10202d">Sun</text>
 <text x="130" y="46" font-family="Georgia,serif" font-size="28" fill="#176b4b">RE</text>
-</svg>
-</a>
+</svg></a>
 <ul class="nav-links">
-<li><a href="#services">Services</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="academy.html">Academy</a></li>
-<li><a href="wealth.html">Wealth</a></li>
-<li><a href="#contact" class="nav-button">Contact</a></li>
+<li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="academy.html">Academy</a></li><li><a href="#contact" class="nav-cta">Contact</a></li>
 </ul>
-<button class="menu" aria-label="Menu" onclick="alert('Use the navigation links above.')">☰</button>
-</nav>
-</div>
+<button class="menu" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</nav></div>
 </header>
-
 <main>
-<section class="hero">
-<div class="container hero-grid">
-<div>
-<p class="eyebrow">Business • Technology • Wealth</p>
-<h1>Clear thinking for what comes next.</h1>
-<p class="hero-copy">Sunre Global brings practical business, technology and wealth solutions together to help people and organisations move forward with confidence.</p>
-<div class="actions">
-<a class="btn btn-dark" href="#services">Explore services</a>
-<a class="btn btn-light" href="#contact">Start a conversation</a>
-</div>
-</div>
-<div class="hero-panel">
-<div class="mark">S</div>
-<div>
-<h2>Practical. Independent. Focused.</h2>
-<p>Advice designed around your priorities — without unnecessary complexity.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section" id="services">
-<div class="container">
-<div class="section-head">
-<p class="eyebrow">What we do</p>
-<h2>Expertise where business decisions matter.</h2>
-<p>Focused support across strategy, technology and financial planning, with an emphasis on practical next steps.</p>
-</div>
-<div class="cards">
-<article class="card"><span class="card-number">01</span><h3>Business Strategy</h3><p>Growth planning, market opportunities, commercial strategy and practical guidance for the decisions ahead.</p></article>
-<article class="card"><span class="card-number">02</span><h3>Technology Advisory</h3><p>Technology strategy, transformation, vendor selection and modernisation aligned with business outcomes.</p></article>
-<article class="card"><span class="card-number">03</span><h3>Wealth &amp; Insurance</h3><p>Resources and guidance around registered accounts, segregated funds and insurance-based strategies.</p></article>
-</div>
-</div>
-</section>
-
-<section class="section section-soft" id="about">
-<div class="container about-grid">
-<div class="about-box">
-<svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M70 140A70 70 0 0 1 210 140" fill="#176b4b"/>
-<line x1="55" y1="140" x2="225" y2="140" stroke="#10202d" stroke-width="4" stroke-linecap="round"/>
-<line x1="140" y1="55" x2="140" y2="35" stroke="#10202d" stroke-width="4" stroke-linecap="round"/>
-<line x1="188" y1="74" x2="202" y2="58" stroke="#10202d" stroke-width="4" stroke-linecap="round"/>
-<line x1="92" y1="74" x2="78" y2="58" stroke="#10202d" stroke-width="4" stroke-linecap="round"/>
-<text x="71" y="190" font-family="Georgia,serif" font-size="44" fill="#10202d">Sun</text>
-<text x="156" y="190" font-family="Georgia,serif" font-size="44" fill="#176b4b">RE</text>
-</svg>
-</div>
-<div class="about-copy">
-<p class="eyebrow">About Sunre</p>
-<h2>Simple advice. Thoughtful execution.</h2>
-<p>We believe good advice should make decisions clearer, not add another layer of complexity.</p>
-<p>Sunre Global works across business and technology consulting, while developing practical wealth and insurance resources for individuals, families and business owners.</p>
-<ul class="points">
-<li>Practical recommendations you can act on</li>
-<li>Independent, client-focused thinking</li>
-<li>Flexible support based on your needs</li>
-<li>Local perspective with a global outlook</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section class="section" id="resources">
-<div class="container">
-<div class="section-head">
-<p class="eyebrow">Explore</p>
-<h2>Useful resources, built into the Sunre experience.</h2>
-</div>
-<div class="resources">
-<a class="resource" href="academy.html"><h3>Sunre Academy</h3><p>Learning resources and interactive tools designed to make learning more engaging.</p><span>Visit Academy →</span></a>
-<a class="resource" href="wealth.html"><h3>Sunre Wealth</h3><p>Information and resources covering wealth, insurance and financial planning topics.</p><span>Explore Wealth →</span></a>
-</div>
-</div>
-</section>
-
-<section class="contact" id="contact">
-<div class="container contact-grid">
-<div>
-<p class="eyebrow" style="color:#6cc49f">Get in touch</p>
-<h2>Let's start with a conversation.</h2>
-<p>Tell us what you're working on and we'll help you identify the right next step.</p>
-<div class="contact-details">
-<small>Email</small>
-<a href="mailto:hello@sunre.ca">hello@sunre.ca</a>
-</div>
-</div>
-<div class="contact-card">
-<h3>Business, technology or wealth?</h3>
-<p>Choose the area that best matches what you need, then get in touch directly.</p>
-<div class="actions">
-<a class="btn btn-light" href="mailto:hello@sunre.ca?subject=Sunre%20Global%20Inquiry">Email Sunre →</a>
-</div>
-</div>
-</div>
-</section>
+<section class="hero"><div class="container hero-grid"><div>
+<div class="kicker">Business • Technology</div>
+<h1>Make the next business decision with clarity.</h1>
+<p class="hero-copy">Sunre Global helps organisations navigate growth, technology and transformation with practical advice built around business outcomes.</p>
+<div class="actions"><a class="btn btn-dark" href="#services">Explore services</a><a class="btn btn-outline" href="#contact">Talk to Sunre</a></div>
+</div><div class="hero-note"><strong>Independent perspective.</strong>Focused on the decision in front of you — and what it takes to execute it.</div></div></section>
+<section class="section" id="services"><div class="container">
+<div class="section-head"><div class="eyebrow">Services</div><h2>Focused expertise. Practical outcomes.</h2><p>Support across the commercial and technology decisions that shape how a business grows and operates.</p></div>
+<div class="services">
+<a class="service" href="#contact"><div><span class="service-num">01</span><h3>Business Strategy</h3><p>Growth strategy, market development, commercial planning, business development and partner strategy.</p></div><span class="service-link">Discuss your business →</span></a>
+<a class="service" href="#contact"><div><span class="service-num">02</span><h3>Technology Advisory</h3><p>Technology strategy, vendor evaluation, cloud, modernization and transformation aligned with business priorities.</p></div><span class="service-link">Discuss your technology →</span></a>
+<a class="service" href="#contact"><div><span class="service-num">03</span><h3>Digital Transformation</h3><p>Turn technology initiatives into structured programmes with clear priorities, stakeholders and measurable outcomes.</p></div><span class="service-link">Start a conversation →</span></a>
+<a class="service" href="#contact"><div><span class="service-num">04</span><h3>Partnerships &amp; Growth</h3><p>Build stronger routes to market through strategic partnerships, channel development and joint go-to-market planning.</p></div><span class="service-link">Explore an opportunity →</span></a>
+</div></div></section>
+<section class="section section-soft" id="about"><div class="container split">
+<div><div class="eyebrow">About Sunre</div><div class="big-statement">Good advice should make the decision clearer.</div></div>
+<div class="about-copy"><p>Sunre Global works at the intersection of business and technology. We help leaders evaluate opportunities, make informed choices and turn plans into practical action.</p><p>Our approach is deliberately straightforward: understand the context, identify what matters, and focus effort where it can create measurable value.</p>
+<div class="principles">
+<div class="principle"><span>01</span><div><strong>Business first</strong><p>Technology recommendations are grounded in commercial and operational outcomes.</p></div></div>
+<div class="principle"><span>02</span><div><strong>Practical by design</strong><p>Clear recommendations, realistic priorities and next steps you can actually execute.</p></div></div>
+<div class="principle"><span>03</span><div><strong>Independent thinking</strong><p>Advice centred on your requirements rather than a predetermined vendor or solution.</p></div></div>
+</div></div></div></section>
+<section class="section"><div class="container academy"><div><div class="eyebrow">Sunre Academy</div><div class="section-head" style="margin-bottom:0"><h2>A learning space for practical skills.</h2><p>Interactive learning resources and assessments, built as part of the Sunre ecosystem.</p></div></div>
+<div class="academy-card"><span class="mini">Learn with Sunre</span><h3>Explore the Academy.</h3><a href="academy.html">Visit Sunre Academy →</a></div></div></section>
+<section class="contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow" style="color:#7ed0a9">Contact</div><h2>Have a business or technology decision to work through?</h2><p>Tell us what you're considering. We'll start with the context and work from there.</p></div><div><p>For general enquiries and conversations with Sunre Global:</p><a class="email" href="mailto:hello@sunre.ca">hello@sunre.ca</a></div></div></section>
 </main>
-
-<footer>
-<div class="container footer-row">
-<p>© 2026 Sunre Global. All rights reserved.</p>
-<div class="footer-links"><a href="#services">Services</a><a href="#about">About</a><a href="academy.html">Academy</a><a href="wealth.html">Wealth</a><a href="#contact">Contact</a></div>
-</div>
-</footer>
+<footer><div class="container footer-row"><p>© 2026 Sunre Global. All rights reserved.</p><div class="footer-links"><a href="#services">Services</a><a href="#about">About</a><a href="academy.html">Academy</a><a href="#contact">Contact</a></div></div></footer>
 </body>
 </html>
