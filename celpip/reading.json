@@ -1,0 +1,2492 @@
+[
+  {
+    "id": "r1",
+    "kind": "reading",
+    "title": "Test 1 — Public spaces and library renewal",
+    "minutes": 55,
+    "parts": [
+      {
+        "title": "Part 1: Reading Correspondence",
+        "text": "From: Mira Chen, Library Facilities Coordinator\nTo: Rowan Ellis, Friends of Cedar Harbour Library\nSubject: A revised plan for the west wing\n\nDear Rowan,\nThank you for forwarding the volunteers’ comments on our proposed renovation. Several people interpreted the architect’s drawings as a decision to replace the entire west wing. The drawings show the maximum space that could be altered, not the scope council has approved. Council authorized a feasibility study and up to $180,000 for urgent roof repairs. Funding for interior changes will require a separate vote after public consultation. We can therefore guarantee a dry building sooner than we can promise a different one.\n\nThe roof contractor now proposes beginning on August 12 rather than September 3. Accepting that date would reduce the chance of rain disrupting the work, but it would overlap with the final week of the children’s reading club. The contractor can isolate the west entrance and keep the east entrance open. The children’s librarian nevertheless recommends moving the final celebration to the community hall: the noise, rather than access, is the concern. Hall rental would be covered from the program budget, which has a small contingency. No participant would pay a fee.\n\nYour offer to have volunteers move the local-history collection is generous. The insurer requires trained staff to handle the fragile volumes, however. Volunteers could instead photograph the current shelf arrangement and help label sturdy storage boxes. Please do not announce a packing day yet. We first need an inventory that distinguishes replaceable copies from unique items; the archivist expects to finish it on July 28. A damaged copy of a commercially available book is inconvenient. A damaged handwritten harbour ledger is irretrievable.\n\nI also want to correct an impression created at the last meeting. The proposed flexible room would not be permanently assigned to outside organizations. During library hours it would support school visits and quiet group study. Evening rentals might help with operating expenses, but neither their prices nor their frequency has been decided. The suggestion that rentals would finance the renovation itself is overly optimistic.\n\nCould your group provide two volunteers for a consultation panel? We especially need someone who uses the library without attending our events. Attendance figures tell us how popular a program is; they do not tell us why someone stays away. Please send nominations by Friday. The panel will recommend priorities, not select a contractor.\n\nBest,\nMira\n\nReply from Rowan:\nDear Mira,\nI will describe the drawings as [1] rather than an approved building project. We support moving the celebration because [2]. I will ask volunteers to wait for [3] before arranging any collection work. Our newsletter will explain that evening rentals are intended to [4]. For the panel, I will seek a volunteer who can speak about [5], alongside one of our regular event organizers. Thank you for distinguishing what has been funded from what is still only being considered.\nRowan",
+        "questions": [
+          {
+            "prompt": "Why does Mira say the building can become dry before it becomes different?",
+            "options": [
+              "The architect has withdrawn the interior plans.",
+              "Roof repairs will generate money for the interior.",
+              "All interior work must wait for winter.",
+              "Roof repairs already have funding; interior changes do not."
+            ],
+            "answer": 3,
+            "explanation": "Council has approved urgent roof repairs but requires another vote for interior changes. The later vote is a funding condition, not a seasonal construction rule.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What would accepting the August 12 start date involve?",
+            "options": [
+              "Trading lower weather risk for overlap with a program.",
+              "Cancelling the children’s reading club entirely.",
+              "Moving the work into the rainiest period.",
+              "Closing both library entrances for a week."
+            ],
+            "answer": 0,
+            "explanation": "The earlier date lowers the chance of rain but overlaps the club’s final week. The celebration moves; the email never cancels the entire club.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What is the primary reason for moving the final celebration?",
+            "options": [
+              "Construction noise.",
+              "An inaccessible east entrance.",
+              "A new admission fee at the library.",
+              "A hall capacity requirement."
+            ],
+            "answer": 0,
+            "explanation": "The librarian explicitly identifies noise, rather than access, as the concern. The contractor would keep the east entrance open, so access is the tempting but contradicted answer.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Which volunteer task would comply with the stated restriction?",
+            "options": [
+              "Deciding which rare books to discard.",
+              "Photographing shelf arrangements.",
+              "Completing the insurer’s staff training.",
+              "Carrying fragile handwritten ledgers."
+            ],
+            "answer": 1,
+            "explanation": "Photographing shelves and labeling sturdy boxes are the alternative volunteer jobs Mira offers. Moving fragile ledgers sounds helpful but is reserved for trained staff.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What authority will the consultation panel have?",
+            "options": [
+              "Setting all evening rental prices.",
+              "Recommending renovation priorities.",
+              "Choosing the successful contractor.",
+              "Approving council’s construction budget."
+            ],
+            "answer": 1,
+            "explanation": "The final paragraph limits the panel to recommending priorities. Selecting a contractor is explicitly excluded even though it relates to the same project.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Which description best captures Mira’s tone?",
+            "options": [
+              "Certain that the full renovation will proceed.",
+              "Angry about the council’s decision.",
+              "Dismissive of all volunteer involvement.",
+              "Appreciative but careful to correct assumptions."
+            ],
+            "answer": 3,
+            "explanation": "Mira thanks Rowan and offers useful roles while repeatedly separating proposals from approved commitments. Her restrictions do not amount to dismissing volunteers; she actively asks for their participation.",
+            "skill": "Tone"
+          },
+          {
+            "prompt": "Choose the best expression for reply gap [1].",
+            "options": [
+              "a cancelled architectural contract",
+              "a funded replacement of the wing",
+              "the possible extent of alterations",
+              "a binding construction schedule"
+            ],
+            "answer": 2,
+            "explanation": "The drawings depict the maximum possible area, not approved scope. A funded replacement would repeat the misunderstanding Mira corrects.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best expression for reply gap [2].",
+            "options": [
+              "the east entrance must also close",
+              "participants cannot afford admission",
+              "noise could undermine the event",
+              "the hall will finance the roof repairs"
+            ],
+            "answer": 2,
+            "explanation": "The celebration is being relocated because construction noise would interfere with it. The east entrance remains open; its closure cannot explain the decision.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best expression for reply gap [3].",
+            "options": [
+              "completion of the collection inventory",
+              "the interior budget to be rejected",
+              "council to select panel members",
+              "the rental income to arrive"
+            ],
+            "answer": 0,
+            "explanation": "Packing cannot be scheduled until replaceable and unique materials have been inventoried. Interior funding is a separate issue and is not the specified packing prerequisite.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best expression for reply gap [4].",
+            "options": [
+              "replace daytime library programming",
+              "pay for the entire renovation",
+              "give outside groups exclusive ownership",
+              "help cover ongoing operating costs"
+            ],
+            "answer": 3,
+            "explanation": "Mira says rentals might help with operating expenses. Financing the renovation itself is explicitly described as overly optimistic.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best expression for reply gap [5].",
+            "options": [
+              "the contractor’s preferred building materials",
+              "how to guarantee unanimous public approval",
+              "barriers faced by people who do not attend events",
+              "the profitability of every past event"
+            ],
+            "answer": 2,
+            "explanation": "The panel needs someone who uses the library without attending events, to illuminate reasons for staying away. Popularity figures are already available; the missing perspective concerns nonattendance.",
+            "skill": "Contextual completion"
+          }
+        ]
+      },
+      {
+        "title": "Part 2: Reading to Apply a Diagram",
+        "text": "Cedar Harbour Library: temporary service arrangements, August 12–30\n\nUse the service table to answer the questions. The closures are limited to construction hours, except where the table says otherwise. Booking windows refer to the time before an appointment begins. Library membership remains free for municipal residents; temporary arrangements do not change borrowing limits. For appointments that require a deposit, payment is refunded when the equipment is returned complete and undamaged. A deposit does not purchase extra time.\n\nA booking is confirmed only after staff send an approval email. Requests submitted online enter the same queue as requests made by telephone. Staff normally reply within two working days. Two consecutive appointments for the same service are not permitted, even if a different family member submits the second request. This rule prevents a single household from using the entire daily allocation. Equipment cannot be moved from its listed location unless the service description explicitly permits home use.\n\nThe van carries popular books and reserved items, not the complete local-history collection. Patrons who cannot reach the van may authorize another adult to collect reserved books; identification for both people is required. The mobile service is an access measure during the works, not a separate membership category. Items borrowed from any temporary site may be returned to the exterior east-side drop box at any hour, except laptop kits, which must be returned directly to staff.\n\nThe older door notice lists a Saturday technology clinic, now suspended during construction. Individual annex laptop appointments continue; use the current table. Hearing-loop receivers are available at the annex and the community hall without additional charge. Staff can reserve a receiver when confirming an eligible appointment, but the request should accompany the original booking.\n\nEmail from patron Leila:\nI need to attend an online interview at 6:30 p.m. on Thursday. I do not have suitable equipment at home, and I need a quiet indoor place for ninety minutes. My sister would like to pick up my reserved books earlier that afternoon. Next Tuesday, I plan to borrow a laptop kit for home use. I can provide a deposit but would prefer not to make an unnecessary trip. Please confirm which services I should request.\n\nDraft staff response:\nFor your Thursday interview, book [6]. Your sister may collect the books if she brings [7]. For Tuesday’s home-use laptop, submit the request [8].",
+        "questions": [
+          {
+            "prompt": "Which service satisfies all of Leila’s interview requirements?",
+            "options": [
+              "Quiet interview booth.",
+              "Outreach van.",
+              "Children’s celebration.",
+              "Desktop workstation."
+            ],
+            "answer": 0,
+            "explanation": "The booth is open Thursday until 8 p.m., offers 90 minutes, and provides a quiet indoor setting. The desktop ends at 5 p.m. and allows only 60 minutes, failing two requirements.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Leila’s interview begins Thursday at 6:30 p.m. When is an eligible booth booking time?",
+            "options": [
+              "Thursday at 5:30 p.m.",
+              "Sunday at 6:30 p.m.",
+              "Tuesday at 6:30 p.m.",
+              "Thursday at noon."
+            ],
+            "answer": 2,
+            "explanation": "Tuesday at 6:30 is 48 hours before the interview, within the 24–72-hour window. Thursday at noon is only six and a half hours ahead, below the minimum.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Which item must be returned directly to staff?",
+            "options": [
+              "A van-borrowed magazine.",
+              "A borrowed children’s book.",
+              "A home laptop kit.",
+              "A reserved novel."
+            ],
+            "answer": 2,
+            "explanation": "The text excludes laptop kits from the all-hours drop-box return option. Reserved books follow the ordinary return rule, even when another adult collects them.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "What does paying the laptop deposit entitle a borrower to?",
+            "options": [
+              "Guaranteed approval before staff reply.",
+              "A normal three-day loan with a refundable security payment.",
+              "A longer loan than other borrowers receive.",
+              "Ownership of the laptop after three days."
+            ],
+            "answer": 1,
+            "explanation": "The table gives a three-day loan and the instructions explain that the deposit is refundable security. The passage explicitly says a deposit does not purchase extra time.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Why would booking two adjacent booths under sisters’ names be rejected?",
+            "options": [
+              "The hall permits just one appointment per week.",
+              "Telephone requests are always prioritized.",
+              "Only municipal employees may use booths.",
+              "The limit applies to the household, not only the named requester."
+            ],
+            "answer": 3,
+            "explanation": "The instructions prohibit consecutive appointments by the same household even under different family names. No weekly limit appears; the specific restriction concerns consecutive appointments.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Choose the best service for staff-response gap [6].",
+            "options": [
+              "a ninety-minute visit to the outreach van",
+              "the Saturday technology clinic",
+              "an annex desktop at 6:30 p.m.",
+              "the community hall interview booth"
+            ],
+            "answer": 3,
+            "explanation": "The current schedule makes the booth the suitable Thursday evening service. The older Saturday clinic is suspended and cannot meet a Thursday interview need.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for gap [7].",
+            "options": [
+              "a copy of the roof contract",
+              "identification for both of you",
+              "a new membership paid in cash",
+              "a laptop deposit of $50"
+            ],
+            "answer": 1,
+            "explanation": "Authorized pickup requires identification for the patron and the collecting adult. The deposit belongs to laptop borrowing, not book collection.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for gap [8].",
+            "options": [
+              "at least eight days before collection",
+              "only on Tuesday at the annex",
+              "between two and seven days before the loan starts",
+              "without booking because it is a walk-in service"
+            ],
+            "answer": 2,
+            "explanation": "The laptop row specifies a two-to-seven-day advance booking window. Tuesday is a collection day, but that does not eliminate the advance booking requirement.",
+            "skill": "Contextual completion"
+          }
+        ],
+        "diagram": "<table><caption>Temporary services — current schedule</caption><thead><tr><th>Service</th><th>Location and hours</th><th>Booking and limits</th></tr></thead><tbody><tr><td>Quiet interview booth</td><td>Community hall; Tue/Thu 4–8 p.m.</td><td>Book 24–72 hours ahead; 90 minutes; no deposit</td></tr><tr><td>Desktop workstation</td><td>Annex; Mon–Fri 9 a.m.–5 p.m.</td><td>Same-day walk-in; 60 minutes; indoor use only</td></tr><tr><td>Home laptop kit</td><td>Annex; Tue/Fri 10 a.m.–4 p.m.</td><td>Book 2–7 days ahead; 3-day loan; $50 refundable deposit</td></tr><tr><td>Outreach van</td><td>Market square; Mon–Fri 2–4 p.m.</td><td>No booking; reserved books and limited stock</td></tr><tr><td>Children’s celebration</td><td>Community hall; Sat August 17, 11 a.m.–1 p.m.</td><td>Registered club participants; free; no booking required</td></tr></tbody></table>"
+      },
+      {
+        "title": "Part 3: Reading for Information",
+        "text": "Four perspectives on library access\n\nA. When library boards report annual success, circulation totals are often the headline. Those totals remain useful, but they miss how a public building serves people who do not borrow anything. A teenager may use reliable internet to submit a college application. Counting these uses is difficult: a visitor who values anonymity may not want to complete a survey. Nevertheless, difficulty in measurement is not evidence that a service has little value. Voluntary feedback can broaden understanding without requiring visitors to declare a purpose. The aim should be a more complete account, not a competition to produce the largest possible number.\n\nB. The phrase “flexible space” can conceal a conflict that an attractive drawing does not resolve. A room suitable for a lively language class may be unsuitable for someone preparing for a licensing examination. Movable furniture changes a layout; it does not remove sound. Scheduling quiet and social uses at different times can work, provided predictable quiet periods remain available. If those periods shift whenever a popular event needs the room, the people with the least flexible schedules lose access first. Good design therefore requires both acoustic separation and an explicit operating policy. A small permanent quiet room may serve residents better than a large room advertised as adaptable to everything. This is not an argument against community events. It is an argument against assuming that every valuable activity can happen in the same space at the same time.\n\nC. Volunteer groups often possess knowledge that official consultations fail to capture. Long-time volunteers know which entrance becomes slippery, which shelf confuses patrons, and which weekday attracts isolated seniors. Yet frequent participation can also make familiar practices seem universal. Someone who always attends daytime meetings may overlook people working rotating shifts. A volunteer panel is stronger when established members share seats with occasional users and residents who have never joined an activity. Unfamiliar questions can productively reveal barriers to cherished programs. Representation means more than inviting everybody to a meeting scheduled for the convenience of those already represented.\n\nD. Libraries increasingly lend unusual objects, from sewing machines to air-quality monitors. The case for these collections is strongest when an item is expensive to buy but useful for short periods. Borrowers can try a tool before purchasing it or complete a task without buying something that will spend years in a cupboard. However, the purchase price is only one part of the cost. Staff must inspect returned equipment, replace consumables, explain safe use, and sometimes arrange specialist repairs. A successful pilot therefore budgets for maintenance and records unmet demand as well as loans. Low borrowing could indicate poor publicity, unsuitable loan periods, or genuinely low interest. The same number supports different decisions depending on the reason behind it. Expanding a collection simply because an item is fashionable is as weak a policy as cancelling it after a single quiet month.",
+        "questions": [
+          {
+            "prompt": "Which paragraph argues that borrowing figures overlook meaningful uses of a library?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A describes internet access, warmth, and conversation that produce no loans. D also discusses borrowing data, but its concern is interpreting an equipment pilot.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says changing furniture cannot by itself reconcile competing activities?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B distinguishes physical rearrangement from acoustic separation. C concerns who participates in decisions, not room acoustics.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph cautions that regular volunteers may mistake their experience for everyone’s?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C contrasts committed daytime participants with residents on rotating shifts. A discusses measurement gaps, not the representativeness of volunteers.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph addresses expenses after an object has been purchased?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D lists inspection, consumables, instruction, and repairs. B discusses design and policy but does not analyze a lending collection’s operating expenses.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph recommends compulsory registration of every visitor’s purpose?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 4,
+            "explanation": "No paragraph recommends compulsory purpose registration; A emphasizes anonymity and voluntary feedback. A is tempting because it addresses visitor measurement, but it proposes the opposite.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph argues that unpredictable schedules can disadvantage users with limited flexibility?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B explains that moving quiet periods harms those with inflexible schedules first. C mentions shift workers, but the question concerns changing room schedules.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says an apparently disappointing statistic can have several explanations?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D explains that low loans can reflect publicity, loan periods, or genuine interest. A says a statistic is incomplete rather than interpreting several causes of low equipment use.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph questions whether an open invitation alone ensures representation?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C says an invitation to a conveniently timed meeting may still exclude people. B protects access through room policy, not consultation participation.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph advocates understanding public benefit without maximizing a headline total?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A calls for a fuller account rather than competition for the largest number. D recommends monitoring a pilot, but does not discuss headline reporting incentives.",
+            "skill": "Matching information"
+          }
+        ]
+      },
+      {
+        "title": "Part 4: Reading for Viewpoints",
+        "text": "Opinion: A library should not have to imitate a café\nBy Dana Morrell\n\nWhen Cedar Harbour published images of its proposed library interior, the most widely shared picture showed soft chairs, plants, and a coffee counter. Some residents welcomed it as an escape from the severe buildings of their childhood. Others asked when reading had become an activity requiring a latte. Both responses assign too much significance to furniture. The real question is whether public space remains accessible without a purchase.\n\nA café inside a library is not inherently a threat to that principle. It becomes a threat when tables migrate into the paid seating area, or when visitors believe the most comfortable corner belongs only to customers. Such boundaries can exist without a written rule. A price board, a queue, and staff repeatedly clearing unused cups may communicate expectations more forcefully than a sign declaring everyone welcome. The board should therefore evaluate the experience of a visitor who buys nothing, not simply the revenue promised by a commercial tenant.\n\nRevenue has a role. Money from a modest concession could keep evening hours open, and evening access matters to residents whose working day overlaps the library’s usual schedule. Refusing every commercial arrangement on principle could sacrifice that practical benefit. But a lease should be judged against alternatives, including municipal funding and a smaller service operated without exclusive seating. Calling the café “self-financing” would also be misleading if library staff absorb its cleaning, security, or administrative costs. Income and net contribution are not interchangeable.\n\nNor should critics romanticize discomfort. Comfortable chairs are not less democratic than painful ones; welcoming design need not be expensive. The danger lies in treating an attractive image as proof of inclusion. Different users assess a room differently. Consultation should let them test layouts, identify barriers, and understand conflicting requests.\n\nMy support for a café would therefore be conditional. Preserve generous unpaid seating; disclose the full operating costs; protect quiet areas; and review the lease after a trial rather than committing the building for a decade. The board should publish what it learns even if the results are less flattering than the opening photographs. A public institution demonstrates confidence by revising a disappointing experiment, not by insisting that the original publicity was correct.\n\nReader response from Alex, an evening student:\nMorrell’s argument is useful because it treats commercial income as [9]. I particularly agree that [10] should determine whether seating is genuinely welcoming. A trial lease would let the board [11]. However, testing a layout only during weekday afternoons would miss [12]. The library should also measure [13] instead of reporting gross café sales as though they were a direct public subsidy.",
+        "questions": [
+          {
+            "prompt": "What is the article’s central position?",
+            "options": [
+              "Comfortable furniture undermines the purpose of reading.",
+              "A café is acceptable if public access and its actual contribution are protected.",
+              "Every library café should be prohibited.",
+              "Café revenue should replace all municipal funding."
+            ],
+            "answer": 1,
+            "explanation": "Morrell offers explicit conditions for supporting a café while recognizing potential revenue benefits. The criticism is conditional; the author specifically rejects refusing every commercial arrangement.",
+            "skill": "Main idea"
+          },
+          {
+            "prompt": "Why does the author mention cups being cleared?",
+            "options": [
+              "Patrons should bring their own cups to save money.",
+              "Everyday behaviour can imply a purchase requirement without a formal rule.",
+              "Cleaning costs always exceed café revenue.",
+              "Library workers should stop clearing tables."
+            ],
+            "answer": 1,
+            "explanation": "The example illustrates how unwritten signals can establish perceived boundaries. Costs are discussed later, but the cup example primarily concerns expectations about who may sit.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What benefit might justify some commercial involvement?",
+            "options": [
+              "Keeping the library open in the evening.",
+              "Making all seating available only to paying patrons.",
+              "Eliminating conflicts among different room users.",
+              "Reducing the need to consult residents."
+            ],
+            "answer": 0,
+            "explanation": "The article says a modest concession could support evening hours for working residents. It never suggests commercial income removes the need for consultation or resolves acoustic conflicts.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "What does the author imply about attractive renderings?",
+            "options": [
+              "They cannot establish that the design works for different users.",
+              "They should never be included in a consultation.",
+              "They prove expensive furniture is essential.",
+              "They reliably predict final operating costs."
+            ],
+            "answer": 0,
+            "explanation": "The author calls for real layout testing and warns against equating an image with inclusion. Rejecting proof from an image is narrower than banning all renderings.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Which action best reflects the author’s view of institutional confidence?",
+            "options": [
+              "Promising every request can be accommodated.",
+              "Publishing disappointing trial findings and changing the plan.",
+              "Keeping negative feedback private until a lease expires.",
+              "Defending the opening publicity regardless of results."
+            ],
+            "answer": 1,
+            "explanation": "The final paragraph connects confidence with revising an experiment and disclosing findings. Defending original publicity despite evidence is the behaviour the author criticizes.",
+            "skill": "Author viewpoint"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [9].",
+            "options": [
+              "an unavoidable threat under any conditions",
+              "the only valid measure of library success",
+              "a possible means to improve public service",
+              "proof that municipal funding is unnecessary"
+            ],
+            "answer": 2,
+            "explanation": "The article recognizes revenue as potentially useful if it supports public benefits under safeguards. An unavoidable threat contradicts the author’s conditional support.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [10].",
+            "options": [
+              "the experience of someone who purchases nothing",
+              "the cost of the most fashionable chairs",
+              "the number of drinks sold on opening day",
+              "the size of the café’s marketing budget"
+            ],
+            "answer": 0,
+            "explanation": "The author explicitly proposes evaluating the experience of a noncustomer. Sales volume measures commercial activity, not whether unpaid users feel welcome.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [11].",
+            "options": [
+              "reconsider the arrangement using actual results",
+              "commit the space to the tenant for a decade",
+              "avoid publishing evidence of the café’s costs",
+              "guarantee the experiment will be profitable"
+            ],
+            "answer": 0,
+            "explanation": "A trial permits review, disclosure, and adjustment without a long binding commitment. A trial produces evidence; it cannot guarantee profitable results.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [12].",
+            "options": [
+              "all possible operating costs automatically",
+              "residents who can visit only after work",
+              "whether the artist selected attractive plants",
+              "the need to preserve any unpaid seating"
+            ],
+            "answer": 1,
+            "explanation": "Evening access matters to people working during usual hours; afternoon-only testing would exclude them. Unpaid seating matters at every time, but the specific scheduling omission concerns working residents.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [13].",
+            "options": [
+              "only the tenant’s social-media followers",
+              "income after the library’s associated expenses",
+              "the number of chairs visible in the rendering",
+              "the gross value of every beverage sold"
+            ],
+            "answer": 1,
+            "explanation": "Morrell distinguishes gross income from net contribution after cleaning, security, and administration. Gross sales are exactly the misleading figure the response contrasts with a public subsidy.",
+            "skill": "Contextual completion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r2",
+    "kind": "reading",
+    "title": "Test 2 — Flood resilience and shared responsibility",
+    "minutes": 55,
+    "parts": [
+      {
+        "title": "Part 1: Reading Correspondence",
+        "text": "From: Aisha Desai, Watershed Project Manager\nTo: Colin Price, Riverside Residents Association\nSubject: Flood-prevention pilot and household visits\n\nDear Colin,\nYour association’s questions have helped us identify a weakness in our public notice. We described the neighbourhood as a priority area, which some homeowners understood to mean that every property would receive a protective barrier. Priority refers to the order in which we are assessing drainage problems. It does not establish individual eligibility for construction funding. The pilot budget covers surveys and six demonstration sites; expansion will depend on both the results and next year’s budget.\n\nSurvey crews will visit between May 6 and May 24. They will record ground levels and the condition of publicly accessible drains. Crews will not enter homes or make decisions about insurance coverage. Where a measurement requires access through a locked side gate, staff will arrange an appointment. Residents who work during the day may request one of the limited Saturday slots. Nobody should leave a gate unlocked in anticipation of an unscheduled visit.\n\nWe had expected to select demonstration sites by June 1. The engineering team now needs another fortnight to compare upstream and downstream effects. A barrier that protects one house by directing water towards a neighbour is not an acceptable success. We will announce the sites on June 15, but installation dates may vary with permits and weather. Please avoid telling residents that selection guarantees work before the summer holiday.\n\nThe demonstration owners will be asked to record water accumulation after heavy rain. We will provide simple gauges and instruction; this is not a request for them to assess structural safety. Residents who are not selected can also contribute observations through the online map. Reports should include a date and photograph where possible. A cluster of consistent observations is more useful than repeated guesses about the source of a single puddle.\n\nYou mentioned that some residents worry the map could reduce their property values. Published reports will identify a street segment rather than a household address. The engineering team will retain precise locations in its restricted working file. This balances public understanding with privacy, although we cannot promise that neighbours will never recognize a location from a photograph. Residents should crop images to avoid house numbers and faces.\n\nFinally, the workshop on May 2 is about reducing small, manageable risks, such as blocked downspouts. It will not certify homes as flood-proof. I would appreciate your help recruiting participants who have experienced minor pooling as well as those affected by serious floods. The former group may show us whether inexpensive measures work before a crisis occurs.\nAisha\n\nColin’s reply:\nThank you. Our newsletter will clarify that priority status means [1]. Residents needing access appointments will be told [2]. We will announce June 15 as [3], not a promised completion date. I will encourage people to submit [4] and remind them that the public map [5]. We will also recruit households whose experience is less dramatic but potentially useful.",
+        "questions": [
+          {
+            "prompt": "What misunderstanding does Aisha correct?",
+            "options": [
+              "All homeowners must buy their own survey tools.",
+              "The association selected the demonstration sites.",
+              "The pilot has no public budget.",
+              "Priority assessment does not guarantee each home a barrier."
+            ],
+            "answer": 3,
+            "explanation": "The first paragraph defines priority as assessment order and limits construction to six demonstration sites. An assessment priority sounds like a construction promise, but the email explicitly separates them.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "When should a resident leave a locked side gate open?",
+            "options": [
+              "Throughout the entire survey period.",
+              "Every Saturday without contacting staff.",
+              "Only as part of an arranged access appointment.",
+              "Whenever neighbours report seeing a crew."
+            ],
+            "answer": 2,
+            "explanation": "Staff arrange access when a locked gate blocks necessary measurements; residents are told not to unlock for unscheduled visits. The survey date range is not an appointment for every property.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Why was site selection delayed?",
+            "options": [
+              "The public workshop was cancelled.",
+              "Engineers must check whether protection transfers risk elsewhere.",
+              "The association refused to supply volunteers.",
+              "Owners demanded structural safety certificates."
+            ],
+            "answer": 1,
+            "explanation": "Engineers need two more weeks to compare upstream and downstream effects. Safety certification is not part of the owners’ role and is not the stated reason for delay.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What would a selected owner be expected to do?",
+            "options": [
+              "Measure water accumulation using supplied gauges.",
+              "Approve neighbours’ insurance claims.",
+              "Publish the full engineering working file.",
+              "Determine whether the house is structurally safe."
+            ],
+            "answer": 0,
+            "explanation": "Owners receive gauges and instruction to record accumulation after heavy rain. The email explicitly distinguishes observation from assessing structural safety.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Why recruit residents who have experienced only minor pooling?",
+            "options": [
+              "They are automatically eligible for barriers.",
+              "They may reveal whether inexpensive preventive measures work.",
+              "Their observations will replace engineering surveys.",
+              "They cannot be identified in photographs."
+            ],
+            "answer": 1,
+            "explanation": "The final paragraph says minor experiences can show whether low-cost measures work before a crisis. Useful participation is not automatic eligibility for construction.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Which statement best describes the privacy arrangement?",
+            "options": [
+              "The public can inspect individual insurance records.",
+              "No precise location is recorded anywhere.",
+              "Exact locations remain restricted, while public reports show street segments.",
+              "All photographs are guaranteed unrecognizable."
+            ],
+            "answer": 2,
+            "explanation": "The map generalizes addresses; the team retains precise locations in a restricted file. The author specifically cannot promise complete unrecognizability from photographs.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [1].",
+            "options": [
+              "automatic insurance eligibility",
+              "earlier drainage assessment",
+              "a barrier for every household",
+              "a completed risk-free neighbourhood"
+            ],
+            "answer": 1,
+            "explanation": "Priority concerns the order of assessment, not a guarantee of installation. Universal barriers exceed the six demonstration sites the budget supports.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [2].",
+            "options": [
+              "to arrange a specific visit with staff",
+              "to leave gates open for three weeks",
+              "to request an insurance inspection",
+              "to admit any visitor claiming to be an engineer"
+            ],
+            "answer": 0,
+            "explanation": "Access through a locked gate requires an arranged appointment. Leaving gates open contradicts the express instruction against anticipating unscheduled visits.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [3].",
+            "options": [
+              "the date the map becomes fully private",
+              "the first day crews may enter houses",
+              "the date selected sites will be announced",
+              "the deadline for all barrier installations"
+            ],
+            "answer": 2,
+            "explanation": "June 15 is the revised announcement date; permits and weather affect installation. Conflating announcement with completion ignores the stated uncertainty.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [4].",
+            "options": [
+              "structural safety certificates they prepare themselves",
+              "their neighbours’ insurance documents",
+              "repeated guesses about each puddle’s source",
+              "dated observations with suitable photographs"
+            ],
+            "answer": 3,
+            "explanation": "The email requests dates and photographs and values consistent observations. Guessing about causes is specifically contrasted with useful evidence.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [5].",
+            "options": [
+              "uses broader locations without guaranteeing complete anonymity",
+              "publishes every owner’s exact address",
+              "contains no information about local flooding",
+              "will certify properties as flood-proof"
+            ],
+            "answer": 0,
+            "explanation": "Street segments protect privacy partly, but recognizable images remain possible. Complete anonymity is not promised despite the map’s generalized location labels.",
+            "skill": "Contextual completion"
+          }
+        ]
+      },
+      {
+        "title": "Part 2: Reading to Apply a Diagram",
+        "text": "Riverside household resilience grants: application guide\n\nThese four programs may support different types of work. An applicant may request more than one category, but the same invoice cannot be reimbursed twice. The percentages in the table apply to eligible costs after any supplier discount and before tax. The maximum contribution is a ceiling, not an amount automatically awarded. Work must begin after written approval unless the category explicitly allows emergency work.\n\nFor ordinary applications, upload a quotation, photographs of the proposed location, and proof that you occupy or own the property. Tenants must include written owner permission for physical alterations. A survey completed under the municipal pilot is helpful but does not substitute for a quotation. Grant officers assess eligibility; they do not recommend a particular contractor. Applicants remain responsible for checking the contractor’s qualifications and obtaining any required permits.\n\nEmergency work means work necessary to prevent further damage immediately after a documented flooding incident. Receipts must identify the address, dates, and work performed. Routine upgrades are not made emergency work simply by purchasing them quickly. Applicants who begin ordinary work while awaiting a decision risk receiving no grant. The current approval rule remains in effect.\n\nThe neighbourhood rain-garden category is designed for a project used by several households rather than a decorative bed on one private lot. The application must name a lead household and at least three participating households in total. Participation may involve maintaining the garden or hosting drainage connections; it need not involve contributing equal amounts of money. A signed maintenance plan is required because neglected gardens can create the very drainage problems they were intended to reduce.\n\nScenario: Marta owns a house outside the demonstration pilot. She plans a $2,400 eligible backwater-valve installation and a $700 eligible downspout improvement. Neither job has begun. Her neighbour Sven rents a basement suite and has owner permission for a $1,200 sump upgrade. Last week, a documented flood required Sven to pay $900 for urgent water extraction. They are also considering a rain garden with one additional household.\n\nDraft advice:\nMarta’s valve grant could contribute [6]. Sven should apply to [7] for the completed extraction work. Their garden proposal [8].",
+        "questions": [
+          {
+            "prompt": "How much could Marta receive for the $700 downspout improvement?",
+            "options": [
+              "$350.",
+              "$700.",
+              "$300.",
+              "$1,500."
+            ],
+            "answer": 2,
+            "explanation": "Half of $700 is $350, but the category caps the contribution at $300. The percentage alone gives the tempting $350 answer; the ceiling must also be applied.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "What must Sven include for the planned sump alteration?",
+            "options": [
+              "Written owner permission.",
+              "A second claim for the extraction invoice.",
+              "Evidence that he belongs to the demonstration pilot.",
+              "Proof that he owns the property."
+            ],
+            "answer": 0,
+            "explanation": "Tenants require written permission for physical alterations, and the sump category permits such tenants. Ownership is not required when tenant permission satisfies the stated eligibility.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "What is the largest contribution to Sven’s $900 extraction bill?",
+            "options": [
+              "$450.",
+              "$675.",
+              "$900.",
+              "$600."
+            ],
+            "answer": 3,
+            "explanation": "Seventy-five percent is $675, reduced to the $600 emergency ceiling. The unadjusted percentage overlooks the maximum contribution.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "When may Marta start the proposed ordinary work without violating the grant rule?",
+            "options": [
+              "After written approval.",
+              "After a contractor verbally predicts approval.",
+              "As soon as she uploads the quotation.",
+              "Immediately because her house is outside the pilot."
+            ],
+            "answer": 0,
+            "explanation": "Ordinary work must begin after written approval. Submitting an application is not the same as receiving the required approval.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "Which statement about grant combinations is accurate?",
+            "options": [
+              "A supplier discount is added back before calculating the grant.",
+              "Only one category is allowed per property.",
+              "Different categories can be combined, but one invoice cannot be reimbursed twice.",
+              "All eligible costs are reimbursed at the highest listed rate."
+            ],
+            "answer": 2,
+            "explanation": "The guide permits several categories but bars double reimbursement and uses discounted eligible costs. Multiple categories do not authorize applying multiple rates to the same invoice.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Choose the amount for advice gap [6].",
+            "options": [
+              "$1,440",
+              "$1,500",
+              "$960",
+              "$2,400"
+            ],
+            "answer": 0,
+            "explanation": "Sixty percent of $2,400 is $1,440, below the $1,500 valve ceiling. The maximum is only a ceiling, not an automatic award.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the category for advice gap [7].",
+            "options": [
+              "Backwater valve",
+              "Sump upgrade",
+              "Neighbourhood rain garden",
+              "Emergency extraction"
+            ],
+            "answer": 3,
+            "explanation": "The completed work is urgent water extraction after a documented flood. The planned sump upgrade is a separate ordinary project, not the category for this completed bill.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for advice gap [8].",
+            "options": [
+              "is ineligible because one participant is a tenant",
+              "qualifies without any further documents",
+              "must include at least four households",
+              "has enough households but still needs a maintenance plan"
+            ],
+            "answer": 3,
+            "explanation": "Marta, Sven, and one additional household meet the minimum of three; a signed plan is still required. Meeting the numerical threshold does not remove the maintenance-plan requirement.",
+            "skill": "Contextual completion"
+          }
+        ],
+        "diagram": "<table><caption>Resilience grant categories</caption><thead><tr><th>Category</th><th>Eligibility</th><th>Contribution</th><th>Timing</th></tr></thead><tbody><tr><td>Backwater valve</td><td>Owner; licensed installer</td><td>60% of eligible cost, maximum $1,500</td><td>Approval before work</td></tr><tr><td>Downspout improvement</td><td>Owner or tenant with permission</td><td>50%, maximum $300</td><td>Approval before work</td></tr><tr><td>Sump upgrade</td><td>Owner or tenant with permission</td><td>50%, maximum $800</td><td>Approval before work</td></tr><tr><td>Emergency extraction</td><td>Occupant after documented flood</td><td>75%, maximum $600</td><td>Apply within 30 days after work</td></tr><tr><td>Neighbourhood rain garden</td><td>At least 3 households; maintenance plan</td><td>70%, maximum $4,000 per project</td><td>Approval before work</td></tr></tbody></table>"
+      },
+      {
+        "title": "Part 3: Reading for Information",
+        "text": "Approaches to water risk\n\nA. Flood maps are sometimes treated as predictions of exactly which houses will be damaged in the next storm. In fact, most describe the probability of an event under specified assumptions. A boundary may reflect available elevation data, a modelled rainfall pattern, or the capacity of infrastructure at the time of the study. It is not a wall water recognizes. Residents just outside a mapped area should therefore avoid assuming that they face no risk. At the same time, uncertainty does not make mapping useless. Maps support planning when their assumptions and limitations are explained. Updating them as new data become available is a sign of responsible analysis, not necessarily evidence that the earlier work was dishonest. Public confidence suffers when officials present a useful model as a guarantee and later must retreat from that promise.\n\nB. Household preparation often concentrates on products: a pump, a barrier, or a special valve. Maintenance can be less visible but equally consequential. A working pump cannot help if its intake is blocked or its backup power has never been checked. A barrier stored behind heavy furniture may be technically available yet practically useless during an overnight warning. Households should rehearse simple actions while conditions are calm, assigning roles that suit people’s abilities. A written plan ought to include neighbours who may need assistance, but nobody should take a dangerous rescue role beyond their training. Preparation is strongest when modest equipment, regular checks, and realistic actions support one another rather than when an expensive purchase creates a false sense of completion.\n\nC. Green infrastructure slows water by restoring some of the functions lost when soil is paved. Rain gardens and permeable surfaces can reduce runoff in appropriate locations, but neither is a universal replacement for drainage pipes. Soil conditions, slope, winter performance, and the amount of water entering a site all matter. A pilot that performs well during a small summer shower may still require investigation before being expanded across a neighbourhood. The broader benefits—habitat, shade, and a more pleasant street—can strengthen the case for investment, provided they are not counted as proof of flood protection. Evaluations should report these benefits separately. That distinction allows residents to value a project without asking it to do something it cannot reliably accomplish.\n\nD. Insurance conversations become more productive when homeowners distinguish physical risk from the terms of a particular policy. Two houses with similar exposure may have different coverage because their owners selected different endorsements or deductibles. A public drainage survey cannot determine what an insurer will pay. Before an emergency, residents should ask for written explanations of exclusions and keep records in a place that will remain accessible if the house is damaged. Taking photographs of possessions may feel tedious, but reconstructing an inventory after a flood is harder. Community workshops can help people prepare questions for an insurer without pretending to offer individual coverage decisions. Such workshops are most useful when they make uncertainty discussable rather than encourage either complacency or panic.",
+        "questions": [
+          {
+            "prompt": "Which paragraph warns that a mapped boundary is not an absolute limit to a hazard?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A states that a map boundary is not a wall recognized by water. C considers site suitability but does not discuss mapped boundaries.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph emphasizes practising actions before an emergency?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B recommends rehearsing calm-weather roles and checking equipment. D recommends documentation, but does not focus on rehearsing physical responses.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph separates environmental benefits from demonstrated protection?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C calls for reporting habitat and shade separately from flood performance. A separates model assumptions from guarantees, a different distinction.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph explains why similarly exposed properties can have different financial protection?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D identifies different endorsements and deductibles despite similar physical exposure. A concerns probabilities of flooding, not contractual coverage.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says updated analysis need not discredit earlier work?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A treats model updates as responsible analysis rather than evidence of dishonesty. C calls for investigation before expansion but does not discuss revisions to earlier maps.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says purchasing expensive equipment can create misplaced confidence?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B warns that a purchase may create a false sense of completion without maintenance and action. C cautions against overclaiming green infrastructure, not household purchasing.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph recommends a specific insurance provider for all residents?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 4,
+            "explanation": "No paragraph names or recommends an insurer; D advises questions about individual policies. D is tempting because it discusses insurance, but stops short of selecting a provider.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph recommends protecting records from the event they document?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D says records should remain accessible if the house is damaged. B concerns accessible barriers, not possession or coverage records.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph cautions against extrapolating from a mild-weather trial?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C says a small summer shower is insufficient evidence for broad expansion. A describes mapping assumptions but does not discuss green-infrastructure trials.",
+            "skill": "Matching information"
+          }
+        ]
+      },
+      {
+        "title": "Part 4: Reading for Viewpoints",
+        "text": "Opinion: Flood resilience cannot stop at the property line\nBy Owen Laurent\n\nAfter every serious flood, photographs of damaged homes understandably dominate the news. A household that has lost its furniture and sense of safety needs immediate practical help. Yet a policy built entirely around individual property grants can become an expensive way to protect the best-organized residents while leaving the underlying drainage problem untouched. We should help households, but we should also ask where the water will go after their improvements are made.\n\nA valve can prevent sewage from backing up into one basement. It cannot create capacity in an overloaded street drain. A barrier may keep water out of a doorway while pushing it towards a lower neighbouring lot. Neither fact makes the equipment worthless. Both facts show why municipal coordination matters. The relevant unit of planning is sometimes a household, sometimes a block, and sometimes an entire watershed. Treating all three as interchangeable invites disappointment.\n\nThe grant process can also distort participation. Owners who understand technical forms, can pay contractors before reimbursement, and have time to collect quotations are best positioned to apply. A program may be formally open to everybody and still be difficult for tenants, low-income owners, or residents working two jobs to use. Staff assistance and direct payments to approved contractors would not eliminate every barrier, but they could reduce the advantage enjoyed by people with ready cash and administrative confidence.\n\nSome critics argue that public money should never improve privately owned homes. That is too simple. Damage can displace families, disrupt schools, and place pressure on emergency accommodation. Preventing it has benefits beyond the owner’s property value. Nevertheless, those public benefits should be demonstrated rather than assumed. A subsidy for a decorative improvement marketed as resilience deserves more scrutiny than a measure supported by a credible assessment of risk reduction.\n\nI favour a combined approach: targeted household support, investments in shared drainage, and transparent evaluation of where protection is improving. Reporting the number of approved grants is insufficient. A large number might show successful outreach, or it might show that we paid for many small projects while postponing a necessary pipe replacement. We need to know who was reached, who could not participate, and whether risks were merely moved. It is easier to celebrate a cheque than to explain a drainage network, but ease of communication is not a sensible criterion for choosing public investments.\n\nResponse from Beatrice, a homeowner:\nLaurent is right that [9] can make an apparently equal program unequal in practice. His concern about barriers is that they may [10]. I support his combined approach because [11]. However, direct contractor payments should still require [12]. If council reports only the number of grants, residents may confuse [13] with actual improvement.",
+        "questions": [
+          {
+            "prompt": "Which policy would the author most likely support?",
+            "options": [
+              "Replacing municipal drainage work entirely with grants.",
+              "Ending all assistance to privately owned homes.",
+              "Household grants alongside coordinated public drainage investment.",
+              "Giving every homeowner the same equipment regardless of risk."
+            ],
+            "answer": 2,
+            "explanation": "The author explicitly favours targeted household support combined with shared drainage and evaluation. Rejecting all private-home assistance ignores the public benefits the author recognizes.",
+            "skill": "Author viewpoint"
+          },
+          {
+            "prompt": "What is the purpose of the valve example?",
+            "options": [
+              "To show that a useful household measure has limits at a wider scale.",
+              "To prove valves never prevent basement damage.",
+              "To recommend one specific manufacturer.",
+              "To show street drains should be abandoned."
+            ],
+            "answer": 0,
+            "explanation": "A valve can stop household backflow without expanding overloaded street capacity. The author affirms the equipment’s usefulness; limited scope does not mean no benefit.",
+            "skill": "Argument"
+          },
+          {
+            "prompt": "Why might reimbursement disadvantage some applicants?",
+            "options": [
+              "Their houses are always outside risky areas.",
+              "They cannot legally own any flood-prevention equipment.",
+              "They must apply through an insurance company.",
+              "They may lack money to pay contractors in advance."
+            ],
+            "answer": 3,
+            "explanation": "The passage identifies upfront contractor payment as a barrier to people without ready cash. Neither location nor insurance-channel restrictions are stated.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "How does the author answer critics of subsidies for private homes?",
+            "options": [
+              "Public money is appropriate only for decorative projects.",
+              "Prevention can produce benefits for schools and emergency accommodation.",
+              "Every private improvement has an equal public benefit.",
+              "Owners deserve support because property values must rise."
+            ],
+            "answer": 1,
+            "explanation": "The author lists displacement, school disruption, and emergency housing pressure as wider consequences. The next sentence insists benefits be demonstrated, so not every private improvement qualifies.",
+            "skill": "Argument"
+          },
+          {
+            "prompt": "What weakness is identified in counting approved grants alone?",
+            "options": [
+              "Residents always prefer pipe projects to cheques.",
+              "The count is necessarily mathematically incorrect.",
+              "The count does not reveal access, risk reduction, or displaced risk.",
+              "No grants can be useful if a pipe needs replacing."
+            ],
+            "answer": 2,
+            "explanation": "A high grant count can reflect outreach or poorly prioritized work and says little about actual protection. The author questions interpretation, not the accuracy of arithmetic.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [9].",
+            "options": [
+              "photographs of damaged furniture",
+              "differences in cash and capacity to handle applications",
+              "identical written eligibility rules alone",
+              "the existence of any private property"
+            ],
+            "answer": 1,
+            "explanation": "The article explains how upfront costs and administrative confidence create unequal practical access. Formal openness alone is not the cause; unequal resources beneath it are.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [10].",
+            "options": [
+              "improve every part of the watershed",
+              "redirect water towards another property",
+              "replace all insurance coverage",
+              "eliminate the need for public planning"
+            ],
+            "answer": 1,
+            "explanation": "Barriers can protect one doorway while pushing water towards a lower neighbouring lot. Universal watershed improvement is precisely the unwarranted generalization the article rejects.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [11].",
+            "options": [
+              "public drains will never require replacement",
+              "individual grants have no possible public value",
+              "every flood occurs for the same reason",
+              "household and shared problems need different but coordinated solutions"
+            ],
+            "answer": 3,
+            "explanation": "The author distinguishes household, block, and watershed scales and supports complementary investment. The article defends some individual grants; dismissing their public value misreads it.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [12].",
+            "options": [
+              "a promise to increase the owner’s resale price",
+              "evidence that the proposed work reduces risk",
+              "a ban on tenants joining the program",
+              "the purchase of decorative garden materials"
+            ],
+            "answer": 1,
+            "explanation": "The author requires demonstrated public benefits and credible risk-reduction assessment. Property appreciation alone is not the public benefit defended in the article.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [13].",
+            "options": [
+              "administrative activity",
+              "structural certification",
+              "insurance deductibles",
+              "accurate rainfall measurement"
+            ],
+            "answer": 0,
+            "explanation": "Approval counts show program activity without necessarily showing actual protection. The counts are not rainfall measurements and cannot establish hydrological performance.",
+            "skill": "Contextual completion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r3",
+    "kind": "reading",
+    "title": "Test 3 — Food co-operatives and participation",
+    "minutes": 55,
+    "parts": [
+      {
+        "title": "Part 1: Reading Correspondence",
+        "text": "From: Julian Park, Operations Lead, North Table Food Co-operative\nTo: Elena Brooks, Member Liaison\nSubject: Changes to collection and member shifts\n\nHello Elena,\nPlease circulate the following explanation before our next members’ meeting. The trial at the Hill Street depot has reduced missed collections, but it has not yet reduced delivery costs. Our driver covers the same distance with a second stop. The board wants another six weeks of records before deciding whether to retain both depots. Members should understand that a useful service can still require a difficult financial choice; we have not promised that convenience is free.\n\nStarting October 4, members may choose either depot when ordering, but they must keep that choice for the whole four-week order cycle. We need this stability to pack the right quantities for each destination. A member moving house during a cycle may request an exception from the coordinator. A preference for a shorter queue is not an exceptional circumstance. Orders not collected by the close of the collection window will be donated to the community kitchen, unless the member has arranged an authorized substitute beforehand. We cannot refrigerate unclaimed boxes overnight.\n\nSeveral volunteers suggested allowing substitutes to change a box’s contents at pickup. Please explain that substitutes may collect an order but cannot alter it. The packing list is final at noon on Tuesday. A member reporting a packing error after collection should send a photograph and the order number; we will offer credit for a verified error. Dissatisfaction with the colour or shape of seasonal produce is not, by itself, evidence of an error. A visibly spoiled item is a different matter and should certainly be reported.\n\nWe are also changing the training for members who complete service shifts. New packers will attend a supervised Saturday session before taking a weekday shift. Experienced packers who completed the spring training need only review the updated hygiene checklist. We do not intend this distinction to imply that experienced volunteers never make mistakes. It avoids repeating instruction they have already received while ensuring everybody understands the revised procedure for chilled products.\n\nOn prices, the supplier has warned us that imported fruit may rise next month. We will not pass on an increase until we receive an invoice showing it, and members will see any revised price before committing to their next cycle. Our promise is transparent pricing, not permanent insulation from the market. Local produce is likely to be more stable, but weather could change that forecast too.\n\nCould you collect comments specifically from members who have stopped ordering? The meeting usually attracts enthusiastic regulars. Understanding why someone left will be more useful than hearing only why current members like us.\nJulian\n\nElena’s draft announcement:\nThe second depot has improved [1], while its financial effect remains under review. Choose a depot for [2]. A substitute can [3], but cannot revise your order. First-time packers must [4]. Any fruit-price increase will be [5] before the next cycle begins.",
+        "questions": [
+          {
+            "prompt": "Why does the board want six more weeks of records?",
+            "options": [
+              "To delay refunding verified packing errors.",
+              "To prove that all members prefer Hill Street.",
+              "To determine whether the driver can stop visiting either depot immediately.",
+              "To assess a service improvement that has not lowered delivery costs."
+            ],
+            "answer": 3,
+            "explanation": "Missed collections have fallen, but the route still covers the same distance with an added stop. Better collection performance does not itself establish cost savings.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Which member has grounds to request a mid-cycle depot exception?",
+            "options": [
+              "A member who expects a shorter queue elsewhere.",
+              "A member who changes home address.",
+              "A member who dislikes the produce shape.",
+              "A member who has not read the hygiene checklist."
+            ],
+            "answer": 1,
+            "explanation": "Moving house is the specific exception example in the email. Queue preference is explicitly excluded as exceptional.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What happens to an unclaimed box without an arranged substitute?",
+            "options": [
+              "It is donated after the collection window closes.",
+              "It is refrigerated for next-day collection.",
+              "Its contents are sold to the substitute.",
+              "It is automatically delivered to the member’s home."
+            ],
+            "answer": 0,
+            "explanation": "The email says unclaimed boxes go to the community kitchen because overnight refrigeration is unavailable. Holding the box overnight may seem reasonable but contradicts the stated storage limit.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What evidence is requested when reporting a packing error?",
+            "options": [
+              "A photograph and the order number.",
+              "A new four-week subscription.",
+              "A receipt for unrelated groceries.",
+              "A written endorsement from another member."
+            ],
+            "answer": 0,
+            "explanation": "Verified errors require a photo and order number to establish what was received and ordered. Another member’s opinion is not the requested documentation.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What distinction does Julian make about produce quality?",
+            "options": [
+              "Only substitutes may report spoiled items.",
+              "Imported produce cannot be reported as defective.",
+              "Unusual appearance alone differs from visible spoilage.",
+              "Every irregularly shaped vegetable is spoiled."
+            ],
+            "answer": 2,
+            "explanation": "Colour or shape is not alone evidence of error, whereas a visibly spoiled item should be reported. Appearance variation does not automatically establish spoilage.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Why solicit comments from former ordering members?",
+            "options": [
+              "Current members have already approved price increases.",
+              "Former members alone may vote on depot policy.",
+              "The board plans to remove all regular members.",
+              "Regular attendees may not reveal the reasons people leave."
+            ],
+            "answer": 3,
+            "explanation": "The usual meeting attracts enthusiastic regulars, so departed customers add missing insight. Seeking criticism is not evidence of removing current members.",
+            "skill": "Purpose"
+          },
+          {
+            "prompt": "Choose the best completion for announcement gap [1].",
+            "options": [
+              "successful collection of orders",
+              "the speed of supplier invoicing",
+              "the shelf life of imported fruit",
+              "the cost of every delivery route"
+            ],
+            "answer": 0,
+            "explanation": "The trial reduced missed collections; delivery costs have not yet fallen. Financial performance remains under review, so cost improvement is not supported.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for announcement gap [2].",
+            "options": [
+              "any length of time without restriction",
+              "each individual item in the box",
+              "only the first collection of the month",
+              "the complete four-week cycle"
+            ],
+            "answer": 3,
+            "explanation": "Depot choice must remain stable through a four-week order cycle. Weekly switching would undermine the packing stability the rule is designed to create.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for announcement gap [3].",
+            "options": [
+              "collect the order as packed",
+              "cancel another member’s cycle",
+              "change the packing list after Tuesday noon",
+              "swap seasonal items at pickup"
+            ],
+            "answer": 0,
+            "explanation": "Substitutes are authorized to collect but not alter orders. Swapping contents is the suggestion Julian expressly rejects.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for announcement gap [4].",
+            "options": [
+              "repeat all spring training every week",
+              "take a weekday shift without instruction",
+              "complete a supervised Saturday session",
+              "approve the supplier’s fruit invoices"
+            ],
+            "answer": 2,
+            "explanation": "First-time packers need supervised Saturday training before weekday shifts. Experienced spring-trained packers have a different, shorter requirement.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for announcement gap [5].",
+            "options": [
+              "supported by an invoice and disclosed to members",
+              "imposed before the supplier confirms it",
+              "applied retrospectively to completed orders",
+              "avoided under all market conditions"
+            ],
+            "answer": 0,
+            "explanation": "The co-op waits for an invoice and discloses new prices before the next commitment. Transparent pricing is promised, but permanent protection from price changes is not.",
+            "skill": "Contextual completion"
+          }
+        ]
+      },
+      {
+        "title": "Part 2: Reading to Apply a Diagram",
+        "text": "North Table member plans and collection guide\n\nChoose the plan that meets the household’s requirements, not necessarily the largest box. The listed price is per weekly box; the commitment covers four consecutive weeks. Prices include packing and depot delivery. Members may pause only between cycles, except for an approved exceptional circumstance. A member cannot convert a plan to a different type midway through a cycle simply because a preferred item becomes unavailable.\n\nBoth depots receive the same plan choices. Hill Street opens Friday from 4 to 7 p.m.; Station Road opens Saturday from 9 a.m. to noon. Members may authorize an adult substitute by entering the person’s name in their account before packing closes at noon on Tuesday. A text sent after this deadline is not sufficient authorization. Each substitute must show the order code at pickup. Volunteers check codes to prevent boxes with similar names from being confused.\n\nOptional pantry items are purchased separately and do not count towards the produce substitutions in the table. A member may order at most two pantry items per week. Pantry additions must be submitted before the same Tuesday deadline. If an advertised product is unavailable, staff will contact the member to offer credit; they will not replace it with another pantry product without consent. Produce substitutions operate differently: the plan’s stated allowance is used when a member selects an alternative from that week’s eligible list.\n\n“Local” refers to the stated growing region, not to the ownership of the wholesaler. In severe weather the local-only box may contain fewer varieties, with quantities adjusted to maintain the advertised total weight. Staff will not add imported fruit without permission merely to make that box look more varied. The mixed plans can contain imported items, so households requiring a strictly local supply should not select a mixed box based on one week’s photograph.\n\nScenario: Arun’s two-person household wants local-only produce and one permitted substitution. He can collect only Saturday morning and wants to add a jar of beans and a bag of oats. Celeste’s four-person household values imported fruit and needs two substitutions. She wants her neighbour to collect on Friday.\n\nOrder confirmation draft:\nArun should choose [6] at Station Road. Celeste should select [7]. Her neighbour’s authorization must be entered [8].",
+        "questions": [
+          {
+            "prompt": "What is Arun’s produce cost for a complete cycle?",
+            "options": [
+              "$120.",
+              "$24.",
+              "$96.",
+              "$88."
+            ],
+            "answer": 2,
+            "explanation": "Local Duo costs $24 weekly over four consecutive weeks, so 4 × $24 = $96. The $24 listing is per box, not for the whole commitment.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Which collection window fits Arun?",
+            "options": [
+              "Saturday, 4 to 7 p.m. at Hill Street.",
+              "Friday, 4 to 7 p.m. at Hill Street.",
+              "Tuesday, noon at Station Road.",
+              "Saturday, 9 a.m. to noon at Station Road."
+            ],
+            "answer": 3,
+            "explanation": "Station Road’s Saturday morning schedule matches his stated availability. Tuesday noon is the packing cutoff rather than a pickup window.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "How will Arun’s two pantry additions affect his substitution allowance?",
+            "options": [
+              "They consume both substitutions in the plan.",
+              "They leave his one produce substitution available.",
+              "They eliminate the next week’s produce box.",
+              "They require changing to Mixed Family."
+            ],
+            "answer": 1,
+            "explanation": "Pantry additions are separate and do not count towards produce substitutions. Treating purchased extras as substitutions confuses the two different rules.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "If a pantry item is unavailable, what will staff do?",
+            "options": [
+              "Keep the payment until a future cycle.",
+              "Use a produce substitution automatically.",
+              "Select another pantry item without asking.",
+              "Contact the member with an offer of credit."
+            ],
+            "answer": 3,
+            "explanation": "The guide explicitly requires contact and offers credit rather than an unapproved replacement. Automatic replacement is ruled out without consent.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "What could happen to the Local Duo box during severe weather?",
+            "options": [
+              "Its advertised weight must always be reduced.",
+              "It automatically becomes a Mixed Duo box.",
+              "It could contain fewer varieties while maintaining total weight.",
+              "It must include imported fruit without notice."
+            ],
+            "answer": 2,
+            "explanation": "The local-only policy allows less variety with quantities adjusted to preserve weight. The guide forbids silently adding imported produce merely for variety.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Choose the plan for confirmation gap [6].",
+            "options": [
+              "Local Family",
+              "Mixed Duo",
+              "Mixed Family",
+              "Local Duo"
+            ],
+            "answer": 3,
+            "explanation": "Arun needs a one-to-two-person local-only box with one substitution, matching Local Duo. Local Family is local but its larger household size and price are unnecessary for the stated requirement.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the plan for confirmation gap [7].",
+            "options": [
+              "Mixed Family",
+              "Local Duo",
+              "Mixed Duo",
+              "Local Family"
+            ],
+            "answer": 0,
+            "explanation": "Celeste needs a family-sized box allowing imported fruit and two substitutions. Mixed Duo allows imported produce but has no substitutions and is sized for fewer people.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for confirmation gap [8].",
+            "options": [
+              "by a text on Friday afternoon",
+              "before Tuesday’s noon packing cutoff",
+              "whenever the four-week cycle ends",
+              "after the neighbour arrives at Hill Street"
+            ],
+            "answer": 1,
+            "explanation": "Substitute names must be entered before packing closes Tuesday at noon. A later text is expressly insufficient, even if it precedes pickup.",
+            "skill": "Contextual completion"
+          }
+        ],
+        "diagram": "<table><caption>Four-week member plans</caption><thead><tr><th>Plan</th><th>Weekly price</th><th>Suggested household</th><th>Contents</th><th>Produce substitutions</th></tr></thead><tbody><tr><td>Local Duo</td><td>$24</td><td>1–2 people</td><td>5 kg; grown within province</td><td>1 per week</td></tr><tr><td>Mixed Duo</td><td>$22</td><td>1–2 people</td><td>5 kg; local and imported</td><td>0</td></tr><tr><td>Local Family</td><td>$39</td><td>3–5 people</td><td>9 kg; grown within province</td><td>2 per week</td></tr><tr><td>Mixed Family</td><td>$36</td><td>3–5 people</td><td>9 kg; local and imported</td><td>2 per week</td></tr></tbody></table>"
+      },
+      {
+        "title": "Part 3: Reading for Information",
+        "text": "Food systems beyond the checkout\n\nA. Short supply chains can help shoppers understand who grew their food, but distance alone is an incomplete measure of environmental impact. A locally grown crop produced in a heavily heated greenhouse may use more energy than a seasonal crop transported efficiently from farther away. Packaging, storage losses, and farming methods also matter. This complexity should encourage better questions rather than make all claims meaningless. A co-operative can disclose what it knows, distinguish measurements from estimates, and avoid implying that a regional label settles every environmental issue. Local buying may have other benefits, such as maintaining relationships with growers. Those benefits deserve to be described in their own terms instead of being disguised as a precise carbon calculation that nobody has performed.\n\nB. Food waste is often presented as a problem of careless consumers, yet retail conventions influence what households buy and discard. A large discounted package can be poor value if half its contents spoil. Rejecting irregular produce may encourage growers to discard edible crops before they reach a shop. Flexible portions and clearer information about storage can help, provided they remain practical for staff. Shoppers also need to distinguish dates that signal product quality from instructions relevant to food safety. A campaign that says all dates are arbitrary may reduce waste while creating a different risk. Effective education acknowledges the distinction and gives concrete, product-specific advice rather than a memorable slogan that is too broad to be reliable.\n\nC. Shared ownership does not automatically produce shared influence. Members who attend every meeting may develop valuable expertise, but their familiarity with procedures can make newcomers reluctant to challenge them. A chair who explains how decisions will be made, circulates plain-language information in advance, and invites quieter participants to speak can reduce that gap. Not every disagreement requires a vote. Some decisions are operational and must be delegated to staff; others concern the purpose of the organization and warrant broad participation. Confusion over that boundary can lead members to interpret routine management as exclusion. A clear account of authority protects both democratic oversight and the staff’s ability to complete everyday work.\n\nD. Low prices matter, but a pickup model imposes costs that do not appear on a receipt. A household may spend an hour travelling to a depot or pay for childcare during a required service shift. Someone without a vehicle may find a nine-kilogram box difficult to carry, even if its price per kilogram is excellent. Evaluating affordability therefore requires understanding time, transport, and accessibility as well as the shelf price. Options such as smaller boxes, authorized substitutes, or delivery for people with mobility barriers may help. Their costs should be visible rather than quietly shifted onto unpaid volunteers. An organization is not necessarily more efficient because some of its labour has disappeared from the financial statement.",
+        "questions": [
+          {
+            "prompt": "Which paragraph questions food miles as a sufficient environmental measure?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A compares greenhouse energy with efficient transport and lists other impacts. D also mentions travel, but it concerns shoppers’ access costs.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph distinguishes safety instructions from quality-related dates?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B cautions that dates have different purposes and rejects treating all as arbitrary. A concerns production impacts rather than product storage guidance.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph argues for clarifying which decisions staff may make?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C separates operational delegation from decisions about organizational purpose. D discusses unpaid labour but not governance authority.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says a cheap large box can still be inaccessible?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D gives the example of carrying nine kilograms without a vehicle. B considers oversized packages and spoilage, not transporting a depot box.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says growers’ relationships should not be presented as measured emissions savings?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A values grower relationships independently of an unperformed carbon calculation. C addresses relationships among members rather than environmental claims.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph identifies retail practices as contributors to waste?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B discusses bulk discounts and rejection of irregular produce. D analyzes collection arrangements but does not focus on discarded food.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph states that all members must vote on every operational purchase?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 4,
+            "explanation": "No paragraph requires universal voting; C supports staff delegation for some operations. C is relevant to voting, but its actual position rejects treating every decision identically.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph warns that experienced participants can unintentionally inhibit newcomers?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C says familiarity with procedure can make newcomers reluctant to challenge regular attendees. A deals with supply-chain knowledge rather than meeting participation.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph challenges apparent efficiency based on unrecorded labour?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D warns against costs being shifted onto unpaid volunteers and disappearing from statements. C protects staff authority but does not assess accounting treatment.",
+            "skill": "Matching information"
+          }
+        ]
+      },
+      {
+        "title": "Part 4: Reading for Viewpoints",
+        "text": "Opinion: Membership should not become a test of spare time\nBy Sofia Mendes\n\nNorth Table’s founders imagined a food co-operative where members would pack boxes together, know their suppliers, and share responsibility. That ideal remains attractive. But the proposal to require every member to complete twelve hours of service each quarter risks confusing participation with one particular kind of availability. A person who cannot attend a weekday packing shift may still care deeply about the organization.\n\nMandatory service has a persuasive financial argument. Packing costs money, and member work can reduce the price of food. Shared work may also build trust that a customer survey cannot produce. I do not dismiss either benefit. My objection is to a rigid requirement that ignores differences in health, caring responsibilities, work schedules, and transportation. An identical rule can impose a very different burden on different households.\n\nThe proposed alternative—a payment for each missed hour—does not fully solve the problem. It makes service optional for members who can afford the fee while making it effectively compulsory for those who cannot. Describing the fee as a donation does not change its function when membership depends on paying it. A genuine donation can be declined without losing access. Language should not conceal the practical consequences of a policy.\n\nThere are workable alternatives. The co-operative could offer a wider range of tasks, including translating instructions, contacting suppliers, or assembling newsletters from home. It could permit households to pool their hours, and provide confidential waivers when participation would cause hardship. Some paid packing staff may still be necessary. Their cost should be compared with the administrative work needed to track hours and enforce penalties, not with an imaginary system in which volunteer labour requires no coordination.\n\nWaivers inevitably require judgment, and judgment can be applied unevenly. That is a reason to publish criteria and provide a discreet review process, not to assume that the only fair policy is one with no exceptions. Nor should the organization demand intimate medical details when a simpler statement of limitation would suffice. Members need enough confidence in the process to ask for help before they disappear from the ordering list.\n\nThe aim should be meaningful contribution rather than visible busyness. Some members will enjoy packing every week; others may contribute occasionally in less conspicuous ways. A co-operative that values only the first group could lose exactly the diversity it claims to welcome. Sharing responsibility is a strong principle. Designing more than one route to fulfil it would make that principle stronger.\n\nResponse from Miles, a founding volunteer:\nMendes acknowledges [9], which makes her criticism fairer than a blanket rejection of service. Her concern about the missed-hour fee is that [10]. I favour home-based tasks, provided [11]. Confidential waivers would need [12]. We should also include [13] when comparing volunteer packing with paid staffing.",
+        "questions": [
+          {
+            "prompt": "What does the author primarily criticize?",
+            "options": [
+              "A single rigid form of participation that burdens members differently.",
+              "The original founders’ commitment to suppliers.",
+              "All efforts to lower food prices.",
+              "The idea of any member contribution."
+            ],
+            "answer": 0,
+            "explanation": "The author supports shared responsibility but argues for multiple routes based on differing constraints. The criticism does not reject contribution itself; the conclusion calls it a strong principle.",
+            "skill": "Main idea"
+          },
+          {
+            "prompt": "Why does the author question calling the missed-hour fee a donation?",
+            "options": [
+              "The fee cannot help cover any expenses.",
+              "Donations are always illegal in co-operatives.",
+              "Members cannot freely decline it while retaining access.",
+              "Only founders may make voluntary payments."
+            ],
+            "answer": 2,
+            "explanation": "A genuine donation may be declined; a payment required for membership serves a different function. The objection concerns practical compulsion, not the fee’s possible financial usefulness.",
+            "skill": "Argument"
+          },
+          {
+            "prompt": "What is implied about equal rules?",
+            "options": [
+              "Their real burden can differ with members’ circumstances.",
+              "They only affect members with vehicles.",
+              "They always guarantee equal practical access.",
+              "They should never be written down."
+            ],
+            "answer": 0,
+            "explanation": "The passage names health, care, work, and transport as reasons identical requirements impose unequal burdens. Formal equality is precisely what the author distinguishes from practical fairness.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "How does the author address the possibility of inconsistent waivers?",
+            "options": [
+              "Require complete medical histories from every member.",
+              "Publish criteria and provide a discreet review process.",
+              "Eliminate all exceptions automatically.",
+              "Let each packer invent a different rule."
+            ],
+            "answer": 1,
+            "explanation": "The waiver paragraph proposes criteria, confidential review, and limited disclosure. The author rejects the conclusion that uncertainty makes a no-exceptions policy fair.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "Which outcome does the author fear from valuing only frequent packing?",
+            "options": [
+              "Guaranteeing every volunteer more leisure time.",
+              "Losing members who contribute in less visible ways.",
+              "Eliminating all need for paid staff.",
+              "Making imported fruit permanently cheaper."
+            ],
+            "answer": 1,
+            "explanation": "The conclusion says the co-op could lose diversity by recognizing only the most visible group. Price changes are unrelated to the stated risk of narrow participation standards.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [9].",
+            "options": [
+              "both savings and relationship benefits from shared work",
+              "that voluntary labour has no value",
+              "that service rules cannot affect anyone differently",
+              "that penalties should replace all participation"
+            ],
+            "answer": 0,
+            "explanation": "The author explicitly recognizes reduced packing costs and the trust created by shared work. Her objection to rigidity does not deny the benefits of service.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [10].",
+            "options": [
+              "it is unrelated to membership access",
+              "it removes all administrative work",
+              "ability to pay determines whether service is truly optional",
+              "every member will receive the same exemption"
+            ],
+            "answer": 2,
+            "explanation": "Affluent members can pay instead; those unable to afford the fee must serve. The fee does not create equal optionality for everyone.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [11].",
+            "options": [
+              "they are deliberately harder than packing",
+              "only founding members are allowed to do them",
+              "they make a useful contribution to the co-operative",
+              "they require a visit to the depot every day"
+            ],
+            "answer": 2,
+            "explanation": "The author’s principle is meaningful contribution, with useful home tasks as alternatives. Requiring depot attendance would undermine the purpose of home-based access.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [12].",
+            "options": [
+              "an unlimited fee for missing hours",
+              "clear criteria and a private route for review",
+              "a guarantee that nobody ever requests one",
+              "public disclosure of every medical diagnosis"
+            ],
+            "answer": 1,
+            "explanation": "Published criteria and discreet review address fairness while preserving privacy. Detailed public medical disclosure directly contradicts the author’s caution.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [13].",
+            "options": [
+              "only the wages of paid packers",
+              "all members’ personal savings accounts",
+              "the cost of coordinating and enforcing volunteer hours",
+              "the retail price of unrelated produce"
+            ],
+            "answer": 2,
+            "explanation": "Tracking hours and enforcing penalties require administrative work that belongs in the comparison. Counting only paid wages falsely assumes volunteer coordination is costless.",
+            "skill": "Contextual completion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r4",
+    "kind": "reading",
+    "title": "Test 4 — Transit connections and station design",
+    "minutes": 55,
+    "parts": [
+      {
+        "title": "Part 1: Reading Correspondence",
+        "text": "From: Priya Nair, Transit Service Planner\nTo: Mateo Silva, Eastbank Business Association\nSubject: Station forecourt trial: what will change in November\n\nDear Mateo,\nThank you for compiling the businesses’ delivery concerns. The trial design has been amended, although not in the way some shopkeepers expected. We will preserve a loading bay on Alder Street rather than permit deliveries in the station forecourt. The forecourt must remain clear because buses need room to turn and passengers often cross between vehicles. A bay outside the forecourt may be less convenient for some premises, but retaining the old arrangement would compromise the purpose of the trial.\n\nThe loading bay will operate from 6 to 10 a.m. on weekdays. Outside those hours it becomes short-stay passenger pickup space, with a ten-minute limit. Vehicles may not wait there for customers who have not yet arrived. The enforcement team will issue information notices during the first five working days. This is an introduction period, not permission to obstruct a bus movement; dangerous obstruction may still lead to immediate enforcement.\n\nWe will move route 18’s departure point to platform C while route 42 remains on platform A. The change separates the routes’ queues, which currently merge near the entrance. It is not a change to either route’s destination or frequency. The electronic boards will display both platforms, and staff will be present during the first morning peak. Please ask employers to circulate the platform information rather than warn employees that their buses have been discontinued.\n\nA rumour has also spread that the sheltered seating will be removed permanently. Two benches must be taken out for resurfacing and will return after the work, expected to last ten days. During that period, temporary seating will be available inside the station. We realize this will not be equally convenient for every passenger, particularly someone watching for a bus from outdoors. The accessibility adviser will review the temporary arrangement before work begins; suggestions about the location are welcome by October 23.\n\nFor evaluating the six-week trial, we will compare bus delay records, pedestrian conflicts, and feedback from passengers and businesses. Sales figures alone would not tell us whether the forecourt works better. Likewise, a reduction in complaints could reflect people giving up rather than improvement. We will publish a brief account of the evidence and explain any recommendation to retain, revise, or abandon the layout. No permanent conversion has been authorized.\n\nCould your association nominate one shopkeeper who receives deliveries before 8 a.m. and one whose deliveries arrive later? The contrast will help us identify practical problems that a single average schedule would conceal.\nPriya\n\nMateo’s reply:\nWe will explain that deliveries belong [1]. The introductory notices [2]. Route 18’s change affects [3]. Members will be invited to comment on [4] before October 23. We welcome an evaluation that combines [5] rather than treating silence as proof of success.",
+        "questions": [
+          {
+            "prompt": "Why were deliveries not retained in the forecourt?",
+            "options": [
+              "They would conflict with bus turning and passenger movement.",
+              "The transit authority has banned goods delivery throughout Eastbank.",
+              "All shops are closing during the trial.",
+              "The loading bay cannot be used before 10 a.m."
+            ],
+            "answer": 0,
+            "explanation": "The forecourt must remain clear for bus turns and people crossing between vehicles. An alternate loading bay is preserved, so deliveries are relocated rather than universally banned.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What use applies to the Alder Street bay at noon on a weekday?",
+            "options": [
+              "Unrestricted commercial loading.",
+              "Reserved parking for route 18 drivers.",
+              "Waiting indefinitely for a customer’s train.",
+              "Ten-minute pickup for passengers who have arrived."
+            ],
+            "answer": 3,
+            "explanation": "After the 6–10 a.m. loading period, the bay becomes ten-minute passenger pickup space. The rule bars waiting for people who have not yet arrived even within the short-stay category.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What is the limit of the first-five-day introduction period?",
+            "options": [
+              "Dangerous obstruction can still receive immediate enforcement.",
+              "Only route 42 passengers may receive notices.",
+              "No vehicle rule applies during that period.",
+              "All violations are permanently exempted."
+            ],
+            "answer": 0,
+            "explanation": "Information notices ease introduction, but immediate enforcement remains possible for dangerous obstruction. The notice policy is expressly not permission to obstruct buses.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What will happen to route 18?",
+            "options": [
+              "Its departure platform changes without changing its destination or frequency.",
+              "It will stop running after the first peak period.",
+              "Its frequency doubles during the trial.",
+              "Its destination changes to Alder Street."
+            ],
+            "answer": 0,
+            "explanation": "Route 18 moves to C, with neither destination nor frequency changed. Warnings that buses are discontinued are precisely the misinformation Priya asks employers to avoid.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What does Priya acknowledge about temporary indoor benches?",
+            "options": [
+              "They cannot be used by anyone with a disability.",
+              "They eliminate the need for an accessibility review.",
+              "They may be less convenient for passengers watching buses outside.",
+              "They will remain inside permanently."
+            ],
+            "answer": 2,
+            "explanation": "Priya identifies the inconvenience of viewing outdoor buses and requests review before work. Acknowledging an access concern does not establish a universal prohibition for disabled passengers.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Why request shopkeepers with different delivery times?",
+            "options": [
+              "An average schedule could hide distinct practical problems.",
+              "Late recipients alone may decide the permanent design.",
+              "The authority intends to publish private sales records.",
+              "Early recipients are automatically entitled to new parking permits."
+            ],
+            "answer": 0,
+            "explanation": "The last paragraph seeks contrasting experiences that a single average would conceal. The nominations provide evidence, not exclusive decision authority.",
+            "skill": "Purpose"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [1].",
+            "options": [
+              "on platform C throughout the day",
+              "in passenger pickup space without a time limit",
+              "between turning buses in the forecourt",
+              "in the Alder Street loading bay during its loading hours"
+            ],
+            "answer": 3,
+            "explanation": "The designated delivery location is Alder Street, with weekday loading from 6 to 10 a.m. Keeping the forecourt clear is a core constraint, not an optional suggestion.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [2].",
+            "options": [
+              "suspend every enforcement power",
+              "allow indefinite vehicle waiting",
+              "do not excuse dangerous obstruction",
+              "apply for the full six-week trial"
+            ],
+            "answer": 2,
+            "explanation": "The email distinguishes explanatory notices from leniency for dangerous obstruction. The period is five working days, not the entire trial.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [3].",
+            "options": [
+              "where passengers board",
+              "how often buses run",
+              "which city the route serves",
+              "whether the route continues operating"
+            ],
+            "answer": 0,
+            "explanation": "A departure-platform move changes boarding location, not service destination or frequency. A queue-management change should not be read as a discontinued route.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [4].",
+            "options": [
+              "permanent removal of every bench",
+              "their preferred bus manufacturer",
+              "the closure of all weekday loading",
+              "the temporary seating location"
+            ],
+            "answer": 3,
+            "explanation": "Suggestions about temporary seating are welcomed by October 23 before accessibility review. The two removed benches are expected to return, so permanent removal is not proposed.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [5].",
+            "options": [
+              "the first morning’s weather alone",
+              "operational records and different users’ feedback",
+              "sales figures as its only measure",
+              "the absence of complaints as definitive evidence"
+            ],
+            "answer": 1,
+            "explanation": "The evaluation combines delays, pedestrian conflicts, and passenger/business feedback. Priya warns that silence may reflect giving up rather than improvement.",
+            "skill": "Contextual completion"
+          }
+        ]
+      },
+      {
+        "title": "Part 2: Reading to Apply a Diagram",
+        "text": "Eastbank integrated travel information\n\nThe timetable shows scheduled weekday departures during the pilot. Travel times are typical and do not include walking time between the station and a destination. Transfers within the station require at least five minutes. A connection with less time is not considered feasible even if two services use adjacent platforms. Travellers should allow additional time for mobility needs or unusually crowded periods.\n\nA single adult fare is $3.20 and permits transfers for ninety minutes from the first validation. The ninety-minute period concerns boarding the connecting service, not reaching the final destination. A passenger may complete a longer journey after the window expires provided the final boarding occurred within it. A new fare is required for a return journey after the valid period. The regional express has a separate $2 supplement, payable even when an ordinary transfer remains valid. A bicycle stored in the station’s locked enclosure costs $1 per day; there is no storage charge for a folding bicycle carried in its bag where permitted.\n\nPlatform C is reached by a ramp from the main entrance. Platform B requires using the pedestrian underpass; allow six minutes from platform A to B. The general five-minute transfer rule is therefore not enough for that particular movement. When platform announcements conflict with this printed schedule, follow the current station board and seek staff assistance. Scheduled departure times may be altered during major weather disruptions; this guide is not a guarantee of arrival at an appointment.\n\nService 18 runs every twenty minutes after the listed departure, and service 42 every thirty minutes. The express departures listed are the only express trips in this period. The community shuttle departs only at the two times shown. Do not infer an additional shuttle simply because another route has a regular interval. Vehicles on routes 18 and 42 accept ordinary bicycles subject to space; the express does not. The shuttle carries folding bicycles in bags only.\n\nScenario: Jo arrives at platform A at 8:00 a.m. and needs to reach the health campus by 8:45. She wants the cheapest feasible journey. Later she will travel to Pine Junction at 10:00 and is considering the express. Malik, carrying a non-folding bicycle, wants to reach the recreation centre without leaving the bicycle at the station.\n\nAdvice draft:\nJo can reach the health campus using [6]. A fresh ordinary fare plus the express supplement would cost [7]. Malik can use [8].",
+        "questions": [
+          {
+            "prompt": "Why is the 8:04 express infeasible for Jo?",
+            "options": [
+              "She needs six minutes to move from A to B.",
+              "Her ticket must be valid for more than ninety minutes.",
+              "The express departs from platform C.",
+              "The express never visits the health campus."
+            ],
+            "answer": 0,
+            "explanation": "From 8:00 to 8:04 is four minutes, less than the six-minute A-to-B movement. The table explicitly lists a campus stop, so destination is not the problem.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "When will the 8:10 route 18 reach the health campus on the typical schedule?",
+            "options": [
+              "8:45 a.m.",
+              "8:25 a.m.",
+              "9:00 a.m.",
+              "8:35 a.m."
+            ],
+            "answer": 3,
+            "explanation": "Adding its 25-minute journey to 8:10 gives 8:35. 8:25 confuses the express’s shorter campus travel time with route 18.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "What is the next route 42 departure after 8:35?",
+            "options": [
+              "9:25 a.m.",
+              "9:05 a.m.",
+              "9:00 a.m.",
+              "8:55 a.m."
+            ],
+            "answer": 1,
+            "explanation": "Route 42 starts at 8:05 and repeats every thirty minutes: 8:35, then 9:05. The twenty-minute interval belongs to route 18, not route 42.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "A fare first validated at 8:10 may cover which final boarding?",
+            "options": [
+              "Any express boarding without a supplement.",
+              "A connecting service at 9:35.",
+              "A connecting service at 9:45.",
+              "A new return journey at 10:00."
+            ],
+            "answer": 1,
+            "explanation": "The ninety-minute window ends at 9:40, so 9:35 boarding qualifies. Completion may occur later, but the boarding itself must remain within ninety minutes.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Which statement about the shuttle timetable is justified?",
+            "options": [
+              "The shuttle reaches the recreation centre in twenty minutes.",
+              "No 8:55 departure is listed or implied.",
+              "The shuttle repeats every thirty minutes all morning.",
+              "The shuttle accepts every non-folding bicycle."
+            ],
+            "answer": 1,
+            "explanation": "The guide says only the two listed shuttle departures operate and warns against assuming intervals. Twenty minutes is the campus travel time; the centre takes forty minutes.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Choose the best completion for advice gap [6].",
+            "options": [
+              "the 9:00 express to arrive by 8:45",
+              "the 8:30 route 18 to arrive at 8:40",
+              "the 8:10 route 18 for a $3.20 ordinary fare",
+              "the 8:04 express without any supplement"
+            ],
+            "answer": 2,
+            "explanation": "The 8:10 ordinary service is feasible and arrives at 8:35 without an express supplement. The quicker 8:04 express is already unreachable under the transfer rule.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the amount for advice gap [7].",
+            "options": [
+              "$2.00",
+              "$5.20",
+              "$3.20",
+              "$6.40"
+            ],
+            "answer": 1,
+            "explanation": "A new $3.20 fare plus the $2 express supplement totals $5.20. The ordinary fare alone omits the supplement required even for valid transfers.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for advice gap [8].",
+            "options": [
+              "the shuttle with a standard bicycle",
+              "any route without capacity restrictions",
+              "the express with a standard bicycle",
+              "route 42, if bicycle space is available"
+            ],
+            "answer": 3,
+            "explanation": "Route 42 reaches the recreation centre and accepts ordinary bicycles subject to space. The shuttle permits only bagged folding bicycles, so Malik’s bicycle is not eligible.",
+            "skill": "Contextual completion"
+          }
+        ],
+        "diagram": "<table><caption>Pilot weekday timetable — morning</caption><thead><tr><th>Service</th><th>Platform</th><th>Departures</th><th>Destination</th><th>Travel time</th></tr></thead><tbody><tr><td>18</td><td>C</td><td>8:10, then every 20 minutes</td><td>Health campus</td><td>25 minutes</td></tr><tr><td>42</td><td>A</td><td>8:05, then every 30 minutes</td><td>Recreation centre</td><td>20 minutes</td></tr><tr><td>Regional express</td><td>B</td><td>8:04, 9:00, 10:00</td><td>Pine Junction via health campus</td><td>15 minutes to campus; 35 to junction</td></tr><tr><td>Community shuttle</td><td>C</td><td>8:25 and 9:25 only</td><td>Recreation centre via health campus</td><td>20 minutes to campus; 40 to centre</td></tr></tbody></table>"
+      },
+      {
+        "title": "Part 3: Reading for Information",
+        "text": "Understanding travel behaviour\n\nA. Passenger counts can conceal the importance of a route at a particular time. A service with modest daily ridership may carry most of the night-shift workers at a hospital, while a busy midday service may have several convenient alternatives. Evaluating a reduction therefore requires information about when passengers travel, what substitutes exist, and the consequences of missing a trip. This does not mean every low-use route must be preserved unchanged. It means that averages should begin a discussion rather than settle it. A smaller vehicle, a shifted departure, or a connection designed around a shift change may serve the need more efficiently. The decision should respond to the people behind the count rather than assume that a quiet bus is necessarily an unnecessary bus.\n\nB. Reliable connections can matter more to passengers than slightly faster vehicles. A ten-minute bus journey followed by an unpredictable twenty-minute wait may be worse than a fifteen-minute journey with a dependable transfer. Passengers also experience missed connections differently: someone travelling to a flexible social visit has more options than someone attending a timed medical appointment. Coordination should therefore examine the whole journey, including walking between platforms and the time needed by people with mobility limitations. Publishing an attractive departure frequency is of limited value if the services repeatedly arrive just after each other has left. Small timetable adjustments can sometimes create more benefit than a costly attempt to increase speed along a crowded corridor.\n\nC. Station design shapes movement before passengers read any instructions. A narrow entrance may cause two queues to merge even if signs assign different platforms. A bench placed beside a busy boarding point can help tired travellers but obstruct people using mobility aids. Trial layouts make these conflicts visible, provided observations include different times and types of user. Counting how many people pass through a space is not enough; observers should notice hesitation, detours, and interactions that require others to step aside. A layout that appears efficient in an empty promotional photograph may function poorly during a rainy peak period. Consultation benefits when participants can test an arrangement rather than speculate from a plan.\n\nD. A digital arrival display can reduce uncertainty, but its usefulness depends on how it handles disruption. A screen that continues showing a scheduled time after a vehicle has been cancelled creates false confidence. Clear explanations of what is known, what is estimated, and when the next update will appear help passengers make decisions. Not every traveller uses a smartphone, and a dead battery should not make a public service inaccessible. Station boards, audible announcements, and available staff should complement online information. This redundancy is not simply a concession to older technology. It recognizes that communication is a service whose failure can prevent people from using the transportation they have already paid for.",
+        "questions": [
+          {
+            "prompt": "Which paragraph warns against judging a route only by average ridership?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A shows how a low daily total can hide a vital night-shift trip. B focuses on connections, not average route demand.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says a slower vehicle can produce a better overall journey?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B contrasts a faster ride with a long uncertain wait against a slower ride with a reliable transfer. A suggests service adjustments but does not make this journey-time comparison.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph recommends observing hesitation and detours?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C lists these behaviours as evidence of layout problems beyond throughput counts. D concerns information accuracy, not direct observation of physical movement.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph supports parallel communication channels?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D recommends boards, audible announcements, and staff alongside online information. C advocates layout testing but does not discuss communication redundancy.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says every service with low use must remain unchanged?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 4,
+            "explanation": "A explicitly denies that low-use routes must always be preserved unchanged. A is tempting because it defends nuanced evaluation, but it allows modifications.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph identifies differences in the consequences of a missed transfer?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B compares flexible social visits with timed medical appointments. A discusses alternatives but not these two transfer consequences.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph challenges conclusions drawn from empty promotional images?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C contrasts an empty photograph with a rainy peak period. D questions stale schedule information, a different kind of representation.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph suggests adapting vehicle size or departure time to a specific need?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A proposes smaller vehicles, shifted departures, and shift-change connections. B recommends coordination, but does not propose changing vehicle size.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph warns that an unchanged display can mislead during cancellations?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D describes a screen still showing a scheduled time for a cancelled vehicle. B concerns missed coordination even when vehicles operate normally.",
+            "skill": "Matching information"
+          }
+        ]
+      },
+      {
+        "title": "Part 4: Reading for Viewpoints",
+        "text": "Opinion: A station is more than a place to move quickly\nBy Leon Haddad\n\nThe Eastbank forecourt trial has revived an old argument: should a transit station prioritize movement or comfort? Framed that way, the debate invites each side to pretend the other has no legitimate concern. Of course buses must turn safely and passengers must reach them. But a station also serves people who arrive early, become tired, need assistance, or wait through a delay. Their stillness is part of travel, not evidence that they are using the space incorrectly.\n\nRemoving every bench might simplify pedestrian flow in a narrow area. It might also force a person with limited stamina to stand where they are least able to wait safely. Conversely, placing seating wherever there is an attractive view may obstruct boarding. The task is not to choose a slogan about movement or comfort. It is to design an arrangement that considers both, then observe where it fails. Accessibility should enter that process before the first complaint, rather than appear as a correction once everything else has been settled.\n\nBusiness access raises another legitimate concern. A forecourt entirely devoted to vehicles delivering goods would undermine transit operations, but a design that makes ordinary deliveries impractical could damage nearby shops and reduce the services available to passengers. Time-limited loading outside the forecourt seems a sensible trial, not a guaranteed solution. Its usefulness depends on whether those hours match actual delivery patterns and whether goods can be moved safely from the bay to the premises. A convenient line on a map is not yet a workable operation.\n\nI am encouraged that planners have promised to publish evidence rather than simply declare the trial a success. However, the choice of evidence matters. Faster bus departures are valuable, but a gain of thirty seconds should not automatically outweigh a major new barrier for a wheelchair user. We should identify the distribution of benefits and burdens, not convert every experience into one average score. Some impacts require a change even if they affect relatively few people.\n\nThe six-week trial should therefore be treated as an opportunity to learn, with permission to revise parts of the layout while it is operating. Critics who demand the old arrangement before collecting evidence and supporters who call any adjustment a failure share the same mistake: they regard a trial as a referendum on a fixed design. Its purpose is to expose problems cheaply enough that we can address them. A successful experiment may end with a different arrangement from the one shown at its beginning.\n\nReader response from Tess, a shop employee:\nHaddad’s point about waiting is that [9]. I welcome the loading trial, but agree that [10] must be checked. An overall speed gain should not conceal [11]. Making a revision during the trial could show [12], and the final decision should consider [13].",
+        "questions": [
+          {
+            "prompt": "How does the author view the movement-versus-comfort debate?",
+            "options": [
+              "Movement is the only legitimate purpose of a station.",
+              "Comfort should always override bus safety.",
+              "It falsely treats two legitimate needs as mutually exclusive.",
+              "Both needs can be ignored if nearby sales improve."
+            ],
+            "answer": 2,
+            "explanation": "The author rejects the binary framing and calls for an arrangement considering both movement and waiting. The article acknowledges bus safety rather than subordinating it unconditionally.",
+            "skill": "Argument"
+          },
+          {
+            "prompt": "When should accessibility influence the design?",
+            "options": [
+              "Before the main decisions are finalized.",
+              "Only if a large majority files complaints.",
+              "After the six-week trial is permanently adopted.",
+              "Only after all other users approve the layout."
+            ],
+            "answer": 0,
+            "explanation": "The author says accessibility should enter before complaints and before everything else is settled. Waiting for a majority would neglect serious impacts on relatively few users.",
+            "skill": "Author viewpoint"
+          },
+          {
+            "prompt": "What does the author think of the proposed loading bay?",
+            "options": [
+              "It is guaranteed to solve every shop’s delivery problem.",
+              "It should replace all bus platforms immediately.",
+              "It is a promising trial whose practical fit still needs checking.",
+              "It is unacceptable solely because it is outside the forecourt."
+            ],
+            "answer": 2,
+            "explanation": "The article calls time-limited external loading sensible but contingent on hours and safe movement of goods. A line on a map is specifically distinguished from proven operational usefulness.",
+            "skill": "Tone"
+          },
+          {
+            "prompt": "Why might a thirty-second bus gain be insufficient to justify a layout?",
+            "options": [
+              "Wheelchair users never need quick departures.",
+              "Speed measurements are impossible to collect.",
+              "Every bus delay is beneficial to shops.",
+              "A serious accessibility burden may outweigh a small average benefit."
+            ],
+            "answer": 3,
+            "explanation": "The author contrasts a minor time saving with a major wheelchair barrier and rejects simple averaging. The argument is about unequal impact, not the impossibility or irrelevance of measuring speed.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What mistaken assumption do both rigid critics and rigid supporters share?",
+            "options": [
+              "They both want buses to be discontinued.",
+              "They treat the trial as a vote on an unchangeable design.",
+              "They both believe changes must require a new station.",
+              "They both refuse to consider shop deliveries."
+            ],
+            "answer": 1,
+            "explanation": "The final paragraph says both regard a trial as a referendum on a fixed design. Their positions differ; the shared issue is resistance to learning through revision.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [9].",
+            "options": [
+              "every station should remove all benches",
+              "delays should be encouraged deliberately",
+              "people who wait are avoiding travel",
+              "remaining still can be a necessary part of a journey"
+            ],
+            "answer": 3,
+            "explanation": "Waiting, fatigue, and assistance are legitimate travel needs, not misuse of space. Recognizing waiting does not mean deliberately creating delays.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [10].",
+            "options": [
+              "whether all shops can use the bus turning area",
+              "the permanent closure of passenger pickup",
+              "the artistic quality of the timetable alone",
+              "the hours and physical practicality of deliveries"
+            ],
+            "answer": 3,
+            "explanation": "The author asks whether bay hours fit deliveries and goods can safely reach premises. Allowing deliveries in turning space would conflict with the transit need the author accepts.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [11].",
+            "options": [
+              "a substantial obstacle experienced by a smaller group",
+              "a requirement to average all harms into seconds",
+              "a guarantee of higher retail profits",
+              "the exact number of decorative benches in photographs"
+            ],
+            "answer": 0,
+            "explanation": "The article urges examining distribution rather than letting averages conceal significant accessibility harms. A single average score is the approach the author questions.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [12].",
+            "options": [
+              "that no more evidence should be gathered",
+              "that the old layout must return in full",
+              "that the experiment is producing useful learning",
+              "that any original planning was worthless"
+            ],
+            "answer": 2,
+            "explanation": "Trials expose problems so revisions can address them; modification is compatible with success. A change does not prove the entire original effort was worthless.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [13].",
+            "options": [
+              "whether the opening map remained unchanged",
+              "only businesses’ average sales",
+              "only the fastest recorded bus departure",
+              "how advantages and disadvantages fall on different users"
+            ],
+            "answer": 3,
+            "explanation": "The author wants the distribution of benefits and burdens assessed across users. Keeping the initial map unchanged is not the trial’s purpose.",
+            "skill": "Contextual completion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r5",
+    "kind": "reading",
+    "title": "Test 5 — Community archives and responsible access",
+    "minutes": 55,
+    "parts": [
+      {
+        "title": "Part 1: Reading Correspondence",
+        "text": "From: Noelle Grant, Community Archive Curator\nTo: Daniel Ross, Millhaven Historical Society\nSubject: Donated recordings and the autumn exhibition\n\nDear Daniel,\nI have finished the first review of the cassette recordings offered by your society. They contain valuable accounts of the mill’s working life, especially from people whose experiences are poorly represented in our written collection. Their historical value, however, does not establish our right to publish them. Several speakers consented to an interview for the society’s newsletter, not explicitly to unlimited online access. We will need to examine the original forms and, where possible, contact speakers or their representatives before uploading complete recordings.\n\nThis need not prevent the autumn exhibition from proceeding. We can display the cassette cases and explain the project, while using only the short excerpts for which permission is clear. The exhibition will be richer if the clearance work is complete, but it should not depend on rushing that work. A label saying “permission pending” would be more honest than quietly treating uncertainty as consent. Visitors can still learn why the material matters and how responsible preservation operates.\n\nThe society asked whether digital copies mean the originals can be discarded. Our recommendation is to retain them. A digital transfer may contain an error that is not noticed immediately, and future equipment could recover a detail our present setup misses. Storage space is limited, so we propose keeping the originals in the archive’s controlled cabinet rather than returning them to the society’s damp basement. Ownership would remain with the society under a renewable five-year deposit agreement; this is not an outright donation unless your committee chooses that separately.\n\nWe would also welcome help identifying people mentioned in the recordings. Please distinguish confident identifications from informed guesses. A note such as “possibly the night supervisor, surname uncertain” is much more useful than an unsupported name entered as fact. We will keep alternative interpretations in the working catalogue until evidence allows us to resolve them. The public catalogue will indicate significant uncertainty rather than presenting a cleaner but less reliable story.\n\nFor the exhibition’s volunteer guides, I suggest a training session on September 14. Guides should explain the limits of the collection as well as its strengths. We do not want a single account of a disagreement at the mill repeated as the settled experience of every worker. Please nominate guides who are comfortable acknowledging that different memories may coexist without one speaker deliberately lying.\n\nFinally, your proposed launch date of September 20 is possible for the physical display. The online collection will have its own launch date once permission and technical checks are complete. Combining the two dates would create a promise we cannot yet keep.\nNoelle\n\nDaniel’s reply:\nThe committee understands that historical importance is separate from [1]. We will plan an exhibition using [2]. A deposit agreement would preserve [3]. Volunteers will mark uncertain names [4]. Our publicity will give the physical exhibition a date while describing the online launch as [5].",
+        "questions": [
+          {
+            "prompt": "Why can the archive not immediately publish every recording?",
+            "options": [
+              "None of the recordings has historical value.",
+              "The society has already destroyed every consent form.",
+              "Some original consent may not extend to unrestricted online access.",
+              "Online publication is prohibited for all oral history."
+            ],
+            "answer": 2,
+            "explanation": "Speakers may have agreed only to newsletter interviews, requiring a review of publication permission. The email does not claim all publication is prohibited; some excerpts already have clear permission.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What may proceed before full clearance is finished?",
+            "options": [
+              "Treating unanswered permission requests as consent.",
+              "Discarding originals after any first transfer.",
+              "A physical display with clearly authorized excerpts.",
+              "Uploading all tapes behind an unlabelled link."
+            ],
+            "answer": 2,
+            "explanation": "The autumn exhibition can show cases and use only excerpts with clear permission. Uncertainty must not be quietly treated as consent, so unrestricted uploading is unsupported.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Why retain the original cassettes after digitization?",
+            "options": [
+              "Digital files are legally incapable of preserving sound.",
+              "The society cannot own any digital copy.",
+              "Keeping originals automatically grants online rights.",
+              "Later checks or equipment may reveal transfer errors or additional details."
+            ],
+            "answer": 3,
+            "explanation": "Noelle cites unnoticed transfer errors and possible future recovery of missed details. Physical preservation does not itself resolve publication rights.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What would the five-year deposit agreement change?",
+            "options": [
+              "Ownership transfers permanently to the archive.",
+              "The archive receives unlimited publication consent.",
+              "The storage location, while ownership remains with the society.",
+              "The society must discard all related paperwork."
+            ],
+            "answer": 2,
+            "explanation": "The proposal moves originals to controlled storage but explicitly preserves society ownership. An outright donation is a separate choice and must not be confused with deposit.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "How should volunteers record an uncertain identification?",
+            "options": [
+              "Enter the most plausible name as an established fact.",
+              "Choose a name solely to simplify the catalogue.",
+              "Exclude the recording from every exhibition permanently.",
+              "Label the tentative name and the nature of the uncertainty."
+            ],
+            "answer": 3,
+            "explanation": "The curator gives an explicitly qualified example and keeps alternatives in the working catalogue. A cleaner catalogue is not worth turning guesses into facts.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What quality should the volunteer guides have?",
+            "options": [
+              "Ability to present one account as every worker’s experience.",
+              "Comfort explaining conflicting memories without declaring dishonesty.",
+              "Authority to issue new consent on behalf of speakers.",
+              "Willingness to promise a complete online launch by September 20."
+            ],
+            "answer": 1,
+            "explanation": "Guides should recognize limits and coexistence of different memories. One account should not be generalized to every worker, even if it is memorable.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [1].",
+            "options": [
+              "the value of workers’ experiences",
+              "the society’s interest in the mill",
+              "permission to make the material public",
+              "the need to preserve any original media"
+            ],
+            "answer": 2,
+            "explanation": "The opening distinction is between historical importance and publication rights. Historical interest supports preservation but does not settle consent.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [2].",
+            "options": [
+              "all recordings regardless of their consent forms",
+              "only interviews with no surviving speakers",
+              "physical materials and excerpts with clear permission",
+              "copies that visitors may alter themselves"
+            ],
+            "answer": 2,
+            "explanation": "The proposed exhibition uses cases and authorized short excerpts while clearance continues. Noelle rejects rushing publication merely to meet an exhibition date.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [3].",
+            "options": [
+              "automatic consent for all online use",
+              "the damp basement as the storage site",
+              "permanent ownership by the archive",
+              "the society’s ownership of the original tapes"
+            ],
+            "answer": 3,
+            "explanation": "Ownership remains with the society under a renewable deposit, while storage improves. Donation transfers ownership differently and is explicitly separate.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [4].",
+            "options": [
+              "as errors to be deleted without review",
+              "as tentative rather than established facts",
+              "as facts if they sound plausible",
+              "only in private conversations with no catalogue note"
+            ],
+            "answer": 1,
+            "explanation": "The working and public catalogue approaches both preserve meaningful uncertainty. Unsupported confidence would undermine the reliability the curator emphasizes.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for reply gap [5].",
+            "options": [
+              "unrelated to any clearance process",
+              "dependent on permission and technical checks",
+              "guaranteed for September 20",
+              "cancelled because no excerpts are authorized"
+            ],
+            "answer": 1,
+            "explanation": "Online launch waits for permission and technical checks and has a separate date. The September 20 possibility concerns the physical display only.",
+            "skill": "Contextual completion"
+          }
+        ]
+      },
+      {
+        "title": "Part 2: Reading to Apply a Diagram",
+        "text": "Millhaven Archive: research access and reproduction rules\n\nResearchers should book the service appropriate to both their source and their intended use. Reading material on site does not automatically entitle someone to publish it. For every reproduction request, staff check physical condition, copyright, and any restrictions in the deposit agreement. Each item needs approval. Researchers must accurately describe their purpose rather than claim “personal study” to obtain faster processing.\n\nThe reading room is open Tuesday to Saturday, 10 a.m. to 4 p.m. Appointments begin at 10 a.m. or 1 p.m. and last up to two hours. Bags remain in lockers, and pencils rather than pens must be used around original documents. Photography without flash is allowed only after staff approve the item. Handling restrictions may limit photography even when copyright permission is not an issue. Personal scanners are not permitted because they can damage bindings.\n\nDigitized photographs requested for a publication include a caption file and the required credit wording. The fee covers file preparation, not copyright transfer. A researcher who later uses the image in a different project must seek a new use approval if the original authorization was project-specific. Public-domain custom files may incur preparation fees; ready files may still have publication restrictions.\n\nFor recordings with limited consent, supervised listening is possible only if the speaker’s agreement permits research access. The listed oral-history service does not override a closed record. Staff will tell researchers whether an item can be requested before taking payment. Transcription requests cover intelligible recorded speech; unclear words are marked, not invented. Transcripts may omit lengthy pauses but identify omissions that affect interpretation. Researchers may request literal transcription for a project that depends on speech patterns.\n\nScenario: Grace needs to examine original ledgers next Saturday for two hours. She also wants one publication-ready photograph for a book due in three weeks. Yusuf needs a transcript of an approved twenty-minute recording and hopes to receive it within ten working days. Neither researcher is asking the archive to clear an otherwise restricted item.\n\nStaff’s draft:\nGrace should book [6] for the ledgers and request [7] for the book image. Yusuf’s standard transcript would cost [8].",
+        "questions": [
+          {
+            "prompt": "Which appointment start time is available for Grace on Saturday?",
+            "options": [
+              "9 a.m.",
+              "3 p.m.",
+              "Noon.",
+              "1 p.m."
+            ],
+            "answer": 3,
+            "explanation": "Appointments begin only at 10 a.m. or 1 p.m.; the room opens Saturday. Being within room opening hours does not mean any start time can be booked.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "Which item can Grace use while examining the originals?",
+            "options": [
+              "A bag kept beside the ledgers.",
+              "A fountain pen.",
+              "A personal document scanner.",
+              "A pencil."
+            ],
+            "answer": 3,
+            "explanation": "The handling rules require pencils, prohibit personal scanners, and place bags in lockers. A personal scanner may seem efficient but is banned because of binding damage.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "Why is a standard study scan inappropriate for Grace’s book?",
+            "options": [
+              "It can only reproduce recorded speech.",
+              "It takes longer than the publication file.",
+              "It is low-resolution and approved for personal study, not publication.",
+              "It is more expensive than every other service."
+            ],
+            "answer": 2,
+            "explanation": "The scan’s table limits do not fit a published book; the publication image service does. Its shorter turnaround does not change the use restriction.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "What does the $25 publication-file fee buy?",
+            "options": [
+              "A guaranteed waiver of every deposit restriction.",
+              "Staff preparation of a high-resolution file, with use permission assessed separately.",
+              "Full copyright ownership for all future projects.",
+              "An unlimited number of images."
+            ],
+            "answer": 1,
+            "explanation": "The passage distinguishes file preparation from copyright transfer and separately checks use. Paying for a file does not purchase unrestricted rights.",
+            "skill": "Applying a diagram"
+          },
+          {
+            "prompt": "How are unclear words handled in a standard transcript?",
+            "options": [
+              "They are invented to improve readability.",
+              "They cause the entire recording to become unavailable.",
+              "They are automatically removed without any note.",
+              "They are marked as unclear rather than guessed."
+            ],
+            "answer": 3,
+            "explanation": "The guide explicitly states unclear words are marked, not invented. Readable reconstruction cannot justify presenting guessed speech as a faithful transcript.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "Choose the service for staff draft gap [6].",
+            "options": [
+              "supervised oral-history listening",
+              "rush transcription",
+              "a standard study scan only",
+              "an original-document appointment"
+            ],
+            "answer": 3,
+            "explanation": "Grace wants to examine original ledgers on site, requiring the document appointment. A scan provides a reproduction, not the requested two-hour examination of originals.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the service for staff draft gap [7].",
+            "options": [
+              "a transcription of the photograph",
+              "a standard personal-study scan",
+              "an unrestricted copyright transfer",
+              "a publication image file"
+            ],
+            "answer": 3,
+            "explanation": "A book requires a publication-suitable high-resolution image and checked use permission. Personal-study service is cheaper but does not fit her purpose.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the amount for staff draft gap [8].",
+            "options": [
+              "$60",
+              "$100",
+              "$25",
+              "$30"
+            ],
+            "answer": 0,
+            "explanation": "Twenty recorded minutes at $3 per minute costs $60; eight working days fits ten days. The $100 rush option is faster than Yusuf requires, while $25 belongs to a photograph.",
+            "skill": "Contextual completion"
+          }
+        ],
+        "diagram": "<table><caption>Research service options</caption><thead><tr><th>Service</th><th>Booking or turnaround</th><th>Charge</th><th>Limits</th></tr></thead><tbody><tr><td>Original-document appointment</td><td>Book at least 3 working days ahead</td><td>Free</td><td>Up to 2 hours; reading room only</td></tr><tr><td>Standard study scan</td><td>5 working days</td><td>$6 per item</td><td>Low-resolution; approved personal study only</td></tr><tr><td>Publication image file</td><td>10 working days</td><td>$25 per image</td><td>High-resolution; use permission checked separately</td></tr><tr><td>Supervised oral-history listening</td><td>Book 5 working days ahead</td><td>$10 per hour</td><td>On site; research access consent required</td></tr><tr><td>Standard transcription</td><td>8 working days</td><td>$3 per recorded minute</td><td>Approved recordings; unclear words marked</td></tr><tr><td>Rush transcription</td><td>3 working days</td><td>$5 per recorded minute</td><td>Approved recordings; subject to staff capacity</td></tr></tbody></table>"
+      },
+      {
+        "title": "Part 3: Reading for Information",
+        "text": "Interpreting community history\n\nA. Oral history captures not just events but the meaning people later attach to them. Two workers may remember the same dispute differently because they occupied different roles, heard different conversations, or reconsidered the experience over time. A contradiction is therefore a starting point for investigation rather than automatic proof that one person is dishonest. Interviewers should preserve the speaker’s wording while gathering other evidence that can clarify dates and context. Correcting an obvious date in an explanatory note can help a reader; silently replacing it in the recording or transcript erases part of the source. The strength of oral history lies in listening carefully without abandoning critical comparison.\n\nB. Digitization expands access but creates a continuing maintenance obligation. A file can survive unchanged while the software needed to read it becomes uncommon. Storage devices fail, links disappear, and a copied file can acquire an unnoticed error. Archives therefore keep multiple copies, check their integrity, record technical information, and plan for format changes. These tasks are less visible than launching a searchable website, but they sustain its value. A one-time project grant may pay for scanning without covering the next decade of preservation. Funding decisions should distinguish creating access today from keeping material accessible tomorrow. Otherwise a collection celebrated as permanently preserved may become difficult to use surprisingly soon.\n\nC. Descriptive language influences what researchers find and how they interpret it. A catalogue that repeats an old prejudiced label without explanation may appear to endorse it. Removing every historical term can also make a source harder to locate or obscure how people were described at the time. A considered approach may preserve the original wording in a clearly identified field while adding current description and context. Community consultation can reveal harms or meanings staff overlooked, but it need not produce a single universally preferred term. The catalogue should document significant decisions and remain open to revision as understanding changes. Description is a continuing responsibility, not a neutral task completed once a box receives a number.\n\nD. Small archives often rely on donated material, which makes the collection’s absences as important as its contents. A business owner may preserve correspondence carefully while temporary workers leave few written records. Families with spare storage space can keep photographs that others lose during repeated moves. None of this means the surviving material is useless. It means that an exhibition should avoid presenting survival as representativeness. Seeking new contributions can broaden a collection, but the archive should explain whose experiences remain difficult to recover. A transparent account of gaps invites future participation and helps visitors understand why a polished display is still a partial account of community life.",
+        "questions": [
+          {
+            "prompt": "Which paragraph says contradictory memories need not indicate deliberate deception?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A explains differing roles, conversations, and later interpretation. D discusses missing records rather than disagreements between speakers.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph distinguishes making files from preserving their future usability?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B separates scanning grants from long-term copying, checks, and format planning. C concerns catalogue wording, not technical accessibility.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph discusses retaining problematic historical wording with context?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C proposes original wording in an identified field alongside current description. A concerns spoken wording and dates, not catalogue labels.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph warns that surviving records may not represent the whole community?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D contrasts owners and temporary workers and cautions against equating survival with representativeness. A deals with different recollections of a shared event, not collection survival.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph argues against silently altering a source to correct a date?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 0,
+            "explanation": "A supports explanatory notes while rejecting replacement in recording or transcript. C allows contextual catalogue changes, a different intervention.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph states that a scanned collection no longer needs preservation funding?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 4,
+            "explanation": "B makes the opposite point: digitized access needs continuing maintenance and funding. B is relevant to scanning, but the proposed statement reverses its argument.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph treats description as an ongoing and revisable responsibility?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 2,
+            "explanation": "C says description is not a neutral once-only task and should remain open to revision. B recommends technical maintenance rather than revising interpretive description.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph identifies unequal household resources as a cause of historical gaps?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 3,
+            "explanation": "D notes that storage space and repeated moves affect what families preserve. B discusses institutional storage technology rather than household circumstances.",
+            "skill": "Matching information"
+          },
+          {
+            "prompt": "Which paragraph says a file can remain intact yet become harder to read?",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E — Not given"
+            ],
+            "answer": 1,
+            "explanation": "B describes unchanged files whose necessary software becomes uncommon. A considers the accuracy of remembered content, not file formats.",
+            "skill": "Matching information"
+          }
+        ]
+      },
+      {
+        "title": "Part 4: Reading for Viewpoints",
+        "text": "Opinion: Open archives require more than an upload button\nBy Amara Voss\n\nA public archive funded by residents should make its collections available as widely as possible. That principle is a good starting point. It becomes less useful when “available” is treated as meaning that every item must be placed online immediately, without considering the circumstances in which it was created. Access is a public good, but so is the trust that allows people to contribute material in the first place.\n\nSomeone interviewed thirty years ago may have expected a cassette to be heard by a small local research group. That expectation does not settle every legal question, but it deserves consideration when the recording can now be searched and shared around the world. The scale and permanence of circulation have changed. A speaker’s passing remark about a neighbour may become the most widely quoted part of an interview that was intended to describe work at the mill. Responsible access requires noticing that change, not pretending the internet is simply a larger reading room.\n\nRestrictions can certainly be abused. An institution might invoke sensitivity to hide uncomfortable evidence about powerful people, or retain broad closures long after their original purpose has disappeared. That possibility is an argument for explicit reasons, review dates, and routes to challenge a decision. It is not an argument that every restriction is illegitimate. Where a recording contains private information about a living third party, a redacted excerpt or supervised research access may be more responsible than either total closure or unrestricted publication.\n\nThe archive also needs to communicate what a restricted item contains without revealing the information it has a duty to protect. A vague catalogue entry saying only “closed recording” helps nobody understand the collection. A fuller description of its topic, period, and access conditions can support research and make decisions accountable. The aim is proportionate access: disclose what can safely be disclosed, explain what cannot, and revisit the boundary when circumstances change.\n\nThis approach takes staff time. Consent inquiries, careful editing, and review procedures are often omitted from the budget because scanning seems more tangible. Yet a website containing thousands of files with unclear rights is not necessarily a successful public service. Nor is an archive that protects itself by refusing every request. We should fund the professional work between those extremes and judge success partly by the quality of access, not only by the number of downloads.\n\nThere will still be contested decisions. A policy cannot remove every conflict between inquiry and privacy. It can make those conflicts visible and provide a consistent process for resolving them. An archive earns trust when it explains an imperfect decision and permits review, rather than presenting its first decision as beyond question.\n\nResponse from Karim, a local researcher:\nVoss supports broad access while recognizing [9]. Her proposed safeguards against excessive closure include [10]. A useful catalogue could [11]. Budgeting only for scanning would neglect [12]. I also agree that download totals alone [13].",
+        "questions": [
+          {
+            "prompt": "What is the author’s central argument?",
+            "options": [
+              "Only wealthy donors should determine access.",
+              "Wide access should be managed through proportionate, accountable decisions.",
+              "Every restriction on public archives is illegitimate.",
+              "Online archives are inherently unsuitable for research."
+            ],
+            "answer": 1,
+            "explanation": "The article supports broad access alongside reasoned restrictions, alternatives, and review. Recognizing online risks is not a rejection of online archives altogether.",
+            "skill": "Main idea"
+          },
+          {
+            "prompt": "Why compare the internet with a local reading room?",
+            "options": [
+              "To show that global searchable circulation changes the context of old consent.",
+              "To prove that every old consent form is legally invalid.",
+              "To show that recordings have no value outside their town.",
+              "To argue that reading rooms should stop serving residents."
+            ],
+            "answer": 0,
+            "explanation": "Searchability, sharing, scale, and permanence differ from limited local listening. The author explicitly says expectation does not settle every legal question, so universal legal invalidity overstates it.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "What danger does the author acknowledge concerning restrictions?",
+            "options": [
+              "They make every catalogue description impossible.",
+              "They can be used to conceal uncomfortable evidence.",
+              "They require deleting all material about living people.",
+              "They always reveal more private information than uploads do."
+            ],
+            "answer": 1,
+            "explanation": "The article notes that sensitivity may become a pretext to shield powerful people or prolong closures. The author recognizes abuse without claiming every restriction is abusive.",
+            "skill": "Argument"
+          },
+          {
+            "prompt": "What alternative might suit material with private information about a living third party?",
+            "options": [
+              "Redacted excerpts or supervised access.",
+              "Automatic unrestricted publication of the complete recording.",
+              "Destroying every related document.",
+              "Refusing to describe its topic under any conditions."
+            ],
+            "answer": 0,
+            "explanation": "These are the explicit intermediate options between total closure and unrestricted posting. A useful descriptive catalogue can still exist without revealing protected details.",
+            "skill": "Detail"
+          },
+          {
+            "prompt": "What does the conclusion say a policy can accomplish?",
+            "options": [
+              "Replace all professional judgment with download totals.",
+              "Provide a consistent, reviewable process despite unresolved conflicts.",
+              "Guarantee the first decision is correct in every case.",
+              "Eliminate all disagreement about privacy permanently."
+            ],
+            "answer": 1,
+            "explanation": "The final paragraph accepts continuing conflicts while emphasizing explanation and review. A policy cannot remove every conflict; complete certainty is explicitly rejected.",
+            "skill": "Inference"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [9].",
+            "options": [
+              "the changed consequences of worldwide online circulation",
+              "that all speakers opposed any future use",
+              "that local research is always illegitimate",
+              "that scanning alone resolves consent"
+            ],
+            "answer": 0,
+            "explanation": "The author distinguishes limited original expectations from globally searchable and shareable access. The article does not assume every speaker opposes access; it calls for consideration and inquiry.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [10].",
+            "options": [
+              "reasons, review dates, and a way to challenge decisions",
+              "allowing institutions to avoid contested evidence",
+              "permanent closure without explanation",
+              "automatic deletion after thirty years"
+            ],
+            "answer": 0,
+            "explanation": "These three mechanisms make restrictions accountable and reduce the potential for abuse. Unexplained permanent closure would reinforce the problem the author identifies.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [11].",
+            "options": [
+              "describe topics and access conditions without exposing protected details",
+              "conceal the existence of every restricted item",
+              "replace all consent inquiries",
+              "publish every private statement in its heading"
+            ],
+            "answer": 0,
+            "explanation": "The article recommends fuller descriptions that support research while respecting protection duties. Vague concealment is criticized, while full disclosure of private details goes too far.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [12].",
+            "options": [
+              "the purchase price of researchers’ computers",
+              "the need to upload every file without checking it",
+              "all forms of physical display advertising",
+              "consent inquiries, careful editing, and continuing review"
+            ],
+            "answer": 3,
+            "explanation": "The author lists these less visible professional tasks as commonly omitted from budgets. The article asks for rights-sensitive work, not indiscriminate upload spending.",
+            "skill": "Contextual completion"
+          },
+          {
+            "prompt": "Choose the best completion for response gap [13].",
+            "options": [
+              "should replace all professional assessment",
+              "show why archives must refuse every request",
+              "cannot establish the quality or responsibility of access",
+              "prove that every published file has clear rights"
+            ],
+            "answer": 2,
+            "explanation": "A large file collection with unclear rights is not necessarily a successful service; quality matters alongside counts. High use does not itself demonstrate responsible permission handling.",
+            "skill": "Contextual completion"
+          }
+        ]
+      }
+    ]
+  }
+]

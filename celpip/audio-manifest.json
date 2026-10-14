@@ -1,0 +1,322 @@
+[
+  {
+    "file": "audio/l1-p1-c1.mp3",
+    "duration": 123.31,
+    "bytes": 740109,
+    "speakers": 3,
+    "sha256": "af517025eec8bd033d1d10cc258779016a22236843b0df2d8977a28f1a0ecb89",
+    "sourceFingerprint": "a8f0a0c6e66b016f974adbc7d76a1c9a5516c094be497d65b08bb40c559e8d19"
+  },
+  {
+    "file": "audio/l1-p1-c2.mp3",
+    "duration": 53.16,
+    "bytes": 319197,
+    "speakers": 3,
+    "sha256": "1e83df32ca79c098e61eadce535ad3fd009fd052f3ecc47b5ee689714230d32e",
+    "sourceFingerprint": "6e7f2c44f51375ca6be12154582d1005f55153ea5e3b5678184850d2051a61bc"
+  },
+  {
+    "file": "audio/l1-p1-c3.mp3",
+    "duration": 36.96,
+    "bytes": 221997,
+    "speakers": 3,
+    "sha256": "a8416951fedb8ebd40ea070bc10d803dd1a24f4ff7fe1f669196130ba38541d4",
+    "sourceFingerprint": "1befcc13bcbe69adce67a9453e2a7f4480e4e0bbd8f0da69ac48165548d63281"
+  },
+  {
+    "file": "audio/l1-p2.mp3",
+    "duration": 156.62,
+    "bytes": 939981,
+    "speakers": 3,
+    "sha256": "8bfa4c516c9f70bf0ed7c7dd3b1ba06f20c799c4348aba4e77c4411ab7dacba0",
+    "sourceFingerprint": "a988114ebaa4a4db8e0a604b70af7ad537459ded2ebe0e4fbc750d45eb183d73"
+  },
+  {
+    "file": "audio/l1-p3.mp3",
+    "duration": 172.22,
+    "bytes": 1033581,
+    "speakers": 2,
+    "sha256": "d933efd36ff10811058acba540233c496e3a2059ce6a7293243d1c8c0ea957c3",
+    "sourceFingerprint": "3fac0529a8a0b6f2f240841f1c4e58396a4ae0f2dcba154ef7c44ad0f9586a6e"
+  },
+  {
+    "file": "audio/l1-p4.mp3",
+    "duration": 153.0,
+    "bytes": 918237,
+    "speakers": 1,
+    "sha256": "141b4feb0bd95fdbc60f99381a48eacc02a392c87174eed6560a0602baab00bd",
+    "sourceFingerprint": "d2c7087aa37431f37b35f162d1a9075490f4c73ca4029f9c54e5c19b71ef84ae"
+  },
+  {
+    "file": "audio/l1-p5.mp3",
+    "duration": 219.02,
+    "bytes": 1314381,
+    "speakers": 4,
+    "sha256": "3684ccfe943404f21dd7305301ed8234e6eadc24e8b0321c8393de877770a39f",
+    "sourceFingerprint": "db7ffb22e94eaef6484cc6e0521da09feea956d9d9acc39a4915509e64142ee7"
+  },
+  {
+    "file": "audio/l1-p6.mp3",
+    "duration": 179.38,
+    "bytes": 1076493,
+    "speakers": 1,
+    "sha256": "77ca41693330977f5621e8144d489e23cf739d537d222b7107e817a52e8e2110",
+    "sourceFingerprint": "b2918698400d7144cfd0bb296fc4c52214704e568c21b08ddf26c09c9f4acfae"
+  },
+  {
+    "file": "audio/l2-p1-c1.mp3",
+    "duration": 126.14,
+    "bytes": 757101,
+    "speakers": 3,
+    "sha256": "6d08f81c516e6f9b92d69ae15080b52d1a3c74f1603fb0e420289b37003ac602",
+    "sourceFingerprint": "322e8a4e2c6ee0764dd1c0afc2f8342d0741f6be75478edef6bb82e8da1c0a44"
+  },
+  {
+    "file": "audio/l2-p1-c2.mp3",
+    "duration": 53.83,
+    "bytes": 323229,
+    "speakers": 3,
+    "sha256": "2c307789814a56e2813eb27c7ebba1c879000f5d1d843e8f744aa60b4f735db9",
+    "sourceFingerprint": "a4aac74db90660c5d95de98f4fb8a554fdf6452c0a137155ddfda17575e0f99e"
+  },
+  {
+    "file": "audio/l2-p1-c3.mp3",
+    "duration": 37.13,
+    "bytes": 223005,
+    "speakers": 3,
+    "sha256": "65080b43b19e1b9300b50cb95204188c1f7ec0afe6ed740c61c24512f320bd42",
+    "sourceFingerprint": "ff67412cc8f83da6209b382c7fe7548e0c57a2495c86a8b9622ae17185569e13"
+  },
+  {
+    "file": "audio/l2-p2.mp3",
+    "duration": 160.54,
+    "bytes": 963453,
+    "speakers": 3,
+    "sha256": "0b294441e64ed4be73fd516c03c2850a48b41c2d1cdd570a4009856489cfa121",
+    "sourceFingerprint": "22e29971479f57c13494493f127a2a74cb9921b1471b824a0d60aa55c04894fd"
+  },
+  {
+    "file": "audio/l2-p3.mp3",
+    "duration": 188.64,
+    "bytes": 1132077,
+    "speakers": 1,
+    "sha256": "63caeda520edccc046669e0742e20e75e4069d5eee8047c946dce3c3a1d90842",
+    "sourceFingerprint": "e431d85699da1e4812ae840651338b0c2be83674b0abbf59540fcb534d6b6d49"
+  },
+  {
+    "file": "audio/l2-p4.mp3",
+    "duration": 170.09,
+    "bytes": 1020765,
+    "speakers": 2,
+    "sha256": "92b72d3f277e8105e3e6621646116de6b552342e56136961f969ffa1c09209f8",
+    "sourceFingerprint": "ce3a57c32f3806fc200444b1eb2e0af0c2c02d07c0507b3967acb14002dd0251"
+  },
+  {
+    "file": "audio/l2-p5.mp3",
+    "duration": 216.65,
+    "bytes": 1300125,
+    "speakers": 4,
+    "sha256": "3d27eadc3e1b5bfdc915db05eb31f95ffd7d10b5b106ca76602c1ba5678cfba1",
+    "sourceFingerprint": "3e027afdf907c30b07893900c99bb62b557149d8c14bc6a8461095d312b27a0a"
+  },
+  {
+    "file": "audio/l2-p6.mp3",
+    "duration": 182.83,
+    "bytes": 1097229,
+    "speakers": 1,
+    "sha256": "a0d81e2c5e4396aa8d24bfd746211b5d9d2ff901838633eda1fb17fa8dd1d7cd",
+    "sourceFingerprint": "b492bcbbb93dbc367fd05f2dd4e375f2a5d0d4bde3fe756046fa659dc08e6a54"
+  },
+  {
+    "file": "audio/l3-p1-c1.mp3",
+    "duration": 127.75,
+    "bytes": 766749,
+    "speakers": 3,
+    "sha256": "0b08376a23bb06ee8f674e97e8b06b7c951f65b4837dc368a281274e82eab988",
+    "sourceFingerprint": "a471f4d592754751a61aa093dca850ac1271d41a10ec62e6f71cbba053170ea5"
+  },
+  {
+    "file": "audio/l3-p1-c2.mp3",
+    "duration": 55.3,
+    "bytes": 332013,
+    "speakers": 3,
+    "sha256": "752dd2d929b2aa9d56fa208d17453e2deffabee6df394fb69224ab12709f94ed",
+    "sourceFingerprint": "c9d1c44deff94ede95caff7d47a2dbf9a4748bd38756fae9ad3faef229d285e1"
+  },
+  {
+    "file": "audio/l3-p1-c3.mp3",
+    "duration": 34.94,
+    "bytes": 209901,
+    "speakers": 3,
+    "sha256": "71684d2e64acf029e82e9268c010fc62906120c42dcd79f68b6a26f6c1c92ca3",
+    "sourceFingerprint": "b2ff97bc3dece943d88936ad87c0c41eccf22c8961009cfc4be38c6de75e5899"
+  },
+  {
+    "file": "audio/l3-p2.mp3",
+    "duration": 152.02,
+    "bytes": 912333,
+    "speakers": 3,
+    "sha256": "20b75b109af53348a1f64fda85dab060ba79c1217113d04cda60c2cf62e3c185",
+    "sourceFingerprint": "6b714e9ca90162a84e213d63f90a0b63a6fcc78b8cdfb163b6f5779b10765aa5"
+  },
+  {
+    "file": "audio/l3-p3.mp3",
+    "duration": 187.01,
+    "bytes": 1122285,
+    "speakers": 1,
+    "sha256": "f78a0084b71f0612a546c34b34a7d44f59d9ece2c3dfca5bf7a563601c46252f",
+    "sourceFingerprint": "a635a2366dde1c2f77aecb2a6f3ad6a9df329ec9c75f19ff93a25a72ba2121ca"
+  },
+  {
+    "file": "audio/l3-p4.mp3",
+    "duration": 165.26,
+    "bytes": 991821,
+    "speakers": 2,
+    "sha256": "cd02369511580ddeb2f06b6496b83e54ef548b8a79963ed3473afb848da91751",
+    "sourceFingerprint": "0dca9a4d7eb7a4f582fa90e4fee72186d5b4ee0cbee7bcf93433da21ff187fa5"
+  },
+  {
+    "file": "audio/l3-p5.mp3",
+    "duration": 220.85,
+    "bytes": 1325325,
+    "speakers": 3,
+    "sha256": "fa24ac3b4700c20441c9e20e76898c196d8f39f076ec6d8d72f83e87333739dd",
+    "sourceFingerprint": "351ff6bf8b58a2beda0d737471375ca9dbe36b6a51fa15d36475212a49bcfa46"
+  },
+  {
+    "file": "audio/l3-p6.mp3",
+    "duration": 175.2,
+    "bytes": 1051437,
+    "speakers": 2,
+    "sha256": "75fd89fa08ec6667e6289078ec0f9b48ee5cd0e88704a0f4344c9e693c2e0fcc",
+    "sourceFingerprint": "ffa5471f54dd1b7f91618f70b02c22584bc3414ed27213f65e23b9103b6cafcd"
+  },
+  {
+    "file": "audio/l4-p1-c1.mp3",
+    "duration": 132.26,
+    "bytes": 793821,
+    "speakers": 3,
+    "sha256": "23fb8f86f143bd03cf3511a550dea198ca8951253fecbb3620547d0ed5a490eb",
+    "sourceFingerprint": "2a6acad9a99e958c36997f7895d8eea65cffb85aea956c50b6f9439c071df7ae"
+  },
+  {
+    "file": "audio/l4-p1-c2.mp3",
+    "duration": 43.65,
+    "bytes": 262144,
+    "speakers": 3,
+    "sha256": "4007fdec779de933f309a5c3e4f085afb7ad44443ee7564e3910d6ed408b9c5c",
+    "sourceFingerprint": "3c766571755e867ff57c977d8c469af2e67ba2f52e4b3936f8ccc26c8c06d197"
+  },
+  {
+    "file": "audio/l4-p1-c3.mp3",
+    "duration": 35.83,
+    "bytes": 215229,
+    "speakers": 3,
+    "sha256": "8cd83e77dc6a4346904cf19228c1e5fbd9f5bb15e83041635c84e82b73619103",
+    "sourceFingerprint": "ea2db2b0a60d41ccfc0d582ee1afda903e0e99fe91796a2fb7a0462c47e26919"
+  },
+  {
+    "file": "audio/l4-p2.mp3",
+    "duration": 157.18,
+    "bytes": 943293,
+    "speakers": 3,
+    "sha256": "f1775f5838d665fedc07c499a6c4226e9ec77066e851f488ad4e1dbe1184df2a",
+    "sourceFingerprint": "bf2508e5fbf6c5a3c5a3bd44bfadb4f49160fde65de2983f44012a4151d9f66a"
+  },
+  {
+    "file": "audio/l4-p3.mp3",
+    "duration": 87.34,
+    "bytes": 524288,
+    "speakers": 2,
+    "sha256": "4df59b1acc1779712fd12b87cba32b5c51067fd597bd6b2ae401c9d6255d2787",
+    "sourceFingerprint": "a12e6aa3b24726d850ddf46c63b036163546949f478519bbca68fb2f78a4f6b2"
+  },
+  {
+    "file": "audio/l4-p4.mp3",
+    "duration": 105.89,
+    "bytes": 635565,
+    "speakers": 1,
+    "sha256": "2783ced5db4fec2407b306757236687d8a8ebd6258a0b964d65ef22a37917d65",
+    "sourceFingerprint": "c1fcdcdedd6e1a564f777407a8d983e2f4a6e949deebe2c0ece84653420b918b"
+  },
+  {
+    "file": "audio/l4-p5.mp3",
+    "duration": 199.27,
+    "bytes": 1195869,
+    "speakers": 4,
+    "sha256": "ba720983c4856bbec457cab61e3e6bbf590df82fbb9d596d69c3c128304690a0",
+    "sourceFingerprint": "fe447bc88dec3878281319496c77435bb9bf5a6e5c9cc70a92926c0878903ca1"
+  },
+  {
+    "file": "audio/l4-p6.mp3",
+    "duration": 176.33,
+    "bytes": 1058205,
+    "speakers": 2,
+    "sha256": "647cf00c7303a4c5b269e9343eb8239cf8b3db9aee69227866e2a129747b068f",
+    "sourceFingerprint": "5f432c08b40ac297f753a75d2fcab7056c880daa0f8339c57f9502f1d6098ab3"
+  },
+  {
+    "file": "audio/l5-p1-c1.mp3",
+    "duration": 130.75,
+    "bytes": 784749,
+    "speakers": 3,
+    "sha256": "c15e5e35a943ebdff2a40bf2c1ea2b6c7116999089188336d234f6ae3361def5",
+    "sourceFingerprint": "341cd9b10dfa6b6b78eef41616b5d898749c949eea68fe92910a85061feb4a8b"
+  },
+  {
+    "file": "audio/l5-p1-c2.mp3",
+    "duration": 53.74,
+    "bytes": 322653,
+    "speakers": 3,
+    "sha256": "efa1a819c5132983163add6e9330a4b2c56fc45110726c07b140cd4ea032bd62",
+    "sourceFingerprint": "eaf2e227e5672c8f9cf03dfe696e2c05527773765bfdabfbe85566da826afedf"
+  },
+  {
+    "file": "audio/l5-p1-c3.mp3",
+    "duration": 40.06,
+    "bytes": 240573,
+    "speakers": 3,
+    "sha256": "05269dbc902450ecd5b201fc3706e1a83a13a009ee23d02d95995df39e13565e",
+    "sourceFingerprint": "875982786eeaa3e4a4ce2477aa3d0c6646b0bed910e6f55f4f08dad845b2657d"
+  },
+  {
+    "file": "audio/l5-p2.mp3",
+    "duration": 157.25,
+    "bytes": 943725,
+    "speakers": 3,
+    "sha256": "270bd52e6a88d42830d09ed440e88b46426689293b19407f6d2bc5584839078f",
+    "sourceFingerprint": "f9564d1fa2a0546769b4ce6a4058d3b150415f4fd3789c7d84117acc69d6d6f4"
+  },
+  {
+    "file": "audio/l5-p3.mp3",
+    "duration": 188.09,
+    "bytes": 1128765,
+    "speakers": 1,
+    "sha256": "38ab15931fb92fc4dbe44576ec548047e83d72fa1690f2c765967ea3f9f772b5",
+    "sourceFingerprint": "b4e579c8d0d9b15e6387b8d46a9a0c4cb470ee7bb108dcc64ae4c90b37c35d81"
+  },
+  {
+    "file": "audio/l5-p4.mp3",
+    "duration": 162.82,
+    "bytes": 977133,
+    "speakers": 2,
+    "sha256": "cf8dbab01bd9bfd0917843d3189fe6bb3baca154a10d8c4220a901c0bacd07c4",
+    "sourceFingerprint": "5fbbdd812142d1a2e7c74da51c705c1374afaf56b35bf809378eb0b5bbfa3a78"
+  },
+  {
+    "file": "audio/l5-p5.mp3",
+    "duration": 221.21,
+    "bytes": 1327485,
+    "speakers": 4,
+    "sha256": "ee7bc54aed7f19d0f80fd52f5cbc3b74e113ae54f33ec15f762ae8ca9e9d50ee",
+    "sourceFingerprint": "12e8b0b6fbe0b0cfcd4c80b492947d84568795d66ce281b138aa9bf7eafa5575"
+  },
+  {
+    "file": "audio/l5-p6.mp3",
+    "duration": 178.75,
+    "bytes": 1072749,
+    "speakers": 2,
+    "sha256": "57728a2be8061b62a5dbcc2bbe5604409fd1960eda8a5f8140aca6d35a2bd6fe",
+    "sourceFingerprint": "9424543999fd9a36f957a13a0b503dd6513f9fe6c4b3ed90fa025fad20ee6b82"
+  }
+]
