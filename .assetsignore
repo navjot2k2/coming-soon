@@ -1,0 +1,7 @@
+/functions/**
+/worker.js
+/wrangler.jsonc
+/.git/**
+/.github/**
+/.dev.vars*
+/.env*
