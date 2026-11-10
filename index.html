@@ -1,93 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sunre Global — business strategy, technology advisory and transformation.">
-<title>Sunre Global | Business & Technology</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunre Global | Local Logistics & Delivery</title><meta name="description" content="Local moving, store pickup, delivery and transportation enquiries in British Columbia. Explore Sun Movers and discuss your business delivery needs with Sunre.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#10202d;--muted:#63737f;--green:#176b4b;--green2:#eaf4ef;--line:#e3e9e6;--paper:#fff;--soft:#f6f8f7}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;color:var(--ink);line-height:1.65;background:var(--paper)}
-a{color:inherit}
-.container{width:min(1160px,calc(100% - 48px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;text-decoration:none}
-.logo svg{width:148px;height:auto}
-.nav-links{display:flex;gap:30px;align-items:center;list-style:none}
-.nav-links a{font-size:14px;color:var(--muted);text-decoration:none}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{background:var(--ink);color:#fff!important;padding:10px 18px;border-radius:6px}
-.menu{display:none;border:0;background:none;font-size:25px;color:var(--ink)}
-.hero{padding:120px 0 105px;background:linear-gradient(135deg,#fff 0%,#f7faf8 100%)}
-.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:end}
-.kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.15em;font-size:12px;font-weight:600;color:var(--green);margin-bottom:22px}
-.kicker:before{content:"";width:28px;height:2px;background:var(--green)}
-h1,h2{font-family:"DM Serif Display",serif;font-weight:400;line-height:1.05;letter-spacing:-.02em}
-h1{font-size:clamp(52px,7vw,88px);max-width:850px}
-.hero-copy{font-size:19px;color:var(--muted);max-width:670px;margin:28px 0 34px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600}
-.btn-dark{background:var(--ink);color:#fff}
-.btn-outline{border:1px solid var(--line);background:#fff}
-.hero-note{border-left:1px solid var(--green);padding:4px 0 4px 24px;color:var(--muted);font-size:14px}
-.hero-note strong{display:block;color:var(--ink);font-size:16px;margin-bottom:6px}
-.section{padding:100px 0}
-.section-soft{background:var(--soft)}
-.section-head{max-width:720px;margin-bottom:48px}
-.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:600;color:var(--green);margin-bottom:16px}
-.section-head h2{font-size:clamp(38px,5vw,58px);margin-bottom:16px}
-.section-head p{color:var(--muted);font-size:16px}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.service{position:relative;border:1px solid var(--line);border-radius:10px;padding:34px;background:#fff;min-height:290px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:.2s}
-.service:hover{transform:translateY(-3px);border-color:#b9cec4}
-.service-num{font-size:12px;color:var(--green);font-weight:600;letter-spacing:.1em}
-.service h3{font-size:24px;margin:30px 0 10px}
-.service p{font-size:14px;color:var(--muted);max-width:470px}
-.service-link{font-size:14px;font-weight:600;color:var(--green);margin-top:25px}
-.split{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;align-items:start}
-.big-statement{font-family:"DM Serif Display",serif;font-size:clamp(34px,4vw,50px);line-height:1.12}
-.about-copy{color:var(--muted);font-size:16px;max-width:650px}
-.about-copy p+p{margin-top:18px}
-.principles{margin-top:38px;border-top:1px solid var(--line)}
-.principle{display:grid;grid-template-columns:50px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
-.principle span{font-size:12px;color:var(--green);font-weight:600}
-.principle strong{display:block;color:var(--ink);font-size:15px;margin-bottom:3px}
-.principle p{font-size:13px}
-.academy{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:center}
-.academy-card{background:var(--ink);color:#fff;border-radius:14px;padding:38px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
-.academy-card .mini{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7ed0a9}
-.academy-card h3{font-family:"DM Serif Display",serif;font-weight:400;font-size:34px;line-height:1.1}
-.academy-card a{color:#fff;text-decoration:none;font-size:14px;font-weight:600}
-.contact{background:var(--ink);color:#fff;padding:90px 0}
-.contact-grid{display:grid;grid-template-columns:1fr .7fr;gap:80px}
-.contact h2{font-size:clamp(44px,5vw,64px);max-width:650px;margin-bottom:18px}
-.contact p{color:#b7c5cc;max-width:550px}
-.email{display:inline-block;margin-top:30px;color:#fff;text-decoration:none;border-bottom:1px solid #4d6470;padding-bottom:5px}
-footer{border-top:1px solid var(--line);padding:25px 0}
-.footer-row{display:flex;justify-content:space-between;gap:20px}
-footer p,footer a{font-size:12px;color:var(--muted);text-decoration:none}
-.footer-links{display:flex;gap:22px}
-@media(max-width:800px){
-.container{width:min(100% - 32px,1160px)}
-.nav-links{display:none}.menu{display:block}
-.nav-links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:18px;padding:24px;background:#fff;border-bottom:1px solid var(--line)}
-.hero{padding:82px 0 75px}.hero-grid,.split,.academy,.contact-grid{grid-template-columns:1fr;gap:42px}
-.hero-note{margin-top:15px}.services{grid-template-columns:1fr}.section{padding:72px 0}
-.footer-row{flex-direction:column}.footer-links{flex-wrap:wrap}
-}
-</style>
-</head>
-<body>
-<header>
-<div class="container"><nav>
-<a class="logo" href="index.html" aria-label="Sunre Global">
-<svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img">
+:root{--ink:#10202d;--green:#176b4b;--muted:#60716b;--line:#dce4dd;--paper:#f7f8f3;--lime:#e4edbf}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "DM Sans",sans-serif}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #d48629;outline-offset:5px}.wrap{width:min(1200px,calc(100% - 64px));margin:auto}header{background:#f7f8f3f5;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand svg{width:148px;display:block}.navlinks{display:flex;align-items:center;gap:28px}.navlinks a{text-decoration:none;font-size:14px;font-weight:600}.button{display:inline-flex;align-items:center;justify-content:center;gap:22px;background:var(--green);color:white;padding:14px 22px;border-radius:7px;text-decoration:none;font-weight:600;font-size:14px}.button.light{background:white;color:var(--ink);border:1px solid var(--line)}.menu{display:none;border:1px solid var(--line);padding:10px 14px;background:transparent;border-radius:6px;font:inherit}.eyebrow{text-transform:uppercase;font-size:11px;letter-spacing:.17em;font-weight:700;color:var(--green)}h1,h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400;letter-spacing:-.035em;line-height:1.05;margin:0}h1{font-size:clamp(50px,5.8vw,80px);margin:23px 0}h2{font-size:clamp(36px,4vw,54px)}h3{font-size:23px;line-height:1.2;letter-spacing:-.025em;margin:0 0 13px}p{margin:0 0 20px}.hero{padding:65px 0 64px}.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}.hero-copy{font-size:18px;color:var(--muted);max-width:520px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 22px}.small{font-size:12px;color:var(--muted)}.hero-visual{position:relative}.hero-visual img{width:100%;height:490px;object-fit:cover;border-radius:110px 12px 12px 12px;display:block;object-position:48% center}.photo-tag{position:absolute;bottom:22px;left:22px;background:#fff;padding:15px 20px;border-radius:8px;box-shadow:0 10px 40px #10202d18}.photo-tag strong{display:block;font-size:15px}.photo-tag span{font-size:12px;color:var(--muted)}.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}.strip .wrap{display:flex;gap:28px;justify-content:space-between;flex-wrap:wrap;font-size:13px}.strip b{color:var(--green);margin-right:9px}.section{padding:88px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:34px}.section-head .eyebrow{margin-bottom:15px}.section-head p{max-width:410px;color:var(--muted);font-size:15px;margin:0}.services{display:grid;grid-template-columns:1fr 1fr;gap:24px}.service{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}.service img{display:block;width:100%;height:280px;object-fit:cover}.service-body{padding:30px}.service-body p{color:var(--muted);font-size:15px}.service-meta{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.13em;color:var(--green);font-weight:700;text-transform:uppercase;margin-bottom:18px}.textlink{text-decoration:none;color:var(--green);font-size:14px;font-weight:700}.business{margin-top:24px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:35px;border:1px solid var(--line);border-radius:12px;background:#edf1e8}.business p{max-width:700px;font-size:15px;color:var(--muted);margin:0}.business h3{font-size:21px}.business .button{flex-shrink:0}.process{background:var(--ink);color:white}.process .eyebrow{color:var(--lime)}.process-head{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:50px}.process-head p{color:#c1ccc7;margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}.step{border-top:1px solid #40514f;padding-top:22px}.step span{color:var(--lime);font-size:12px}.step h3{font-size:21px;margin-top:20px}.step p{font-size:14px;color:#c1ccc7}.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px}.about p{color:var(--muted)}.about .eyebrow{margin-bottom:18px}.about h2{max-width:420px}.tech{margin-top:34px;border-top:1px solid var(--line);padding-top:25px;font-size:13px}.tech strong{display:block;font-size:14px;color:var(--ink);margin-bottom:7px}.tech a{color:var(--green)}.contact{padding:64px 0;background:var(--lime)}.contact-grid{display:flex;align-items:center;justify-content:space-between;gap:45px}.contact h2{max-width:650px}.contact p{margin:18px 0 0;max-width:600px}.contact-actions{display:flex;flex-direction:column;gap:15px;align-items:start;flex-shrink:0}.contact-actions>a:last-child{font-size:13px;color:var(--green)}footer{padding:32px 0;background:var(--paper)}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:25px}.footer-links{display:flex;gap:24px;flex-wrap:wrap}.footer-links a{font-size:12px;color:var(--muted);text-decoration:none}.footer-note{font-size:11px;color:var(--muted);margin-top:20px;border-top:1px solid var(--line);padding-top:20px}
+@media(max-width:900px){.wrap{width:calc(100% - 36px)}.hero-grid{gap:30px}.hero-visual img{height:420px}.navlinks{gap:16px}.section-head{align-items:start}.about{gap:35px}.contact-grid{align-items:start;flex-direction:column}}
+@media(max-width:680px){.nav{min-height:76px}.menu{display:block}.navlinks{display:none}.navlinks.open{display:flex;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:24px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.hero{padding:42px 0}.hero-grid,.services,.process-head,.about{grid-template-columns:1fr}.hero-grid{gap:35px}.hero-visual img{height:330px;border-top-left-radius:75px}h1{font-size:54px}.hero-copy{font-size:17px}.strip .wrap{gap:12px;flex-direction:column}.section{padding:58px 0}.section-head{flex-direction:column;gap:20px}.service img{height:240px}.service-body{padding:24px}.business{align-items:start;flex-direction:column;padding:24px}.steps{grid-template-columns:1fr;gap:25px}.process-head{gap:25px;margin-bottom:32px}.about{gap:28px}.contact{padding:48px 0}.footer-row{align-items:start;flex-direction:column}.footer-links{gap:18px}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="/" aria-label="Sunre Global home"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img">
 <path d="M10 46A22 22 0 0 1 54 46" fill="#176b4b"/>
 <line x1="4" y1="46" x2="60" y2="46" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
 <line x1="32" y1="18" x2="32" y2="11" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
@@ -97,40 +17,29 @@ footer p,footer a{font-size:12px;color:var(--muted);text-decoration:none}
 <line x1="9" y1="36" x2="2" y2="32" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
 <text x="72" y="46" font-family="Georgia,serif" font-size="28" fill="#10202d">Sun</text>
 <text x="130" y="46" font-family="Georgia,serif" font-size="28" fill="#176b4b">RE</text>
-</svg></a>
-<ul class="nav-links">
-<li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="academy.html">Academy</a></li><li><a href="/stays/">Stays</a></li><li><a href="/movers/">Movers</a></li><li><a href="#contact" class="nav-cta">Contact</a></li>
-</ul>
-<button class="menu" aria-label="Menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.toggle('open'))">☰</button>
-</nav></div>
-</header>
+</svg></a><nav class="navlinks" id="navigation" aria-label="Main navigation"><a href="#services">Services</a><a href="/movers/">Sun Movers</a><a href="#about">About</a><a class="button" href="#contact">Get in touch ↗</a></nav><button class="menu" aria-label="Toggle navigation" aria-controls="navigation" aria-expanded="false">Menu</button></div></header>
 <main>
-<section class="hero"><div class="container hero-grid"><div>
-<div class="kicker">Business • Technology</div>
-<h1>Make the next business decision with clarity.</h1>
-<p class="hero-copy">Sunre Global helps organisations navigate growth, technology and transformation with practical advice built around business outcomes.</p>
-<div class="actions"><a class="btn btn-dark" href="#services">Explore services</a><a class="btn btn-outline" href="#contact">Talk to Sunre</a></div>
-</div><div class="hero-note"><strong>Independent perspective.</strong>Focused on the decision in front of you — and what it takes to execute it.</div></div></section>
-<section class="section" id="services"><div class="container">
-<div class="section-head"><div class="eyebrow">Services</div><h2>Focused expertise. Practical outcomes.</h2><p>Support across the commercial and technology decisions that shape how a business grows and operates.</p></div>
-<div class="services">
-<a class="service" href="#contact"><div><span class="service-num">01</span><h3>Business Strategy</h3><p>Growth strategy, market development, commercial planning, business development and partner strategy.</p></div><span class="service-link">Discuss your business →</span></a>
-<a class="service" href="#contact"><div><span class="service-num">02</span><h3>Technology Advisory</h3><p>Technology strategy, vendor evaluation, cloud, modernization and transformation aligned with business priorities.</p></div><span class="service-link">Discuss your technology →</span></a>
-<a class="service" href="#contact"><div><span class="service-num">03</span><h3>Digital Transformation</h3><p>Turn technology initiatives into structured programmes with clear priorities, stakeholders and measurable outcomes.</p></div><span class="service-link">Start a conversation →</span></a>
-<a class="service" href="#contact"><div><span class="service-num">04</span><h3>Partnerships &amp; Growth</h3><p>Build stronger routes to market through strategic partnerships, channel development and joint go-to-market planning.</p></div><span class="service-link">Explore an opportunity →</span></a>
-</div></div></section>
-<section class="section section-soft" id="about"><div class="container split">
-<div><div class="eyebrow">About Sunre</div><div class="big-statement">Good advice should make the decision clearer.</div></div>
-<div class="about-copy"><p>Sunre Global works at the intersection of business and technology. We help leaders evaluate opportunities, make informed choices and turn plans into practical action.</p><p>Our approach is deliberately straightforward: understand the context, identify what matters, and focus effort where it can create measurable value.</p>
-<div class="principles">
-<div class="principle"><span>01</span><div><strong>Business first</strong><p>Technology recommendations are grounded in commercial and operational outcomes.</p></div></div>
-<div class="principle"><span>02</span><div><strong>Practical by design</strong><p>Clear recommendations, realistic priorities and next steps you can actually execute.</p></div></div>
-<div class="principle"><span>03</span><div><strong>Independent thinking</strong><p>Advice centred on your requirements rather than a predetermined vendor or solution.</p></div></div>
-</div></div></div></section>
-<section class="section"><div class="container academy"><div><div class="eyebrow">Sunre Academy</div><div class="section-head" style="margin-bottom:0"><h2>A learning space for practical skills.</h2><p>Interactive learning resources and assessments, built as part of the Sunre ecosystem.</p></div></div>
-<div class="academy-card"><span class="mini">Learn with Sunre</span><h3>Explore the Academy.</h3><a href="academy.html">Visit Sunre Academy →</a></div></div></section>
-<section class="contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow" style="color:#7ed0a9">Contact</div><h2>Have a business or technology decision to work through?</h2><p>Tell us what you're considering. We'll start with the context and work from there.</p></div><div><p>For general enquiries and conversations with Sunre Global:</p><a class="email" href="mailto:hello@sunre.ca">hello@sunre.ca</a></div></div></section>
-</main>
-<footer><div class="container footer-row"><p>© 2026 Sunre Global. All rights reserved.</p><div class="footer-links"><a href="#services">Services</a><a href="#about">About</a><a href="academy.html">Academy</a><a href="/stays/">Stays</a><a href="/movers/">Movers</a><a href="#contact">Contact</a></div></div></footer>
-</body>
-</html>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Sunre Global · Local logistics</div><h1>Moving things.<br>Connecting<br>people.</h1><p class="hero-copy">Small moves, store pickups and local deliveries. Practical transportation support for everyday life and business in British Columbia.</p><div class="actions"><a class="button" href="/movers/#quote">Request a quote <span>↗</span></a><a class="button light" href="#services">Explore services</a></div><p class="small">Tell us what needs to move. We’ll discuss the details with you.</p></div><div class="hero-visual"><img src="/movers/store-pickup.jpg" alt="Black pickup truck with boxed furniture at a store pickup area, illustrative"><div class="photo-tag"><strong>From the store to your door.</strong><span>Pickup & delivery with Sun Movers</span></div></div></div></section>
+<div class="strip"><div class="wrap"><span><b>01</b> Small moves & relocations</span><span><b>02</b> Store pickup & local delivery</span><span><b>03</b> Transportation enquiries</span></div></div>
+<section class="section" id="services"><div class="wrap"><div class="section-head"><div><div class="eyebrow">What we help move</div><h2>Local needs.<br>Practical solutions.</h2></div><p>From a single furniture purchase to a small relocation, start with the service that fits your plans.</p></div><div class="services">
+<article class="service"><img src="/movers/small-moves.jpg" alt="Pickup truck carrying furniture and boxes for a small move" loading="lazy"><div class="service-body"><div class="service-meta"><span>For homes & everyday life</span><span>Sun Movers / 01</span></div><h3>Small moves, handled simply.</h3><p>Furniture transportation, student moves, and smaller household or office relocations. Share your items, locations and preferred schedule for an estimate.</p><a class="textlink" href="/movers/">Explore Sun Movers →</a></div></article>
+<article class="service"><img src="/movers/store-pickup.jpg" alt="Flat-pack furniture and household purchases in a pickup truck outside a furniture store, illustrative" loading="lazy"><div class="service-body"><div class="service-meta"><span>For purchases & deliveries</span><span>Sun Movers / 02</span></div><h3>You find it. We help move it.</h3><p>Store purchases, boxed furniture and eligible marketplace finds. Request pickup and local delivery based on the size of your items and where they need to go.</p><a class="textlink" href="/movers/#quote">Plan a pickup →</a></div></article></div>
+<div class="business"><div><h3>Have a business delivery requirement?</h3><p>Tell us about your goods, delivery locations and frequency. We’ll discuss the scope and whether we can support your needs.</p></div><a class="button light" href="mailto:bookings@sunre.ca?subject=Business%20delivery%20enquiry">Discuss a delivery ↗</a></div>
+<p class="small" style="margin:22px 0 0">Need prearranged airport transportation? <a class="textlink" href="/movers/#services">View Sun Movers services →</a></p>
+</div></section>
+<section class="section process" id="how-it-works"><div class="wrap"><div class="process-head"><div><div class="eyebrow" style="margin-bottom:18px">A straightforward start</div><h2>From the first detail<br>to the next step.</h2></div><p>A quote request starts a conversation. We’ll review your requirements before confirming availability, price or a booking.</p></div><div class="steps"><div class="step"><span>01 / SHARE</span><h3>Tell us what needs moving.</h3><p>Include pickup and drop-off locations, item details, access requirements and your preferred date.</p></div><div class="step"><span>02 / REVIEW</span><h3>Let’s work through the details.</h3><p>We’ll discuss the scope, scheduling and a personalized estimate for your request.</p></div><div class="step"><span>03 / CONFIRM</span><h3>Agree on the plan.</h3><p>Your service is booked only once the arrangements and availability have been confirmed with you.</p></div></div></div></section>
+<section class="section" id="about"><div class="wrap about"><div><div class="eyebrow">About Sunre</div><h2>Built around<br>the next move.</h2></div><div><p>Sunre Global brings a practical approach to local logistics and transportation enquiries in British Columbia. Through Sun Movers, we focus on small moves, pickup and delivery, and prearranged transportation.</p><p>Our approach is simple: understand the requirement, communicate clearly and agree on the details before work begins.</p><aside class="tech"><strong>Business & technology, when you need it.</strong><p style="margin-bottom:0">Sunre also welcomes enquiries about business and IT advisory support. <a href="mailto:hello@sunre.ca?subject=Business%20and%20IT%20advisory%20enquiry">Start a conversation →</a></p></aside></div></div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow" style="margin-bottom:18px">Let’s get moving</div><h2>What do you need<br>to move next?</h2><p>Share a few details and your preferred schedule. We’ll take it from there.</p></div><div class="contact-actions"><a class="button" href="/movers/#quote">Request a quote ↗</a><a href="mailto:bookings@sunre.ca">bookings@sunre.ca</a></div></div></section>
+</main><footer><div class="wrap"><div class="footer-row"><a class="brand" href="/" aria-label="Sunre Global home"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img">
+<path d="M10 46A22 22 0 0 1 54 46" fill="#176b4b"/>
+<line x1="4" y1="46" x2="60" y2="46" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
+<line x1="32" y1="18" x2="32" y2="11" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
+<line x1="46" y1="24" x2="51" y2="18" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
+<line x1="18" y1="24" x2="13" y2="18" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
+<line x1="55" y1="36" x2="62" y2="32" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
+<line x1="9" y1="36" x2="2" y2="32" stroke="#10202d" stroke-width="2" stroke-linecap="round"/>
+<text x="72" y="46" font-family="Georgia,serif" font-size="28" fill="#10202d">Sun</text>
+<text x="130" y="46" font-family="Georgia,serif" font-size="28" fill="#176b4b">RE</text>
+</svg></a><div class="footer-links"><a href="#services">Services</a><a href="/movers/">Sun Movers</a><a href="#about">About</a><a href="#contact">Contact</a><a href="/academy.html">Academy</a></div></div><div class="footer-note">© 2026 Sunre Global. All rights reserved. · Service scope and availability confirmed by enquiry.</div></div></footer>
+<script>const menu=document.querySelector('.menu'),navigation=document.querySelector('.navlinks');menu.addEventListener('click',()=>{const open=navigation.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navigation.classList.remove('open');menu.setAttribute('aria-expanded','false');}));</script>
+</body></html>
