@@ -1,0 +1,15 @@
+/* Shared Sunre typography, sizing and controls. Brand accents may vary by page. */
+:root{--font-body:"DM Sans",sans-serif;--font-display:"DM Serif Display",Georgia,serif;--accent:#176b4b;--ink:#10202d;--muted:#60716b;--line:#dce4dd;--paper:#f7f8f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{font:16px/1.65 var(--font-body);color:var(--ink);background:var(--paper)}
+h1,h2{font-family:var(--font-display);font-weight:400;letter-spacing:-.035em;line-height:1.05}
+h1,.hero h1{font-size:clamp(48px,5.5vw,78px)}h2{font-size:clamp(36px,4vw,54px)}
+.wrap{width:min(1200px,calc(100% - 64px));margin:auto}
+.eyebrow{font-size:11px;letter-spacing:.17em;font-weight:700;text-transform:uppercase;color:var(--accent)}
+.btn,.button{display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:14px 22px;border:0;border-radius:7px;font-family:var(--font-body);font-weight:600;font-size:14px;line-height:1.65;text-decoration:none;background:var(--accent);color:white}
+.btn-outline,.button.light{background:white;color:var(--ink);border:1px solid var(--line)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+header{background:color-mix(in srgb,var(--paper) 96%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:86px}.navlinks a,.links a{font-size:14px;font-weight:600}
+@media(max-width:900px){.wrap{width:calc(100% - 36px)}}
+@media(max-width:680px){h1,.hero h1{font-size:49px}.nav{min-height:76px}}
